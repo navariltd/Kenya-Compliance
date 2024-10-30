@@ -51,6 +51,7 @@ fixtures = [
                 ),
             ],
             ["is_system_generated", "=", 0],
+            # ["fieldname", "in", ("custom_tax_rate", "custom_tax_amount")],
         ],
     },
     {"dt": TRANSACTION_TYPE_DOCTYPE_NAME},
@@ -106,6 +107,7 @@ fixtures = [
         ],
     },
 ]
+
 # Includes in <head>
 # ------------------
 
@@ -243,6 +245,9 @@ doc_events = {
     # 		"on_trash": "method"
     # 	}
     "Sales Invoice": {
+        "before_save":[
+            "kenya_compliance.kenya_compliance.utils.before_save_"
+        ],
         "on_submit": [
             "kenya_compliance.kenya_compliance.overrides.server.sales_invoice.on_submit"
         ],
@@ -251,6 +256,9 @@ doc_events = {
         ],
     },
     "Purchase Invoice": {
+         "before_save":[
+            "kenya_compliance.kenya_compliance.utils.before_save_"
+        ],
         "on_submit": [
             "kenya_compliance.kenya_compliance.overrides.server.purchase_invoice.on_submit"
         ],

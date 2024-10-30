@@ -52,29 +52,77 @@ def before_insert(doc: Document, method: str) -> None:
 
     perform_item_registration(json.dumps(item_registration_data))
 
+#TODO check on this function
+# def validate(doc: Document, method: str) -> None:
+#     # FIXME Ensure all item code numbers follow a global serial
+#     # FIXME Currently, the item code number for each item is incremented if there's an item with same etims item code value
+#     if not doc.custom_item_registered or "None" in doc.custom_item_code_etims:
+#         # Check if Item code contains None or if it's not present
+#         item_code = f"{doc.custom_etims_country_of_origin_code}{doc.custom_product_type}{doc.custom_packaging_unit_code}{doc.custom_unit_of_quantity_code}"
+#         count = frappe.db.count(
+#             "Item", {"custom_item_code_etims": ["like", f"{item_code}%"]}
+#         )
+
+#         doc.custom_item_code_etims = f"{item_code}{str(count + 1).zfill(7)}"
+
+#     is_tax_type_changed = doc.has_value_changed(
+#         "custom_taxation_type"
+#     )  # Check if tax type field changed
+#     if doc.custom_taxation_type and is_tax_type_changed:
+#         relevant_tax_templates = frappe.get_all(
+#             "Item Tax Template",
+#             ["*"],
+#             {
+#                 "custom_etims_taxation_type": doc.custom_taxation_type,
+#             },
+#         )
+
+#         if relevant_tax_templates:
+#             doc.set("taxes", [])
+#             for template in relevant_tax_templates:
+#                 doc.append("taxes", {"item_tax_template": template.name})
 
 def validate(doc: Document, method: str) -> None:
-    # FIXME Ensure all item code numbers follow a global serial
-    # FIXME Currently, the item code number for each item is incremented if there's an item with same etims item code value
-    if not doc.custom_item_registered or "None" in doc.custom_item_code_etims:
-        # Check if Item code contains None or if it's not present
-        item_code = f"{doc.custom_etims_country_of_origin_code}{doc.custom_product_type}{doc.custom_packaging_unit_code}{doc.custom_unit_of_quantity_code}"
-        count = frappe.db.count(
-            "Item", {"custom_item_code_etims": ["like", f"{item_code}%"]}
+    
+
+    # Construct the prefix from the relevant fields
+    new_prefix = f"{doc.custom_etims_country_of_origin_code}{doc.custom_product_type}{doc.custom_packaging_unit_code}{doc.custom_unit_of_quantity_code}"
+    
+    # Check if custom_item_code_etims exists and extract its suffix if so
+    if doc.custom_item_code_etims:
+        # Extract the last 7 digits as the suffix
+        existing_suffix = doc.custom_item_code_etims[-7:]
+    else:
+        # If there is no existing code, generate a new suffix
+        last_code = frappe.db.sql(
+            """
+            SELECT custom_item_code_etims 
+            FROM `tabItem`
+            WHERE custom_item_classification = %s
+            ORDER BY CAST(SUBSTRING(custom_item_code_etims, -7) AS UNSIGNED) DESC
+            LIMIT 1
+            """,
+            (doc.custom_item_classification,),
+            as_dict=True,
         )
 
-        doc.custom_item_code_etims = f"{item_code}{str(count + 1).zfill(7)}"
+        if last_code:
+            last_suffix = int(last_code[0]["custom_item_code_etims"][-7:])
+            existing_suffix = str(last_suffix + 1).zfill(7)
+        else:
+            # Start from '0000001' if no matching classification item exists
+            existing_suffix = "0000001"
 
-    is_tax_type_changed = doc.has_value_changed(
-        "custom_taxation_type"
-    )  # Check if tax type field changed
+    # Combine the new prefix with the existing or new suffix
+    doc.custom_item_code_etims = f"{new_prefix}{existing_suffix}"
+
+    # Check if the tax type field has changed
+    is_tax_type_changed = doc.has_value_changed("custom_taxation_type")
     if doc.custom_taxation_type and is_tax_type_changed:
         relevant_tax_templates = frappe.get_all(
             "Item Tax Template",
             ["*"],
-            {
-                "custom_etims_taxation_type": doc.custom_taxation_type,
-            },
+            {"custom_etims_taxation_type": doc.custom_taxation_type},
         )
 
         if relevant_tax_templates:

@@ -1,2522 +1,2522 @@
 [
-  {
-    "code": "AC",
-    "code_description": null,
-    "code_name": "ASCENSION ISLAND ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:56.925737",
-    "name": "ASCENSION ISLAND",
-    "sort_order": "1"
-  },
-  {
-    "code": "AD",
-    "code_description": null,
-    "code_name": "ANDORRA",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.116006",
-    "name": "ANDORRA",
-    "sort_order": "2"
-  },
-  {
-    "code": "AE",
-    "code_description": null,
-    "code_name": "UNITED ARAB EMIRATES ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.119357",
-    "name": "UNITED ARAB EMIRATES",
-    "sort_order": "3"
-  },
-  {
-    "code": "AG",
-    "code_description": null,
-    "code_name": "ANTIGUA AND BARBUDA",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.122754",
-    "name": "ANTIGUA AND BARBUDA",
-    "sort_order": "4"
-  },
-  {
-    "code": "AI",
-    "code_description": null,
-    "code_name": "ANGUILLA",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.126212",
-    "name": "ANGUILLA",
-    "sort_order": "5"
-  },
-  {
-    "code": "AL",
-    "code_description": null,
-    "code_name": "ALBANIA ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.129586",
-    "name": "ALBANIA",
-    "sort_order": "6"
-  },
-  {
-    "code": "AM",
-    "code_description": null,
-    "code_name": "ARMENIA",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.133253",
-    "name": "ARMENIA",
-    "sort_order": "7"
-  },
-  {
-    "code": "AN",
-    "code_description": null,
-    "code_name": "NETHERLANDS ANTILLES ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.136572",
-    "name": "NETHERLANDS ANTILLES",
-    "sort_order": "8"
-  },
-  {
-    "code": "AO",
-    "code_description": null,
-    "code_name": "ANGOLA",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.139912",
-    "name": "ANGOLA",
-    "sort_order": "9"
-  },
-  {
-    "code": "AQ",
-    "code_description": null,
-    "code_name": "ANTARCTICA",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.143278",
-    "name": "ANTARCTICA",
-    "sort_order": "10"
-  },
-  {
-    "code": "AR",
-    "code_description": null,
-    "code_name": "ARGENTINA",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.146787",
-    "name": "ARGENTINA",
-    "sort_order": "11"
-  },
-  {
-    "code": "AS",
-    "code_description": null,
-    "code_name": "AMERICAN SAMOA",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.150818",
-    "name": "AMERICAN SAMOA",
-    "sort_order": "12"
-  },
-  {
-    "code": "AT",
-    "code_description": null,
-    "code_name": "AUSTRIA",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.154079",
-    "name": "AUSTRIA",
-    "sort_order": "13"
-  },
-  {
-    "code": "AU",
-    "code_description": null,
-    "code_name": "AUSTRALIA",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.157345",
-    "name": "AUSTRALIA",
-    "sort_order": "14"
-  },
-  {
-    "code": "AW",
-    "code_description": null,
-    "code_name": "ARUBA",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.160542",
-    "name": "ARUBA",
-    "sort_order": "15"
-  },
-  {
-    "code": "AX",
-    "code_description": null,
-    "code_name": "ALAND ISLANDS",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.164316",
-    "name": "ALAND ISLANDS",
-    "sort_order": "16"
-  },
-  {
-    "code": "AZ",
-    "code_description": null,
-    "code_name": "AZERBAIJAN",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.167669",
-    "name": "AZERBAIJAN",
-    "sort_order": "17"
-  },
-  {
-    "code": "BA",
-    "code_description": null,
-    "code_name": "BOSNIA AND HERZEGOVINA ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.171462",
-    "name": "BOSNIA AND HERZEGOVINA",
-    "sort_order": "18"
-  },
-  {
-    "code": "BB",
-    "code_description": null,
-    "code_name": "BARBADOS ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.178353",
-    "name": "BARBADOS",
-    "sort_order": "19"
-  },
-  {
-    "code": "BD",
-    "code_description": null,
-    "code_name": "BANGLADESH ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.182302",
-    "name": "BANGLADESH",
-    "sort_order": "20"
-  },
-  {
-    "code": "BE",
-    "code_description": null,
-    "code_name": "BELGIUM ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.185572",
-    "name": "BELGIUM",
-    "sort_order": "21"
-  },
-  {
-    "code": "BF",
-    "code_description": null,
-    "code_name": "BURKINA FASO ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.188886",
-    "name": "BURKINA FASO",
-    "sort_order": "22"
-  },
-  {
-    "code": "BG",
-    "code_description": null,
-    "code_name": "BULGARIA ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.192498",
-    "name": "BULGARIA",
-    "sort_order": "23"
-  },
-  {
-    "code": "BH",
-    "code_description": null,
-    "code_name": "BAHRAIN",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.195919",
-    "name": "BAHRAIN",
-    "sort_order": "24"
-  },
-  {
-    "code": "BI",
-    "code_description": null,
-    "code_name": "BURUNDI ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.199397",
-    "name": "BURUNDI",
-    "sort_order": "25"
-  },
-  {
-    "code": "BJ",
-    "code_description": null,
-    "code_name": "BENIN ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.205109",
-    "name": "BENIN",
-    "sort_order": "26"
-  },
-  {
-    "code": "BM",
-    "code_description": null,
-    "code_name": "BERMUDA ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.208602",
-    "name": "BERMUDA",
-    "sort_order": "27"
-  },
-  {
-    "code": "BN",
-    "code_description": null,
-    "code_name": "BRUNEI DARUSSALAM ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.212258",
-    "name": "BRUNEI DARUSSALAM",
-    "sort_order": "28"
-  },
-  {
-    "code": "BO",
-    "code_description": null,
-    "code_name": "BOLIVIA ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.215887",
-    "name": "BOLIVIA",
-    "sort_order": "29"
-  },
-  {
-    "code": "BR",
-    "code_description": null,
-    "code_name": "BRAZIL ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.219510",
-    "name": "BRAZIL",
-    "sort_order": "30"
-  },
-  {
-    "code": "BS",
-    "code_description": null,
-    "code_name": "BAHAMAS ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.222928",
-    "name": "BAHAMAS",
-    "sort_order": "31"
-  },
-  {
-    "code": "BT",
-    "code_description": null,
-    "code_name": "BHUTAN ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.226434",
-    "name": "BHUTAN",
-    "sort_order": "32"
-  },
-  {
-    "code": "BV",
-    "code_description": null,
-    "code_name": "BOUVET ISLAND ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.229790",
-    "name": "BOUVET ISLAND",
-    "sort_order": "33"
-  },
-  {
-    "code": "BW",
-    "code_description": null,
-    "code_name": "BOTSWANA ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.233414",
-    "name": "BOTSWANA",
-    "sort_order": "34"
-  },
-  {
-    "code": "BY",
-    "code_description": null,
-    "code_name": "BELARUS ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.236693",
-    "name": "BELARUS",
-    "sort_order": "35"
-  },
-  {
-    "code": "BZ",
-    "code_description": null,
-    "code_name": "BELIZE ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.240044",
-    "name": "BELIZE",
-    "sort_order": "36"
-  },
-  {
-    "code": "CA",
-    "code_description": null,
-    "code_name": "CANADA ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.243268",
-    "name": "CANADA",
-    "sort_order": "37"
-  },
-  {
-    "code": "CC",
-    "code_description": null,
-    "code_name": "COCOS (KEELING) ISLANDS ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.247096",
-    "name": "COCOS (KEELING) ISLANDS",
-    "sort_order": "38"
-  },
-  {
-    "code": "CD",
-    "code_description": null,
-    "code_name": "CONGO, DEMOCRATIC REPUBLIC ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.250582",
-    "name": "CONGO, DEMOCRATIC REPUBLIC",
-    "sort_order": "39"
-  },
-  {
-    "code": "CF",
-    "code_description": null,
-    "code_name": "CENTRAL AFRICAN REPUBLIC ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.254192",
-    "name": "CENTRAL AFRICAN REPUBLIC",
-    "sort_order": "40"
-  },
-  {
-    "code": "CG",
-    "code_description": null,
-    "code_name": "CONGO ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.257514",
-    "name": "CONGO",
-    "sort_order": "41"
-  },
-  {
-    "code": "CH",
-    "code_description": null,
-    "code_name": "SWITZERLAND ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.260919",
-    "name": "SWITZERLAND",
-    "sort_order": "42"
-  },
-  {
-    "code": "CI",
-    "code_description": null,
-    "code_name": "COTE D'IVOIRE (IVORY COAST) ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.264575",
-    "name": "COTE D'IVOIRE (IVORY COAST)",
-    "sort_order": "43"
-  },
-  {
-    "code": "CK",
-    "code_description": null,
-    "code_name": "COOK ISLANDS ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.267955",
-    "name": "COOK ISLANDS",
-    "sort_order": "44"
-  },
-  {
-    "code": "CL",
-    "code_description": null,
-    "code_name": "CHILE ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.271246",
-    "name": "CHILE",
-    "sort_order": "45"
-  },
-  {
-    "code": "CM",
-    "code_description": null,
-    "code_name": "CAMEROON ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.274477",
-    "name": "CAMEROON",
-    "sort_order": "46"
-  },
-  {
-    "code": "CN",
-    "code_description": null,
-    "code_name": "CHINA ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.277782",
-    "name": "CHINA",
-    "sort_order": "47"
-  },
-  {
-    "code": "CO",
-    "code_description": null,
-    "code_name": "COLOMBIA ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.281617",
-    "name": "COLOMBIA",
-    "sort_order": "48"
-  },
-  {
-    "code": "CR",
-    "code_description": null,
-    "code_name": "COSTA RICA ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.285003",
-    "name": "COSTA RICA",
-    "sort_order": "49"
-  },
-  {
-    "code": "CS",
-    "code_description": null,
-    "code_name": "CZECHOSLOVAKIA (FORMER) ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.288294",
-    "name": "CZECHOSLOVAKIA (FORMER)",
-    "sort_order": "50"
-  },
-  {
-    "code": "CU",
-    "code_description": null,
-    "code_name": "CUBA ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.291565",
-    "name": "CUBA",
-    "sort_order": "51"
-  },
-  {
-    "code": "CV",
-    "code_description": null,
-    "code_name": "CAPE VERDE ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.294943",
-    "name": "CAPE VERDE",
-    "sort_order": "52"
-  },
-  {
-    "code": "CX",
-    "code_description": null,
-    "code_name": "CHRISTMAS ISLAND ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.298547",
-    "name": "CHRISTMAS ISLAND",
-    "sort_order": "53"
-  },
-  {
-    "code": "CY",
-    "code_description": null,
-    "code_name": "CYPRUS ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.303606",
-    "name": "CYPRUS",
-    "sort_order": "54"
-  },
-  {
-    "code": "CZ",
-    "code_description": null,
-    "code_name": "CZECH REPUBLIC ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.306939",
-    "name": "CZECH REPUBLIC",
-    "sort_order": "55"
-  },
-  {
-    "code": "DE",
-    "code_description": null,
-    "code_name": "GERMANY ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.310161",
-    "name": "GERMANY",
-    "sort_order": "56"
-  },
-  {
-    "code": "DJ",
-    "code_description": null,
-    "code_name": "DJIBOUTI ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.313808",
-    "name": "DJIBOUTI",
-    "sort_order": "57"
-  },
-  {
-    "code": "DK",
-    "code_description": null,
-    "code_name": "DENMARK ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.317393",
-    "name": "DENMARK",
-    "sort_order": "58"
-  },
-  {
-    "code": "DM",
-    "code_description": null,
-    "code_name": "DOMINICA ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.320689",
-    "name": "DOMINICA",
-    "sort_order": "59"
-  },
-  {
-    "code": "DO",
-    "code_description": null,
-    "code_name": "DOMINICAN REPUBLIC ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.324088",
-    "name": "DOMINICAN REPUBLIC",
-    "sort_order": "60"
-  },
-  {
-    "code": "DZ",
-    "code_description": null,
-    "code_name": "ALGERIA",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.327636",
-    "name": "ALGERIA",
-    "sort_order": "61"
-  },
-  {
-    "code": "EC",
-    "code_description": null,
-    "code_name": "ECUADOR ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.331662",
-    "name": "ECUADOR",
-    "sort_order": "62"
-  },
-  {
-    "code": "EE",
-    "code_description": null,
-    "code_name": "ESTONIA ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.335001",
-    "name": "ESTONIA",
-    "sort_order": "63"
-  },
-  {
-    "code": "EG",
-    "code_description": null,
-    "code_name": "EGYPT ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.338317",
-    "name": "EGYPT",
-    "sort_order": "64"
-  },
-  {
-    "code": "EH",
-    "code_description": null,
-    "code_name": "WESTERN SAHARA ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.341601",
-    "name": "WESTERN SAHARA",
-    "sort_order": "65"
-  },
-  {
-    "code": "ER",
-    "code_description": null,
-    "code_name": "ERITREA ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.344990",
-    "name": "ERITREA",
-    "sort_order": "66"
-  },
-  {
-    "code": "ES",
-    "code_description": null,
-    "code_name": "SPAIN ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.348980",
-    "name": "SPAIN",
-    "sort_order": "67"
-  },
-  {
-    "code": "ET",
-    "code_description": null,
-    "code_name": "ETHIOPIA ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.352300",
-    "name": "ETHIOPIA",
-    "sort_order": "68"
-  },
-  {
-    "code": "EU",
-    "code_description": null,
-    "code_name": "EUROPEAN UNION ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.355384",
-    "name": "EUROPEAN UNION",
-    "sort_order": "69"
-  },
-  {
-    "code": "FI",
-    "code_description": null,
-    "code_name": "FINLAND ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.358570",
-    "name": "FINLAND",
-    "sort_order": "70"
-  },
-  {
-    "code": "FJ",
-    "code_description": null,
-    "code_name": "FIJI ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.361723",
-    "name": "FIJI",
-    "sort_order": "71"
-  },
-  {
-    "code": "FK",
-    "code_description": null,
-    "code_name": "FALKLAND ISLANDS (MALVINAS) ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.365111",
-    "name": "FALKLAND ISLANDS (MALVINAS)",
-    "sort_order": "72"
-  },
-  {
-    "code": "FM",
-    "code_description": null,
-    "code_name": "MICRONESIA ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.368195",
-    "name": "MICRONESIA",
-    "sort_order": "73"
-  },
-  {
-    "code": "FO",
-    "code_description": null,
-    "code_name": "FAROE ISLANDS ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.371316",
-    "name": "FAROE ISLANDS",
-    "sort_order": "74"
-  },
-  {
-    "code": "FR",
-    "code_description": null,
-    "code_name": "FRANCE ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.374465",
-    "name": "FRANCE",
-    "sort_order": "75"
-  },
-  {
-    "code": "FX",
-    "code_description": null,
-    "code_name": "FRANCE, METROPOLITAN ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.377571",
-    "name": "FRANCE, METROPOLITAN",
-    "sort_order": "76"
-  },
-  {
-    "code": "GA",
-    "code_description": null,
-    "code_name": "GABON ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.381938",
-    "name": "GABON",
-    "sort_order": "77"
-  },
-  {
-    "code": "GB",
-    "code_description": null,
-    "code_name": "GREAT BRITAIN (UK) ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.385494",
-    "name": "GREAT BRITAIN (UK)",
-    "sort_order": "78"
-  },
-  {
-    "code": "GD",
-    "code_description": null,
-    "code_name": "GRENADA ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.388717",
-    "name": "GRENADA",
-    "sort_order": "79"
-  },
-  {
-    "code": "GE",
-    "code_description": null,
-    "code_name": "GEORGIA ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.391915",
-    "name": "GEORGIA",
-    "sort_order": "80"
-  },
-  {
-    "code": "GF",
-    "code_description": null,
-    "code_name": "FRENCH GUIANA ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.395131",
-    "name": "FRENCH GUIANA",
-    "sort_order": "81"
-  },
-  {
-    "code": "GG",
-    "code_description": null,
-    "code_name": "GUERNSEY ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.398566",
-    "name": "GUERNSEY",
-    "sort_order": "82"
-  },
-  {
-    "code": "GH",
-    "code_description": null,
-    "code_name": "GHANA ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.401772",
-    "name": "GHANA",
-    "sort_order": "83"
-  },
-  {
-    "code": "GI",
-    "code_description": null,
-    "code_name": "GIBRALTAR ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.405799",
-    "name": "GIBRALTAR",
-    "sort_order": "84"
-  },
-  {
-    "code": "GL",
-    "code_description": null,
-    "code_name": "GREENLAND ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.408887",
-    "name": "GREENLAND",
-    "sort_order": "85"
-  },
-  {
-    "code": "GM",
-    "code_description": null,
-    "code_name": "GAMBIA ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.412184",
-    "name": "GAMBIA",
-    "sort_order": "86"
-  },
-  {
-    "code": "GN",
-    "code_description": null,
-    "code_name": "GUINEA ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.415680",
-    "name": "GUINEA",
-    "sort_order": "87"
-  },
-  {
-    "code": "GP",
-    "code_description": null,
-    "code_name": "GUADELOUPE ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.418850",
-    "name": "GUADELOUPE",
-    "sort_order": "88"
-  },
-  {
-    "code": "GQ",
-    "code_description": null,
-    "code_name": "EQUATORIAL GUINEA ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.422083",
-    "name": "EQUATORIAL GUINEA",
-    "sort_order": "89"
-  },
-  {
-    "code": "GR",
-    "code_description": null,
-    "code_name": "GREECE ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.425202",
-    "name": "GREECE",
-    "sort_order": "90"
-  },
-  {
-    "code": "GS",
-    "code_description": null,
-    "code_name": "S. GEORGIA AND S. SANDWICH ISLS. ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.428472",
-    "name": "S. GEORGIA AND S. SANDWICH ISLS.",
-    "sort_order": "91"
-  },
-  {
-    "code": "GT",
-    "code_description": null,
-    "code_name": "GUATEMALA ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.431934",
-    "name": "GUATEMALA",
-    "sort_order": "92"
-  },
-  {
-    "code": "GU",
-    "code_description": null,
-    "code_name": "GUAM ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.435253",
-    "name": "GUAM",
-    "sort_order": "93"
-  },
-  {
-    "code": "GW",
-    "code_description": null,
-    "code_name": "GUINEA     BISSAU ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.438443",
-    "name": "GUINEA     BISSAU",
-    "sort_order": "94"
-  },
-  {
-    "code": "GY",
-    "code_description": null,
-    "code_name": "GUYANA ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.441634",
-    "name": "GUYANA",
-    "sort_order": "95"
-  },
-  {
-    "code": "HK",
-    "code_description": null,
-    "code_name": "HONG KONG ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.444735",
-    "name": "HONG KONG",
-    "sort_order": "96"
-  },
-  {
-    "code": "HM",
-    "code_description": null,
-    "code_name": "HEARD AND MCDONALD ISLANDS ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.448228",
-    "name": "HEARD AND MCDONALD ISLANDS",
-    "sort_order": "97"
-  },
-  {
-    "code": "HN",
-    "code_description": null,
-    "code_name": "HONDURAS ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.451603",
-    "name": "HONDURAS",
-    "sort_order": "98"
-  },
-  {
-    "code": "HR",
-    "code_description": null,
-    "code_name": "CROATIA (HRVATSKA) ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.454760",
-    "name": "CROATIA (HRVATSKA)",
-    "sort_order": "99"
-  },
-  {
-    "code": "HT",
-    "code_description": null,
-    "code_name": "HAITI ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.457924",
-    "name": "HAITI",
-    "sort_order": "100"
-  },
-  {
-    "code": "HU",
-    "code_description": null,
-    "code_name": "HUNGARY ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.461174",
-    "name": "HUNGARY",
-    "sort_order": "101"
-  },
-  {
-    "code": "ID",
-    "code_description": null,
-    "code_name": "INDONESIA ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.464549",
-    "name": "INDONESIA",
-    "sort_order": "102"
-  },
-  {
-    "code": "IE",
-    "code_description": null,
-    "code_name": "IRELAND ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.467836",
-    "name": "IRELAND",
-    "sort_order": "103"
-  },
-  {
-    "code": "IL",
-    "code_description": null,
-    "code_name": "ISRAEL ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.471101",
-    "name": "ISRAEL",
-    "sort_order": "104"
-  },
-  {
-    "code": "IM",
-    "code_description": null,
-    "code_name": "ISLE OF MAN ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.474172",
-    "name": "ISLE OF MAN",
-    "sort_order": "105"
-  },
-  {
-    "code": "IN",
-    "code_description": null,
-    "code_name": "INDIA ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.477267",
-    "name": "INDIA",
-    "sort_order": "106"
-  },
-  {
-    "code": "IO",
-    "code_description": null,
-    "code_name": "BRITISH INDIAN OCEAN TERRITORY ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.480621",
-    "name": "BRITISH INDIAN OCEAN TERRITORY",
-    "sort_order": "107"
-  },
-  {
-    "code": "IQ",
-    "code_description": null,
-    "code_name": "IRAQ ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.483917",
-    "name": "IRAQ",
-    "sort_order": "108"
-  },
-  {
-    "code": "IR",
-    "code_description": null,
-    "code_name": "IRAN ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.486961",
-    "name": "IRAN",
-    "sort_order": "109"
-  },
-  {
-    "code": "IS",
-    "code_description": null,
-    "code_name": "ICELAND ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.490013",
-    "name": "ICELAND",
-    "sort_order": "110"
-  },
-  {
-    "code": "IT",
-    "code_description": null,
-    "code_name": "ITALY ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.493222",
-    "name": "ITALY",
-    "sort_order": "111"
-  },
-  {
-    "code": "JE",
-    "code_description": null,
-    "code_name": "JERSEY ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.496523",
-    "name": "JERSEY",
-    "sort_order": "112"
-  },
-  {
-    "code": "JM",
-    "code_description": null,
-    "code_name": "JAMAICA ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.499794",
-    "name": "JAMAICA",
-    "sort_order": "113"
-  },
-  {
-    "code": "JO",
-    "code_description": null,
-    "code_name": "JORDAN ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.503339",
-    "name": "JORDAN",
-    "sort_order": "114"
-  },
-  {
-    "code": "JP",
-    "code_description": null,
-    "code_name": "JAPAN ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.508081",
-    "name": "JAPAN",
-    "sort_order": "115"
-  },
-  {
-    "code": "KE",
-    "code_description": null,
-    "code_name": "KENYA ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.511388",
-    "name": "KENYA",
-    "sort_order": "116"
-  },
-  {
-    "code": "KG",
-    "code_description": null,
-    "code_name": "KYRGYZSTAN ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.515006",
-    "name": "KYRGYZSTAN",
-    "sort_order": "117"
-  },
-  {
-    "code": "KH",
-    "code_description": null,
-    "code_name": "CAMBODIA ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.518204",
-    "name": "CAMBODIA",
-    "sort_order": "118"
-  },
-  {
-    "code": "KI",
-    "code_description": null,
-    "code_name": "KIRIBATI ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.521358",
-    "name": "KIRIBATI",
-    "sort_order": "119"
-  },
-  {
-    "code": "KM",
-    "code_description": null,
-    "code_name": "COMOROS ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.524465",
-    "name": "COMOROS",
-    "sort_order": "120"
-  },
-  {
-    "code": "KN",
-    "code_description": null,
-    "code_name": "SAINT KITTS AND NEVIS ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.527806",
-    "name": "SAINT KITTS AND NEVIS",
-    "sort_order": "121"
-  },
-  {
-    "code": "KP",
-    "code_description": null,
-    "code_name": "NORTH KOREA",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.531600",
-    "name": "NORTH KOREA",
-    "sort_order": "122"
-  },
-  {
-    "code": "KR",
-    "code_description": null,
-    "code_name": "SOUTH KOREA",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.534865",
-    "name": "SOUTH KOREA",
-    "sort_order": "123"
-  },
-  {
-    "code": "KW",
-    "code_description": null,
-    "code_name": "KUWAIT ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.538120",
-    "name": "KUWAIT",
-    "sort_order": "124"
-  },
-  {
-    "code": "KY",
-    "code_description": null,
-    "code_name": "CAYMAN ISLANDS ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.541305",
-    "name": "CAYMAN ISLANDS",
-    "sort_order": "125"
-  },
-  {
-    "code": "KZ",
-    "code_description": null,
-    "code_name": "KAZAKHSTAN ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.544356",
-    "name": "KAZAKHSTAN",
-    "sort_order": "126"
-  },
-  {
-    "code": "LA",
-    "code_description": null,
-    "code_name": "LAOS ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.548366",
-    "name": "LAOS",
-    "sort_order": "127"
-  },
-  {
-    "code": "LB",
-    "code_description": null,
-    "code_name": "LEBANON ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.551623",
-    "name": "LEBANON",
-    "sort_order": "128"
-  },
-  {
-    "code": "LC",
-    "code_description": null,
-    "code_name": "SAINT LUCIA ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.554795",
-    "name": "SAINT LUCIA",
-    "sort_order": "129"
-  },
-  {
-    "code": "LI",
-    "code_description": null,
-    "code_name": "LIECHTENSTEIN ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.557958",
-    "name": "LIECHTENSTEIN",
-    "sort_order": "130"
-  },
-  {
-    "code": "LK",
-    "code_description": null,
-    "code_name": "SRI LANKA ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.561141",
-    "name": "SRI LANKA",
-    "sort_order": "131"
-  },
-  {
-    "code": "LR",
-    "code_description": null,
-    "code_name": "LIBERIA ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.564582",
-    "name": "LIBERIA",
-    "sort_order": "132"
-  },
-  {
-    "code": "LS",
-    "code_description": null,
-    "code_name": "LESOTHO ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.567797",
-    "name": "LESOTHO",
-    "sort_order": "133"
-  },
-  {
-    "code": "LT",
-    "code_description": null,
-    "code_name": "LITHUANIA ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.571126",
-    "name": "LITHUANIA",
-    "sort_order": "134"
-  },
-  {
-    "code": "LU",
-    "code_description": null,
-    "code_name": "LUXEMBOURG ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.574252",
-    "name": "LUXEMBOURG",
-    "sort_order": "135"
-  },
-  {
-    "code": "LV",
-    "code_description": null,
-    "code_name": "LATVIA ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.577350",
-    "name": "LATVIA",
-    "sort_order": "136"
-  },
-  {
-    "code": "LY",
-    "code_description": null,
-    "code_name": "LIBYA ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.580863",
-    "name": "LIBYA",
-    "sort_order": "137"
-  },
-  {
-    "code": "MA",
-    "code_description": null,
-    "code_name": "MOROCCO ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.584122",
-    "name": "MOROCCO",
-    "sort_order": "138"
-  },
-  {
-    "code": "MC",
-    "code_description": null,
-    "code_name": "MONACO ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.587185",
-    "name": "MONACO",
-    "sort_order": "139"
-  },
-  {
-    "code": "MD",
-    "code_description": null,
-    "code_name": "MOLDOVA ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.590240",
-    "name": "MOLDOVA",
-    "sort_order": "140"
-  },
-  {
-    "code": "ME",
-    "code_description": null,
-    "code_name": "MONTENEGRO ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.593428",
-    "name": "MONTENEGRO",
-    "sort_order": "141"
-  },
-  {
-    "code": "MG",
-    "code_description": null,
-    "code_name": "MADAGASCAR ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.596812",
-    "name": "MADAGASCAR",
-    "sort_order": "142"
-  },
-  {
-    "code": "MH",
-    "code_description": null,
-    "code_name": "MARSHALL ISLANDS ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.600113",
-    "name": "MARSHALL ISLANDS",
-    "sort_order": "143"
-  },
-  {
-    "code": "MK",
-    "code_description": null,
-    "code_name": "F.Y.R.O.M. (MACEDONIA) ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.603319",
-    "name": "F.Y.R.O.M. (MACEDONIA)",
-    "sort_order": "144"
-  },
-  {
-    "code": "ML",
-    "code_description": null,
-    "code_name": "MALI ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.607301",
-    "name": "MALI",
-    "sort_order": "145"
-  },
-  {
-    "code": "MM",
-    "code_description": null,
-    "code_name": "MYANMAR ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.610423",
-    "name": "MYANMAR",
-    "sort_order": "146"
-  },
-  {
-    "code": "MN",
-    "code_description": null,
-    "code_name": "MONGOLIA ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.614326",
-    "name": "MONGOLIA",
-    "sort_order": "147"
-  },
-  {
-    "code": "MO",
-    "code_description": null,
-    "code_name": "MACAU ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.618362",
-    "name": "MACAU",
-    "sort_order": "148"
-  },
-  {
-    "code": "MP",
-    "code_description": null,
-    "code_name": "NORTHERN MARIANA ISLANDS ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.621865",
-    "name": "NORTHERN MARIANA ISLANDS",
-    "sort_order": "149"
-  },
-  {
-    "code": "MQ",
-    "code_description": null,
-    "code_name": "MARTINIQUE ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.625305",
-    "name": "MARTINIQUE",
-    "sort_order": "150"
-  },
-  {
-    "code": "MR",
-    "code_description": null,
-    "code_name": "MAURITANIA ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.628806",
-    "name": "MAURITANIA",
-    "sort_order": "151"
-  },
-  {
-    "code": "MS",
-    "code_description": null,
-    "code_name": "MONTSERRAT ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.633554",
-    "name": "MONTSERRAT",
-    "sort_order": "152"
-  },
-  {
-    "code": "MT",
-    "code_description": null,
-    "code_name": "MALTA ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.637497",
-    "name": "MALTA",
-    "sort_order": "153"
-  },
-  {
-    "code": "MU",
-    "code_description": null,
-    "code_name": "MAURITIUS ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.641609",
-    "name": "MAURITIUS",
-    "sort_order": "154"
-  },
-  {
-    "code": "MV",
-    "code_description": null,
-    "code_name": "MALDIVES ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.645586",
-    "name": "MALDIVES",
-    "sort_order": "155"
-  },
-  {
-    "code": "MW",
-    "code_description": null,
-    "code_name": "MALAWI ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.649518",
-    "name": "MALAWI",
-    "sort_order": "156"
-  },
-  {
-    "code": "MX",
-    "code_description": null,
-    "code_name": "MEXICO ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.653102",
-    "name": "MEXICO",
-    "sort_order": "157"
-  },
-  {
-    "code": "MY",
-    "code_description": null,
-    "code_name": "MALAYSIA ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.656540",
-    "name": "MALAYSIA",
-    "sort_order": "158"
-  },
-  {
-    "code": "MZ",
-    "code_description": null,
-    "code_name": "MOZAMBIQUE ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.660272",
-    "name": "MOZAMBIQUE",
-    "sort_order": "159"
-  },
-  {
-    "code": "NA",
-    "code_description": null,
-    "code_name": "NAMIBIA ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.664276",
-    "name": "NAMIBIA",
-    "sort_order": "160"
-  },
-  {
-    "code": "NC",
-    "code_description": null,
-    "code_name": "NEW CALEDONIA ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.668325",
-    "name": "NEW CALEDONIA",
-    "sort_order": "161"
-  },
-  {
-    "code": "NE",
-    "code_description": null,
-    "code_name": "NIGER ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.672529",
-    "name": "NIGER",
-    "sort_order": "162"
-  },
-  {
-    "code": "NF",
-    "code_description": null,
-    "code_name": "NORFOLK ISLAND ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.676193",
-    "name": "NORFOLK ISLAND",
-    "sort_order": "163"
-  },
-  {
-    "code": "NG",
-    "code_description": null,
-    "code_name": "NIGERIA ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.679773",
-    "name": "NIGERIA",
-    "sort_order": "164"
-  },
-  {
-    "code": "NI",
-    "code_description": null,
-    "code_name": "NICARAGUA ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.683988",
-    "name": "NICARAGUA",
-    "sort_order": "165"
-  },
-  {
-    "code": "NL",
-    "code_description": null,
-    "code_name": "NETHERLANDS ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.687481",
-    "name": "NETHERLANDS",
-    "sort_order": "166"
-  },
-  {
-    "code": "NO",
-    "code_description": null,
-    "code_name": "NORWAY ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.691664",
-    "name": "NORWAY",
-    "sort_order": "167"
-  },
-  {
-    "code": "NP",
-    "code_description": null,
-    "code_name": "NEPAL ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.695556",
-    "name": "NEPAL",
-    "sort_order": "168"
-  },
-  {
-    "code": "NR",
-    "code_description": null,
-    "code_name": "NAURU ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.700060",
-    "name": "NAURU",
-    "sort_order": "169"
-  },
-  {
-    "code": "NT",
-    "code_description": null,
-    "code_name": "NEUTRAL ZONE ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.703766",
-    "name": "NEUTRAL ZONE",
-    "sort_order": "170"
-  },
-  {
-    "code": "NU",
-    "code_description": null,
-    "code_name": "NIUE ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.708157",
-    "name": "NIUE",
-    "sort_order": "171"
-  },
-  {
-    "code": "NZ",
-    "code_description": null,
-    "code_name": "NEW ZEALAND (AOTEAROA) ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.714130",
-    "name": "NEW ZEALAND (AOTEAROA)",
-    "sort_order": "172"
-  },
-  {
-    "code": "OM",
-    "code_description": null,
-    "code_name": "OMAN ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.720315",
-    "name": "OMAN",
-    "sort_order": "173"
-  },
-  {
-    "code": "PA",
-    "code_description": null,
-    "code_name": "PANAMA ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.725919",
-    "name": "PANAMA",
-    "sort_order": "174"
-  },
-  {
-    "code": "PE",
-    "code_description": null,
-    "code_name": "PERU ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.732824",
-    "name": "PERU",
-    "sort_order": "175"
-  },
-  {
-    "code": "PF",
-    "code_description": null,
-    "code_name": "FRENCH POLYNESIA ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.739349",
-    "name": "FRENCH POLYNESIA",
-    "sort_order": "176"
-  },
-  {
-    "code": "PG",
-    "code_description": null,
-    "code_name": "PAPUA NEW GUINEA ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.745374",
-    "name": "PAPUA NEW GUINEA",
-    "sort_order": "177"
-  },
-  {
-    "code": "PH",
-    "code_description": null,
-    "code_name": "PHILIPPINES ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.751978",
-    "name": "PHILIPPINES",
-    "sort_order": "178"
-  },
-  {
-    "code": "PK",
-    "code_description": null,
-    "code_name": "PAKISTAN ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.757379",
-    "name": "PAKISTAN",
-    "sort_order": "179"
-  },
-  {
-    "code": "PL",
-    "code_description": null,
-    "code_name": "POLAND ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.762337",
-    "name": "POLAND",
-    "sort_order": "180"
-  },
-  {
-    "code": "PM",
-    "code_description": null,
-    "code_name": "ST. PIERRE AND MIQUELON ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.768070",
-    "name": "ST. PIERRE AND MIQUELON",
-    "sort_order": "181"
-  },
-  {
-    "code": "PN",
-    "code_description": null,
-    "code_name": "PITCAIRN ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.772937",
-    "name": "PITCAIRN",
-    "sort_order": "182"
-  },
-  {
-    "code": "PR",
-    "code_description": null,
-    "code_name": "PUERTO RICO ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.778615",
-    "name": "PUERTO RICO",
-    "sort_order": "183"
-  },
-  {
-    "code": "PS",
-    "code_description": null,
-    "code_name": "PALESTINIAN TERRITORY, OCCUPIED ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.782224",
-    "name": "PALESTINIAN TERRITORY, OCCUPIED",
-    "sort_order": "184"
-  },
-  {
-    "code": "PT",
-    "code_description": null,
-    "code_name": "PORTUGAL ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.785398",
-    "name": "PORTUGAL",
-    "sort_order": "185"
-  },
-  {
-    "code": "PW",
-    "code_description": null,
-    "code_name": "PALAU ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.788502",
-    "name": "PALAU",
-    "sort_order": "186"
-  },
-  {
-    "code": "PY",
-    "code_description": null,
-    "code_name": "PARAGUAY ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.792111",
-    "name": "PARAGUAY",
-    "sort_order": "187"
-  },
-  {
-    "code": "QA",
-    "code_description": null,
-    "code_name": "QATAR ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.795437",
-    "name": "QATAR",
-    "sort_order": "188"
-  },
-  {
-    "code": "RE",
-    "code_description": null,
-    "code_name": "REUNION ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.799011",
-    "name": "REUNION",
-    "sort_order": "189"
-  },
-  {
-    "code": "RO",
-    "code_description": null,
-    "code_name": "ROMANIA ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.802945",
-    "name": "ROMANIA",
-    "sort_order": "190"
-  },
-  {
-    "code": "RS",
-    "code_description": null,
-    "code_name": "SERBIA ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.806050",
-    "name": "SERBIA",
-    "sort_order": "191"
-  },
-  {
-    "code": "RU",
-    "code_description": null,
-    "code_name": "RUSSIAN FEDERATION ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.809870",
-    "name": "RUSSIAN FEDERATION",
-    "sort_order": "192"
-  },
-  {
-    "code": "RW",
-    "code_description": null,
-    "code_name": "RWANDA ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.813280",
-    "name": "RWANDA",
-    "sort_order": "193"
-  },
-  {
-    "code": "SA",
-    "code_description": null,
-    "code_name": "SAUDI ARABIA ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.816693",
-    "name": "SAUDI ARABIA",
-    "sort_order": "194"
-  },
-  {
-    "code": "SB",
-    "code_description": null,
-    "code_name": "SOLOMON ISLANDS ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.819838",
-    "name": "SOLOMON ISLANDS",
-    "sort_order": "195"
-  },
-  {
-    "code": "SC",
-    "code_description": null,
-    "code_name": "SEYCHELLES ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.822983",
-    "name": "SEYCHELLES",
-    "sort_order": "196"
-  },
-  {
-    "code": "SD",
-    "code_description": null,
-    "code_name": "SUDAN ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.826154",
-    "name": "SUDAN",
-    "sort_order": "197"
-  },
-  {
-    "code": "SE",
-    "code_description": null,
-    "code_name": "SWEDEN ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.829345",
-    "name": "SWEDEN",
-    "sort_order": "198"
-  },
-  {
-    "code": "SG",
-    "code_description": null,
-    "code_name": "SINGAPORE ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.832890",
-    "name": "SINGAPORE",
-    "sort_order": "199"
-  },
-  {
-    "code": "SH",
-    "code_description": null,
-    "code_name": "ST. HELENA ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.836112",
-    "name": "ST. HELENA",
-    "sort_order": "200"
-  },
-  {
-    "code": "SI",
-    "code_description": null,
-    "code_name": "SLOVENIA ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.839337",
-    "name": "SLOVENIA",
-    "sort_order": "201"
-  },
-  {
-    "code": "SJ",
-    "code_description": null,
-    "code_name": "SVALBARD & JAN MAYEN ISLANDS ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.842493",
-    "name": "SVALBARD & JAN MAYEN ISLANDS",
-    "sort_order": "202"
-  },
-  {
-    "code": "SK",
-    "code_description": null,
-    "code_name": "SLOVAK REPUBLIC ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.845858",
-    "name": "SLOVAK REPUBLIC",
-    "sort_order": "203"
-  },
-  {
-    "code": "SL",
-    "code_description": null,
-    "code_name": "SIERRA LEONE ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.849866",
-    "name": "SIERRA LEONE",
-    "sort_order": "204"
-  },
-  {
-    "code": "SM",
-    "code_description": null,
-    "code_name": "SAN MARINO ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.853229",
-    "name": "SAN MARINO",
-    "sort_order": "205"
-  },
-  {
-    "code": "SN",
-    "code_description": null,
-    "code_name": "SENEGAL ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.856376",
-    "name": "SENEGAL",
-    "sort_order": "206"
-  },
-  {
-    "code": "SO",
-    "code_description": null,
-    "code_name": "SOMALIA ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.859456",
-    "name": "SOMALIA",
-    "sort_order": "207"
-  },
-  {
-    "code": "SR",
-    "code_description": null,
-    "code_name": "SURINAME ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.863067",
-    "name": "SURINAME",
-    "sort_order": "208"
-  },
-  {
-    "code": "ST",
-    "code_description": null,
-    "code_name": "SAO TOME AND PRINCIPE ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.866470",
-    "name": "SAO TOME AND PRINCIPE",
-    "sort_order": "209"
-  },
-  {
-    "code": "SU",
-    "code_description": null,
-    "code_name": "USSR (FORMER) ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.869708",
-    "name": "USSR (FORMER)",
-    "sort_order": "210"
-  },
-  {
-    "code": "SV",
-    "code_description": null,
-    "code_name": "EL SALVADOR ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.872915",
-    "name": "EL SALVADOR",
-    "sort_order": "211"
-  },
-  {
-    "code": "SY",
-    "code_description": null,
-    "code_name": "SYRIA ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.876390",
-    "name": "SYRIA",
-    "sort_order": "212"
-  },
-  {
-    "code": "SZ",
-    "code_description": null,
-    "code_name": "SWAZILAND ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.879588",
-    "name": "SWAZILAND",
-    "sort_order": "213"
-  },
-  {
-    "code": "TC",
-    "code_description": null,
-    "code_name": "TURKS AND CAICOS ISLANDS ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.883060",
-    "name": "TURKS AND CAICOS ISLANDS",
-    "sort_order": "214"
-  },
-  {
-    "code": "TD",
-    "code_description": null,
-    "code_name": "CHAD ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.886242",
-    "name": "CHAD",
-    "sort_order": "215"
-  },
-  {
-    "code": "TF",
-    "code_description": null,
-    "code_name": "FRENCH SOUTHERN TERRITORIES ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.889449",
-    "name": "FRENCH SOUTHERN TERRITORIES",
-    "sort_order": "216"
-  },
-  {
-    "code": "TG",
-    "code_description": null,
-    "code_name": "TOGO ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.892637",
-    "name": "TOGO",
-    "sort_order": "217"
-  },
-  {
-    "code": "TH",
-    "code_description": null,
-    "code_name": "THAILAND ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.895910",
-    "name": "THAILAND",
-    "sort_order": "218"
-  },
-  {
-    "code": "TJ",
-    "code_description": null,
-    "code_name": "TAJIKISTAN ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.899394",
-    "name": "TAJIKISTAN",
-    "sort_order": "219"
-  },
-  {
-    "code": "TK",
-    "code_description": null,
-    "code_name": "TOKELAU ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.902581",
-    "name": "TOKELAU",
-    "sort_order": "220"
-  },
-  {
-    "code": "TM",
-    "code_description": null,
-    "code_name": "TURKMENISTAN ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.905701",
-    "name": "TURKMENISTAN",
-    "sort_order": "221"
-  },
-  {
-    "code": "TN",
-    "code_description": null,
-    "code_name": "TUNISIA ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.909311",
-    "name": "TUNISIA",
-    "sort_order": "222"
-  },
-  {
-    "code": "TO",
-    "code_description": null,
-    "code_name": "TONGA ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.912742",
-    "name": "TONGA",
-    "sort_order": "223"
-  },
-  {
-    "code": "TP",
-    "code_description": null,
-    "code_name": "EAST TIMOR ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.916195",
-    "name": "EAST TIMOR",
-    "sort_order": "224"
-  },
-  {
-    "code": "TR",
-    "code_description": null,
-    "code_name": "TURKEY ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.919435",
-    "name": "TURKEY",
-    "sort_order": "225"
-  },
-  {
-    "code": "TT",
-    "code_description": null,
-    "code_name": "TRINIDAD AND TOBAGO ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.922593",
-    "name": "TRINIDAD AND TOBAGO",
-    "sort_order": "226"
-  },
-  {
-    "code": "TV",
-    "code_description": null,
-    "code_name": "TUVALU ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.925761",
-    "name": "TUVALU",
-    "sort_order": "227"
-  },
-  {
-    "code": "TW",
-    "code_description": null,
-    "code_name": "TAIWAN ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.929115",
-    "name": "TAIWAN",
-    "sort_order": "228"
-  },
-  {
-    "code": "TZ",
-    "code_description": null,
-    "code_name": "TANZANIA ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.932773",
-    "name": "TANZANIA",
-    "sort_order": "229"
-  },
-  {
-    "code": "UA",
-    "code_description": null,
-    "code_name": "UKRAINE ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.936083",
-    "name": "UKRAINE",
-    "sort_order": "230"
-  },
-  {
-    "code": "UG",
-    "code_description": null,
-    "code_name": "UGANDA ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.939189",
-    "name": "UGANDA",
-    "sort_order": "231"
-  },
-  {
-    "code": "UK",
-    "code_description": null,
-    "code_name": "UNITED KINGDOM ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.943477",
-    "name": "UNITED KINGDOM",
-    "sort_order": "232"
-  },
-  {
-    "code": "UM",
-    "code_description": null,
-    "code_name": "US MINOR OUTLYING ISLANDS ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.946831",
-    "name": "US MINOR OUTLYING ISLANDS",
-    "sort_order": "233"
-  },
-  {
-    "code": "US",
-    "code_description": null,
-    "code_name": "UNITED STATES ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.950303",
-    "name": "UNITED STATES",
-    "sort_order": "234"
-  },
-  {
-    "code": "UY",
-    "code_description": null,
-    "code_name": "URUGUAY ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.953597",
-    "name": "URUGUAY",
-    "sort_order": "235"
-  },
-  {
-    "code": "UZ",
-    "code_description": null,
-    "code_name": "UZBEKISTAN ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.956725",
-    "name": "UZBEKISTAN",
-    "sort_order": "236"
-  },
-  {
-    "code": "VA",
-    "code_description": null,
-    "code_name": "VATICAN CITY STATE (HOLY SEE) ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.959881",
-    "name": "VATICAN CITY STATE (HOLY SEE)",
-    "sort_order": "237"
-  },
-  {
-    "code": "VC",
-    "code_description": null,
-    "code_name": "SAINT VINCENT & THE GRENADINES ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.963255",
-    "name": "SAINT VINCENT & THE GRENADINES",
-    "sort_order": "238"
-  },
-  {
-    "code": "VE",
-    "code_description": null,
-    "code_name": "VENEZUELA ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.966621",
-    "name": "VENEZUELA",
-    "sort_order": "239"
-  },
-  {
-    "code": "VG",
-    "code_description": null,
-    "code_name": "BRITISH VIRGIN ISLANDS ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.969795",
-    "name": "BRITISH VIRGIN ISLANDS",
-    "sort_order": "240"
-  },
-  {
-    "code": "VI",
-    "code_description": null,
-    "code_name": "VIRGIN ISLANDS (U.S.) ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.973040",
-    "name": "VIRGIN ISLANDS (U.S.)",
-    "sort_order": "241"
-  },
-  {
-    "code": "VN",
-    "code_description": null,
-    "code_name": "VIET NAM ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.976278",
-    "name": "VIET NAM",
-    "sort_order": "242"
-  },
-  {
-    "code": "VU",
-    "code_description": null,
-    "code_name": "VANUATU ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.979560",
-    "name": "VANUATU",
-    "sort_order": "243"
-  },
-  {
-    "code": "WF",
-    "code_description": null,
-    "code_name": "WALLIS AND FUTUNA ISLANDS ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.983103",
-    "name": "WALLIS AND FUTUNA ISLANDS",
-    "sort_order": "244"
-  },
-  {
-    "code": "WS",
-    "code_description": null,
-    "code_name": "SAMOA ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.986259",
-    "name": "SAMOA",
-    "sort_order": "245"
-  },
-  {
-    "code": "YE",
-    "code_description": null,
-    "code_name": "YEMEN ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.989420",
-    "name": "YEMEN",
-    "sort_order": "246"
-  },
-  {
-    "code": "YU",
-    "code_description": null,
-    "code_name": "SERBIA AND MONTENEGRO (FORMER) ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.995953",
-    "name": "SERBIA AND MONTENEGRO (FORMER)",
-    "sort_order": "248"
-  },
-  {
-    "code": "ZA",
-    "code_description": null,
-    "code_name": "SOUTH AFRICA ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.999380",
-    "name": "SOUTH AFRICA",
-    "sort_order": "249"
-  },
-  {
-    "code": "ZM",
-    "code_description": null,
-    "code_name": "ZAMBIA ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:58.002804",
-    "name": "ZAMBIA",
-    "sort_order": "250"
-  },
-  {
-    "code": "ZR",
-    "code_description": null,
-    "code_name": "(ZAIRE) SEE CD CONGO, DEMOCRATIC REPUBLIC ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:58.006172",
-    "name": "(ZAIRE) SEE CD CONGO, DEMOCRATIC REPUBLIC",
-    "sort_order": "251"
-  },
-  {
-    "code": "ZW",
-    "code_description": null,
-    "code_name": "ZIMBABWE",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:58.010790",
-    "name": "ZIMBABWE",
-    "sort_order": "252"
-  },
-  {
-    "code": "YT",
-    "code_description": null,
-    "code_name": "MAYOTTE ",
-    "docstatus": 0,
-    "doctype": "Navari eTims Country",
-    "modified": "2024-04-02 09:48:57.992661",
-    "name": "MAYOTTE",
-    "sort_order": "247"
-  }
+ {
+  "code": "AC",
+  "code_description": null,
+  "code_name": "ASCENSION ISLAND ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:56.925737",
+  "name": "ASCENSION ISLAND",
+  "sort_order": "1"
+ },
+ {
+  "code": "AD",
+  "code_description": null,
+  "code_name": "ANDORRA",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.116006",
+  "name": "ANDORRA",
+  "sort_order": "2"
+ },
+ {
+  "code": "AE",
+  "code_description": null,
+  "code_name": "UNITED ARAB EMIRATES ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.119357",
+  "name": "UNITED ARAB EMIRATES",
+  "sort_order": "3"
+ },
+ {
+  "code": "AG",
+  "code_description": null,
+  "code_name": "ANTIGUA AND BARBUDA",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.122754",
+  "name": "ANTIGUA AND BARBUDA",
+  "sort_order": "4"
+ },
+ {
+  "code": "AI",
+  "code_description": null,
+  "code_name": "ANGUILLA",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.126212",
+  "name": "ANGUILLA",
+  "sort_order": "5"
+ },
+ {
+  "code": "AL",
+  "code_description": null,
+  "code_name": "ALBANIA ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.129586",
+  "name": "ALBANIA",
+  "sort_order": "6"
+ },
+ {
+  "code": "AM",
+  "code_description": null,
+  "code_name": "ARMENIA",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.133253",
+  "name": "ARMENIA",
+  "sort_order": "7"
+ },
+ {
+  "code": "AN",
+  "code_description": null,
+  "code_name": "NETHERLANDS ANTILLES ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.136572",
+  "name": "NETHERLANDS ANTILLES",
+  "sort_order": "8"
+ },
+ {
+  "code": "AO",
+  "code_description": null,
+  "code_name": "ANGOLA",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.139912",
+  "name": "ANGOLA",
+  "sort_order": "9"
+ },
+ {
+  "code": "AQ",
+  "code_description": null,
+  "code_name": "ANTARCTICA",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.143278",
+  "name": "ANTARCTICA",
+  "sort_order": "10"
+ },
+ {
+  "code": "AR",
+  "code_description": null,
+  "code_name": "ARGENTINA",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.146787",
+  "name": "ARGENTINA",
+  "sort_order": "11"
+ },
+ {
+  "code": "AS",
+  "code_description": null,
+  "code_name": "AMERICAN SAMOA",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.150818",
+  "name": "AMERICAN SAMOA",
+  "sort_order": "12"
+ },
+ {
+  "code": "AT",
+  "code_description": null,
+  "code_name": "AUSTRIA",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.154079",
+  "name": "AUSTRIA",
+  "sort_order": "13"
+ },
+ {
+  "code": "AU",
+  "code_description": null,
+  "code_name": "AUSTRALIA",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.157345",
+  "name": "AUSTRALIA",
+  "sort_order": "14"
+ },
+ {
+  "code": "AW",
+  "code_description": null,
+  "code_name": "ARUBA",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.160542",
+  "name": "ARUBA",
+  "sort_order": "15"
+ },
+ {
+  "code": "AX",
+  "code_description": null,
+  "code_name": "ALAND ISLANDS",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.164316",
+  "name": "ALAND ISLANDS",
+  "sort_order": "16"
+ },
+ {
+  "code": "AZ",
+  "code_description": null,
+  "code_name": "AZERBAIJAN",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.167669",
+  "name": "AZERBAIJAN",
+  "sort_order": "17"
+ },
+ {
+  "code": "BA",
+  "code_description": null,
+  "code_name": "BOSNIA AND HERZEGOVINA ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.171462",
+  "name": "BOSNIA AND HERZEGOVINA",
+  "sort_order": "18"
+ },
+ {
+  "code": "BB",
+  "code_description": null,
+  "code_name": "BARBADOS ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.178353",
+  "name": "BARBADOS",
+  "sort_order": "19"
+ },
+ {
+  "code": "BD",
+  "code_description": null,
+  "code_name": "BANGLADESH ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.182302",
+  "name": "BANGLADESH",
+  "sort_order": "20"
+ },
+ {
+  "code": "BE",
+  "code_description": null,
+  "code_name": "BELGIUM ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.185572",
+  "name": "BELGIUM",
+  "sort_order": "21"
+ },
+ {
+  "code": "BF",
+  "code_description": null,
+  "code_name": "BURKINA FASO ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.188886",
+  "name": "BURKINA FASO",
+  "sort_order": "22"
+ },
+ {
+  "code": "BG",
+  "code_description": null,
+  "code_name": "BULGARIA ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.192498",
+  "name": "BULGARIA",
+  "sort_order": "23"
+ },
+ {
+  "code": "BH",
+  "code_description": null,
+  "code_name": "BAHRAIN",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.195919",
+  "name": "BAHRAIN",
+  "sort_order": "24"
+ },
+ {
+  "code": "BI",
+  "code_description": null,
+  "code_name": "BURUNDI ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.199397",
+  "name": "BURUNDI",
+  "sort_order": "25"
+ },
+ {
+  "code": "BJ",
+  "code_description": null,
+  "code_name": "BENIN ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.205109",
+  "name": "BENIN",
+  "sort_order": "26"
+ },
+ {
+  "code": "BM",
+  "code_description": null,
+  "code_name": "BERMUDA ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.208602",
+  "name": "BERMUDA",
+  "sort_order": "27"
+ },
+ {
+  "code": "BN",
+  "code_description": null,
+  "code_name": "BRUNEI DARUSSALAM ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.212258",
+  "name": "BRUNEI DARUSSALAM",
+  "sort_order": "28"
+ },
+ {
+  "code": "BO",
+  "code_description": null,
+  "code_name": "BOLIVIA ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.215887",
+  "name": "BOLIVIA",
+  "sort_order": "29"
+ },
+ {
+  "code": "BR",
+  "code_description": null,
+  "code_name": "BRAZIL ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.219510",
+  "name": "BRAZIL",
+  "sort_order": "30"
+ },
+ {
+  "code": "BS",
+  "code_description": null,
+  "code_name": "BAHAMAS ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.222928",
+  "name": "BAHAMAS",
+  "sort_order": "31"
+ },
+ {
+  "code": "BT",
+  "code_description": null,
+  "code_name": "BHUTAN ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.226434",
+  "name": "BHUTAN",
+  "sort_order": "32"
+ },
+ {
+  "code": "BV",
+  "code_description": null,
+  "code_name": "BOUVET ISLAND ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.229790",
+  "name": "BOUVET ISLAND",
+  "sort_order": "33"
+ },
+ {
+  "code": "BW",
+  "code_description": null,
+  "code_name": "BOTSWANA ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.233414",
+  "name": "BOTSWANA",
+  "sort_order": "34"
+ },
+ {
+  "code": "BY",
+  "code_description": null,
+  "code_name": "BELARUS ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.236693",
+  "name": "BELARUS",
+  "sort_order": "35"
+ },
+ {
+  "code": "BZ",
+  "code_description": null,
+  "code_name": "BELIZE ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.240044",
+  "name": "BELIZE",
+  "sort_order": "36"
+ },
+ {
+  "code": "CA",
+  "code_description": null,
+  "code_name": "CANADA ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.243268",
+  "name": "CANADA",
+  "sort_order": "37"
+ },
+ {
+  "code": "CC",
+  "code_description": null,
+  "code_name": "COCOS (KEELING) ISLANDS ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.247096",
+  "name": "COCOS (KEELING) ISLANDS",
+  "sort_order": "38"
+ },
+ {
+  "code": "CD",
+  "code_description": null,
+  "code_name": "CONGO, DEMOCRATIC REPUBLIC ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.250582",
+  "name": "CONGO, DEMOCRATIC REPUBLIC",
+  "sort_order": "39"
+ },
+ {
+  "code": "CF",
+  "code_description": null,
+  "code_name": "CENTRAL AFRICAN REPUBLIC ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.254192",
+  "name": "CENTRAL AFRICAN REPUBLIC",
+  "sort_order": "40"
+ },
+ {
+  "code": "CG",
+  "code_description": null,
+  "code_name": "CONGO ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.257514",
+  "name": "CONGO",
+  "sort_order": "41"
+ },
+ {
+  "code": "CH",
+  "code_description": null,
+  "code_name": "SWITZERLAND ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.260919",
+  "name": "SWITZERLAND",
+  "sort_order": "42"
+ },
+ {
+  "code": "CI",
+  "code_description": null,
+  "code_name": "COTE D'IVOIRE (IVORY COAST) ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.264575",
+  "name": "COTE D'IVOIRE (IVORY COAST)",
+  "sort_order": "43"
+ },
+ {
+  "code": "CK",
+  "code_description": null,
+  "code_name": "COOK ISLANDS ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.267955",
+  "name": "COOK ISLANDS",
+  "sort_order": "44"
+ },
+ {
+  "code": "CL",
+  "code_description": null,
+  "code_name": "CHILE ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.271246",
+  "name": "CHILE",
+  "sort_order": "45"
+ },
+ {
+  "code": "CM",
+  "code_description": null,
+  "code_name": "CAMEROON ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.274477",
+  "name": "CAMEROON",
+  "sort_order": "46"
+ },
+ {
+  "code": "CN",
+  "code_description": null,
+  "code_name": "CHINA ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.277782",
+  "name": "CHINA",
+  "sort_order": "47"
+ },
+ {
+  "code": "CO",
+  "code_description": null,
+  "code_name": "COLOMBIA ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.281617",
+  "name": "COLOMBIA",
+  "sort_order": "48"
+ },
+ {
+  "code": "CR",
+  "code_description": null,
+  "code_name": "COSTA RICA ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.285003",
+  "name": "COSTA RICA",
+  "sort_order": "49"
+ },
+ {
+  "code": "CS",
+  "code_description": null,
+  "code_name": "CZECHOSLOVAKIA (FORMER) ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.288294",
+  "name": "CZECHOSLOVAKIA (FORMER)",
+  "sort_order": "50"
+ },
+ {
+  "code": "CU",
+  "code_description": null,
+  "code_name": "CUBA ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.291565",
+  "name": "CUBA",
+  "sort_order": "51"
+ },
+ {
+  "code": "CV",
+  "code_description": null,
+  "code_name": "CAPE VERDE ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.294943",
+  "name": "CAPE VERDE",
+  "sort_order": "52"
+ },
+ {
+  "code": "CX",
+  "code_description": null,
+  "code_name": "CHRISTMAS ISLAND ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.298547",
+  "name": "CHRISTMAS ISLAND",
+  "sort_order": "53"
+ },
+ {
+  "code": "CY",
+  "code_description": null,
+  "code_name": "CYPRUS ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.303606",
+  "name": "CYPRUS",
+  "sort_order": "54"
+ },
+ {
+  "code": "CZ",
+  "code_description": null,
+  "code_name": "CZECH REPUBLIC ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.306939",
+  "name": "CZECH REPUBLIC",
+  "sort_order": "55"
+ },
+ {
+  "code": "DE",
+  "code_description": null,
+  "code_name": "GERMANY ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.310161",
+  "name": "GERMANY",
+  "sort_order": "56"
+ },
+ {
+  "code": "DJ",
+  "code_description": null,
+  "code_name": "DJIBOUTI ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.313808",
+  "name": "DJIBOUTI",
+  "sort_order": "57"
+ },
+ {
+  "code": "DK",
+  "code_description": null,
+  "code_name": "DENMARK ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.317393",
+  "name": "DENMARK",
+  "sort_order": "58"
+ },
+ {
+  "code": "DM",
+  "code_description": null,
+  "code_name": "DOMINICA ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.320689",
+  "name": "DOMINICA",
+  "sort_order": "59"
+ },
+ {
+  "code": "DO",
+  "code_description": null,
+  "code_name": "DOMINICAN REPUBLIC ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.324088",
+  "name": "DOMINICAN REPUBLIC",
+  "sort_order": "60"
+ },
+ {
+  "code": "DZ",
+  "code_description": null,
+  "code_name": "ALGERIA",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.327636",
+  "name": "ALGERIA",
+  "sort_order": "61"
+ },
+ {
+  "code": "EC",
+  "code_description": null,
+  "code_name": "ECUADOR ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.331662",
+  "name": "ECUADOR",
+  "sort_order": "62"
+ },
+ {
+  "code": "EE",
+  "code_description": null,
+  "code_name": "ESTONIA ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.335001",
+  "name": "ESTONIA",
+  "sort_order": "63"
+ },
+ {
+  "code": "EG",
+  "code_description": null,
+  "code_name": "EGYPT ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.338317",
+  "name": "EGYPT",
+  "sort_order": "64"
+ },
+ {
+  "code": "EH",
+  "code_description": null,
+  "code_name": "WESTERN SAHARA ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.341601",
+  "name": "WESTERN SAHARA",
+  "sort_order": "65"
+ },
+ {
+  "code": "ER",
+  "code_description": null,
+  "code_name": "ERITREA ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.344990",
+  "name": "ERITREA",
+  "sort_order": "66"
+ },
+ {
+  "code": "ES",
+  "code_description": null,
+  "code_name": "SPAIN ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.348980",
+  "name": "SPAIN",
+  "sort_order": "67"
+ },
+ {
+  "code": "ET",
+  "code_description": null,
+  "code_name": "ETHIOPIA ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.352300",
+  "name": "ETHIOPIA",
+  "sort_order": "68"
+ },
+ {
+  "code": "EU",
+  "code_description": null,
+  "code_name": "EUROPEAN UNION ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.355384",
+  "name": "EUROPEAN UNION",
+  "sort_order": "69"
+ },
+ {
+  "code": "FI",
+  "code_description": null,
+  "code_name": "FINLAND ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.358570",
+  "name": "FINLAND",
+  "sort_order": "70"
+ },
+ {
+  "code": "FJ",
+  "code_description": null,
+  "code_name": "FIJI ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.361723",
+  "name": "FIJI",
+  "sort_order": "71"
+ },
+ {
+  "code": "FK",
+  "code_description": null,
+  "code_name": "FALKLAND ISLANDS (MALVINAS) ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.365111",
+  "name": "FALKLAND ISLANDS (MALVINAS)",
+  "sort_order": "72"
+ },
+ {
+  "code": "FM",
+  "code_description": null,
+  "code_name": "MICRONESIA ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.368195",
+  "name": "MICRONESIA",
+  "sort_order": "73"
+ },
+ {
+  "code": "FO",
+  "code_description": null,
+  "code_name": "FAROE ISLANDS ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.371316",
+  "name": "FAROE ISLANDS",
+  "sort_order": "74"
+ },
+ {
+  "code": "FR",
+  "code_description": null,
+  "code_name": "FRANCE ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.374465",
+  "name": "FRANCE",
+  "sort_order": "75"
+ },
+ {
+  "code": "FX",
+  "code_description": null,
+  "code_name": "FRANCE, METROPOLITAN ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.377571",
+  "name": "FRANCE, METROPOLITAN",
+  "sort_order": "76"
+ },
+ {
+  "code": "GA",
+  "code_description": null,
+  "code_name": "GABON ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.381938",
+  "name": "GABON",
+  "sort_order": "77"
+ },
+ {
+  "code": "GB",
+  "code_description": null,
+  "code_name": "GREAT BRITAIN (UK) ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.385494",
+  "name": "GREAT BRITAIN (UK)",
+  "sort_order": "78"
+ },
+ {
+  "code": "GD",
+  "code_description": null,
+  "code_name": "GRENADA ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.388717",
+  "name": "GRENADA",
+  "sort_order": "79"
+ },
+ {
+  "code": "GE",
+  "code_description": null,
+  "code_name": "GEORGIA ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.391915",
+  "name": "GEORGIA",
+  "sort_order": "80"
+ },
+ {
+  "code": "GF",
+  "code_description": null,
+  "code_name": "FRENCH GUIANA ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.395131",
+  "name": "FRENCH GUIANA",
+  "sort_order": "81"
+ },
+ {
+  "code": "GG",
+  "code_description": null,
+  "code_name": "GUERNSEY ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.398566",
+  "name": "GUERNSEY",
+  "sort_order": "82"
+ },
+ {
+  "code": "GH",
+  "code_description": null,
+  "code_name": "GHANA ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.401772",
+  "name": "GHANA",
+  "sort_order": "83"
+ },
+ {
+  "code": "GI",
+  "code_description": null,
+  "code_name": "GIBRALTAR ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.405799",
+  "name": "GIBRALTAR",
+  "sort_order": "84"
+ },
+ {
+  "code": "GL",
+  "code_description": null,
+  "code_name": "GREENLAND ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.408887",
+  "name": "GREENLAND",
+  "sort_order": "85"
+ },
+ {
+  "code": "GM",
+  "code_description": null,
+  "code_name": "GAMBIA ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.412184",
+  "name": "GAMBIA",
+  "sort_order": "86"
+ },
+ {
+  "code": "GN",
+  "code_description": null,
+  "code_name": "GUINEA ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.415680",
+  "name": "GUINEA",
+  "sort_order": "87"
+ },
+ {
+  "code": "GP",
+  "code_description": null,
+  "code_name": "GUADELOUPE ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.418850",
+  "name": "GUADELOUPE",
+  "sort_order": "88"
+ },
+ {
+  "code": "GQ",
+  "code_description": null,
+  "code_name": "EQUATORIAL GUINEA ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.422083",
+  "name": "EQUATORIAL GUINEA",
+  "sort_order": "89"
+ },
+ {
+  "code": "GR",
+  "code_description": null,
+  "code_name": "GREECE ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.425202",
+  "name": "GREECE",
+  "sort_order": "90"
+ },
+ {
+  "code": "GS",
+  "code_description": null,
+  "code_name": "S. GEORGIA AND S. SANDWICH ISLS. ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.428472",
+  "name": "S. GEORGIA AND S. SANDWICH ISLS.",
+  "sort_order": "91"
+ },
+ {
+  "code": "GT",
+  "code_description": null,
+  "code_name": "GUATEMALA ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.431934",
+  "name": "GUATEMALA",
+  "sort_order": "92"
+ },
+ {
+  "code": "GU",
+  "code_description": null,
+  "code_name": "GUAM ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.435253",
+  "name": "GUAM",
+  "sort_order": "93"
+ },
+ {
+  "code": "GW",
+  "code_description": null,
+  "code_name": "GUINEA     BISSAU ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.438443",
+  "name": "GUINEA     BISSAU",
+  "sort_order": "94"
+ },
+ {
+  "code": "GY",
+  "code_description": null,
+  "code_name": "GUYANA ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.441634",
+  "name": "GUYANA",
+  "sort_order": "95"
+ },
+ {
+  "code": "HK",
+  "code_description": null,
+  "code_name": "HONG KONG ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.444735",
+  "name": "HONG KONG",
+  "sort_order": "96"
+ },
+ {
+  "code": "HM",
+  "code_description": null,
+  "code_name": "HEARD AND MCDONALD ISLANDS ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.448228",
+  "name": "HEARD AND MCDONALD ISLANDS",
+  "sort_order": "97"
+ },
+ {
+  "code": "HN",
+  "code_description": null,
+  "code_name": "HONDURAS ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.451603",
+  "name": "HONDURAS",
+  "sort_order": "98"
+ },
+ {
+  "code": "HR",
+  "code_description": null,
+  "code_name": "CROATIA (HRVATSKA) ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.454760",
+  "name": "CROATIA (HRVATSKA)",
+  "sort_order": "99"
+ },
+ {
+  "code": "HT",
+  "code_description": null,
+  "code_name": "HAITI ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.457924",
+  "name": "HAITI",
+  "sort_order": "100"
+ },
+ {
+  "code": "HU",
+  "code_description": null,
+  "code_name": "HUNGARY ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.461174",
+  "name": "HUNGARY",
+  "sort_order": "101"
+ },
+ {
+  "code": "ID",
+  "code_description": null,
+  "code_name": "INDONESIA ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.464549",
+  "name": "INDONESIA",
+  "sort_order": "102"
+ },
+ {
+  "code": "IE",
+  "code_description": null,
+  "code_name": "IRELAND ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.467836",
+  "name": "IRELAND",
+  "sort_order": "103"
+ },
+ {
+  "code": "IL",
+  "code_description": null,
+  "code_name": "ISRAEL ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.471101",
+  "name": "ISRAEL",
+  "sort_order": "104"
+ },
+ {
+  "code": "IM",
+  "code_description": null,
+  "code_name": "ISLE OF MAN ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.474172",
+  "name": "ISLE OF MAN",
+  "sort_order": "105"
+ },
+ {
+  "code": "IN",
+  "code_description": null,
+  "code_name": "INDIA ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.477267",
+  "name": "INDIA",
+  "sort_order": "106"
+ },
+ {
+  "code": "IO",
+  "code_description": null,
+  "code_name": "BRITISH INDIAN OCEAN TERRITORY ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.480621",
+  "name": "BRITISH INDIAN OCEAN TERRITORY",
+  "sort_order": "107"
+ },
+ {
+  "code": "IQ",
+  "code_description": null,
+  "code_name": "IRAQ ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.483917",
+  "name": "IRAQ",
+  "sort_order": "108"
+ },
+ {
+  "code": "IR",
+  "code_description": null,
+  "code_name": "IRAN ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.486961",
+  "name": "IRAN",
+  "sort_order": "109"
+ },
+ {
+  "code": "IS",
+  "code_description": null,
+  "code_name": "ICELAND ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.490013",
+  "name": "ICELAND",
+  "sort_order": "110"
+ },
+ {
+  "code": "IT",
+  "code_description": null,
+  "code_name": "ITALY ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.493222",
+  "name": "ITALY",
+  "sort_order": "111"
+ },
+ {
+  "code": "JE",
+  "code_description": null,
+  "code_name": "JERSEY ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.496523",
+  "name": "JERSEY",
+  "sort_order": "112"
+ },
+ {
+  "code": "JM",
+  "code_description": null,
+  "code_name": "JAMAICA ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.499794",
+  "name": "JAMAICA",
+  "sort_order": "113"
+ },
+ {
+  "code": "JO",
+  "code_description": null,
+  "code_name": "JORDAN ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.503339",
+  "name": "JORDAN",
+  "sort_order": "114"
+ },
+ {
+  "code": "JP",
+  "code_description": null,
+  "code_name": "JAPAN ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.508081",
+  "name": "JAPAN",
+  "sort_order": "115"
+ },
+ {
+  "code": "KE",
+  "code_description": null,
+  "code_name": "KENYA ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.511388",
+  "name": "KENYA",
+  "sort_order": "116"
+ },
+ {
+  "code": "KG",
+  "code_description": null,
+  "code_name": "KYRGYZSTAN ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.515006",
+  "name": "KYRGYZSTAN",
+  "sort_order": "117"
+ },
+ {
+  "code": "KH",
+  "code_description": null,
+  "code_name": "CAMBODIA ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.518204",
+  "name": "CAMBODIA",
+  "sort_order": "118"
+ },
+ {
+  "code": "KI",
+  "code_description": null,
+  "code_name": "KIRIBATI ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.521358",
+  "name": "KIRIBATI",
+  "sort_order": "119"
+ },
+ {
+  "code": "KM",
+  "code_description": null,
+  "code_name": "COMOROS ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.524465",
+  "name": "COMOROS",
+  "sort_order": "120"
+ },
+ {
+  "code": "KN",
+  "code_description": null,
+  "code_name": "SAINT KITTS AND NEVIS ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.527806",
+  "name": "SAINT KITTS AND NEVIS",
+  "sort_order": "121"
+ },
+ {
+  "code": "KP",
+  "code_description": null,
+  "code_name": "NORTH KOREA",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.531600",
+  "name": "NORTH KOREA",
+  "sort_order": "122"
+ },
+ {
+  "code": "KR",
+  "code_description": null,
+  "code_name": "SOUTH KOREA",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.534865",
+  "name": "SOUTH KOREA",
+  "sort_order": "123"
+ },
+ {
+  "code": "KW",
+  "code_description": null,
+  "code_name": "KUWAIT ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.538120",
+  "name": "KUWAIT",
+  "sort_order": "124"
+ },
+ {
+  "code": "KY",
+  "code_description": null,
+  "code_name": "CAYMAN ISLANDS ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.541305",
+  "name": "CAYMAN ISLANDS",
+  "sort_order": "125"
+ },
+ {
+  "code": "KZ",
+  "code_description": null,
+  "code_name": "KAZAKHSTAN ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.544356",
+  "name": "KAZAKHSTAN",
+  "sort_order": "126"
+ },
+ {
+  "code": "LA",
+  "code_description": null,
+  "code_name": "LAOS ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.548366",
+  "name": "LAOS",
+  "sort_order": "127"
+ },
+ {
+  "code": "LB",
+  "code_description": null,
+  "code_name": "LEBANON ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.551623",
+  "name": "LEBANON",
+  "sort_order": "128"
+ },
+ {
+  "code": "LC",
+  "code_description": null,
+  "code_name": "SAINT LUCIA ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.554795",
+  "name": "SAINT LUCIA",
+  "sort_order": "129"
+ },
+ {
+  "code": "LI",
+  "code_description": null,
+  "code_name": "LIECHTENSTEIN ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.557958",
+  "name": "LIECHTENSTEIN",
+  "sort_order": "130"
+ },
+ {
+  "code": "LK",
+  "code_description": null,
+  "code_name": "SRI LANKA ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.561141",
+  "name": "SRI LANKA",
+  "sort_order": "131"
+ },
+ {
+  "code": "LR",
+  "code_description": null,
+  "code_name": "LIBERIA ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.564582",
+  "name": "LIBERIA",
+  "sort_order": "132"
+ },
+ {
+  "code": "LS",
+  "code_description": null,
+  "code_name": "LESOTHO ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.567797",
+  "name": "LESOTHO",
+  "sort_order": "133"
+ },
+ {
+  "code": "LT",
+  "code_description": null,
+  "code_name": "LITHUANIA ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.571126",
+  "name": "LITHUANIA",
+  "sort_order": "134"
+ },
+ {
+  "code": "LU",
+  "code_description": null,
+  "code_name": "LUXEMBOURG ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.574252",
+  "name": "LUXEMBOURG",
+  "sort_order": "135"
+ },
+ {
+  "code": "LV",
+  "code_description": null,
+  "code_name": "LATVIA ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.577350",
+  "name": "LATVIA",
+  "sort_order": "136"
+ },
+ {
+  "code": "LY",
+  "code_description": null,
+  "code_name": "LIBYA ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.580863",
+  "name": "LIBYA",
+  "sort_order": "137"
+ },
+ {
+  "code": "MA",
+  "code_description": null,
+  "code_name": "MOROCCO ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.584122",
+  "name": "MOROCCO",
+  "sort_order": "138"
+ },
+ {
+  "code": "MC",
+  "code_description": null,
+  "code_name": "MONACO ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.587185",
+  "name": "MONACO",
+  "sort_order": "139"
+ },
+ {
+  "code": "MD",
+  "code_description": null,
+  "code_name": "MOLDOVA ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.590240",
+  "name": "MOLDOVA",
+  "sort_order": "140"
+ },
+ {
+  "code": "ME",
+  "code_description": null,
+  "code_name": "MONTENEGRO ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.593428",
+  "name": "MONTENEGRO",
+  "sort_order": "141"
+ },
+ {
+  "code": "MG",
+  "code_description": null,
+  "code_name": "MADAGASCAR ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.596812",
+  "name": "MADAGASCAR",
+  "sort_order": "142"
+ },
+ {
+  "code": "MH",
+  "code_description": null,
+  "code_name": "MARSHALL ISLANDS ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.600113",
+  "name": "MARSHALL ISLANDS",
+  "sort_order": "143"
+ },
+ {
+  "code": "MK",
+  "code_description": null,
+  "code_name": "F.Y.R.O.M. (MACEDONIA) ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.603319",
+  "name": "F.Y.R.O.M. (MACEDONIA)",
+  "sort_order": "144"
+ },
+ {
+  "code": "ML",
+  "code_description": null,
+  "code_name": "MALI ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.607301",
+  "name": "MALI",
+  "sort_order": "145"
+ },
+ {
+  "code": "MM",
+  "code_description": null,
+  "code_name": "MYANMAR ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.610423",
+  "name": "MYANMAR",
+  "sort_order": "146"
+ },
+ {
+  "code": "MN",
+  "code_description": null,
+  "code_name": "MONGOLIA ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.614326",
+  "name": "MONGOLIA",
+  "sort_order": "147"
+ },
+ {
+  "code": "MO",
+  "code_description": null,
+  "code_name": "MACAU ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.618362",
+  "name": "MACAU",
+  "sort_order": "148"
+ },
+ {
+  "code": "MP",
+  "code_description": null,
+  "code_name": "NORTHERN MARIANA ISLANDS ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.621865",
+  "name": "NORTHERN MARIANA ISLANDS",
+  "sort_order": "149"
+ },
+ {
+  "code": "MQ",
+  "code_description": null,
+  "code_name": "MARTINIQUE ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.625305",
+  "name": "MARTINIQUE",
+  "sort_order": "150"
+ },
+ {
+  "code": "MR",
+  "code_description": null,
+  "code_name": "MAURITANIA ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.628806",
+  "name": "MAURITANIA",
+  "sort_order": "151"
+ },
+ {
+  "code": "MS",
+  "code_description": null,
+  "code_name": "MONTSERRAT ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.633554",
+  "name": "MONTSERRAT",
+  "sort_order": "152"
+ },
+ {
+  "code": "MT",
+  "code_description": null,
+  "code_name": "MALTA ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.637497",
+  "name": "MALTA",
+  "sort_order": "153"
+ },
+ {
+  "code": "MU",
+  "code_description": null,
+  "code_name": "MAURITIUS ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.641609",
+  "name": "MAURITIUS",
+  "sort_order": "154"
+ },
+ {
+  "code": "MV",
+  "code_description": null,
+  "code_name": "MALDIVES ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.645586",
+  "name": "MALDIVES",
+  "sort_order": "155"
+ },
+ {
+  "code": "MW",
+  "code_description": null,
+  "code_name": "MALAWI ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.649518",
+  "name": "MALAWI",
+  "sort_order": "156"
+ },
+ {
+  "code": "MX",
+  "code_description": null,
+  "code_name": "MEXICO ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.653102",
+  "name": "MEXICO",
+  "sort_order": "157"
+ },
+ {
+  "code": "MY",
+  "code_description": null,
+  "code_name": "MALAYSIA ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.656540",
+  "name": "MALAYSIA",
+  "sort_order": "158"
+ },
+ {
+  "code": "MZ",
+  "code_description": null,
+  "code_name": "MOZAMBIQUE ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.660272",
+  "name": "MOZAMBIQUE",
+  "sort_order": "159"
+ },
+ {
+  "code": "NA",
+  "code_description": null,
+  "code_name": "NAMIBIA ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.664276",
+  "name": "NAMIBIA",
+  "sort_order": "160"
+ },
+ {
+  "code": "NC",
+  "code_description": null,
+  "code_name": "NEW CALEDONIA ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.668325",
+  "name": "NEW CALEDONIA",
+  "sort_order": "161"
+ },
+ {
+  "code": "NE",
+  "code_description": null,
+  "code_name": "NIGER ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.672529",
+  "name": "NIGER",
+  "sort_order": "162"
+ },
+ {
+  "code": "NF",
+  "code_description": null,
+  "code_name": "NORFOLK ISLAND ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.676193",
+  "name": "NORFOLK ISLAND",
+  "sort_order": "163"
+ },
+ {
+  "code": "NG",
+  "code_description": null,
+  "code_name": "NIGERIA ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.679773",
+  "name": "NIGERIA",
+  "sort_order": "164"
+ },
+ {
+  "code": "NI",
+  "code_description": null,
+  "code_name": "NICARAGUA ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.683988",
+  "name": "NICARAGUA",
+  "sort_order": "165"
+ },
+ {
+  "code": "NL",
+  "code_description": null,
+  "code_name": "NETHERLANDS ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.687481",
+  "name": "NETHERLANDS",
+  "sort_order": "166"
+ },
+ {
+  "code": "NO",
+  "code_description": null,
+  "code_name": "NORWAY ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.691664",
+  "name": "NORWAY",
+  "sort_order": "167"
+ },
+ {
+  "code": "NP",
+  "code_description": null,
+  "code_name": "NEPAL ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.695556",
+  "name": "NEPAL",
+  "sort_order": "168"
+ },
+ {
+  "code": "NR",
+  "code_description": null,
+  "code_name": "NAURU ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.700060",
+  "name": "NAURU",
+  "sort_order": "169"
+ },
+ {
+  "code": "NT",
+  "code_description": null,
+  "code_name": "NEUTRAL ZONE ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.703766",
+  "name": "NEUTRAL ZONE",
+  "sort_order": "170"
+ },
+ {
+  "code": "NU",
+  "code_description": null,
+  "code_name": "NIUE ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.708157",
+  "name": "NIUE",
+  "sort_order": "171"
+ },
+ {
+  "code": "NZ",
+  "code_description": null,
+  "code_name": "NEW ZEALAND (AOTEAROA) ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.714130",
+  "name": "NEW ZEALAND (AOTEAROA)",
+  "sort_order": "172"
+ },
+ {
+  "code": "OM",
+  "code_description": null,
+  "code_name": "OMAN ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.720315",
+  "name": "OMAN",
+  "sort_order": "173"
+ },
+ {
+  "code": "PA",
+  "code_description": null,
+  "code_name": "PANAMA ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.725919",
+  "name": "PANAMA",
+  "sort_order": "174"
+ },
+ {
+  "code": "PE",
+  "code_description": null,
+  "code_name": "PERU ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.732824",
+  "name": "PERU",
+  "sort_order": "175"
+ },
+ {
+  "code": "PF",
+  "code_description": null,
+  "code_name": "FRENCH POLYNESIA ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.739349",
+  "name": "FRENCH POLYNESIA",
+  "sort_order": "176"
+ },
+ {
+  "code": "PG",
+  "code_description": null,
+  "code_name": "PAPUA NEW GUINEA ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.745374",
+  "name": "PAPUA NEW GUINEA",
+  "sort_order": "177"
+ },
+ {
+  "code": "PH",
+  "code_description": null,
+  "code_name": "PHILIPPINES ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.751978",
+  "name": "PHILIPPINES",
+  "sort_order": "178"
+ },
+ {
+  "code": "PK",
+  "code_description": null,
+  "code_name": "PAKISTAN ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.757379",
+  "name": "PAKISTAN",
+  "sort_order": "179"
+ },
+ {
+  "code": "PL",
+  "code_description": null,
+  "code_name": "POLAND ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.762337",
+  "name": "POLAND",
+  "sort_order": "180"
+ },
+ {
+  "code": "PM",
+  "code_description": null,
+  "code_name": "ST. PIERRE AND MIQUELON ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.768070",
+  "name": "ST. PIERRE AND MIQUELON",
+  "sort_order": "181"
+ },
+ {
+  "code": "PN",
+  "code_description": null,
+  "code_name": "PITCAIRN ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.772937",
+  "name": "PITCAIRN",
+  "sort_order": "182"
+ },
+ {
+  "code": "PR",
+  "code_description": null,
+  "code_name": "PUERTO RICO ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.778615",
+  "name": "PUERTO RICO",
+  "sort_order": "183"
+ },
+ {
+  "code": "PS",
+  "code_description": null,
+  "code_name": "PALESTINIAN TERRITORY, OCCUPIED ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.782224",
+  "name": "PALESTINIAN TERRITORY, OCCUPIED",
+  "sort_order": "184"
+ },
+ {
+  "code": "PT",
+  "code_description": null,
+  "code_name": "PORTUGAL ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.785398",
+  "name": "PORTUGAL",
+  "sort_order": "185"
+ },
+ {
+  "code": "PW",
+  "code_description": null,
+  "code_name": "PALAU ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.788502",
+  "name": "PALAU",
+  "sort_order": "186"
+ },
+ {
+  "code": "PY",
+  "code_description": null,
+  "code_name": "PARAGUAY ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.792111",
+  "name": "PARAGUAY",
+  "sort_order": "187"
+ },
+ {
+  "code": "QA",
+  "code_description": null,
+  "code_name": "QATAR ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.795437",
+  "name": "QATAR",
+  "sort_order": "188"
+ },
+ {
+  "code": "RE",
+  "code_description": null,
+  "code_name": "REUNION ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.799011",
+  "name": "REUNION",
+  "sort_order": "189"
+ },
+ {
+  "code": "RO",
+  "code_description": null,
+  "code_name": "ROMANIA ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.802945",
+  "name": "ROMANIA",
+  "sort_order": "190"
+ },
+ {
+  "code": "RS",
+  "code_description": null,
+  "code_name": "SERBIA ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.806050",
+  "name": "SERBIA",
+  "sort_order": "191"
+ },
+ {
+  "code": "RU",
+  "code_description": null,
+  "code_name": "RUSSIAN FEDERATION ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.809870",
+  "name": "RUSSIAN FEDERATION",
+  "sort_order": "192"
+ },
+ {
+  "code": "RW",
+  "code_description": null,
+  "code_name": "RWANDA ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.813280",
+  "name": "RWANDA",
+  "sort_order": "193"
+ },
+ {
+  "code": "SA",
+  "code_description": null,
+  "code_name": "SAUDI ARABIA ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.816693",
+  "name": "SAUDI ARABIA",
+  "sort_order": "194"
+ },
+ {
+  "code": "SB",
+  "code_description": null,
+  "code_name": "SOLOMON ISLANDS ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.819838",
+  "name": "SOLOMON ISLANDS",
+  "sort_order": "195"
+ },
+ {
+  "code": "SC",
+  "code_description": null,
+  "code_name": "SEYCHELLES ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.822983",
+  "name": "SEYCHELLES",
+  "sort_order": "196"
+ },
+ {
+  "code": "SD",
+  "code_description": null,
+  "code_name": "SUDAN ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.826154",
+  "name": "SUDAN",
+  "sort_order": "197"
+ },
+ {
+  "code": "SE",
+  "code_description": null,
+  "code_name": "SWEDEN ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.829345",
+  "name": "SWEDEN",
+  "sort_order": "198"
+ },
+ {
+  "code": "SG",
+  "code_description": null,
+  "code_name": "SINGAPORE ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.832890",
+  "name": "SINGAPORE",
+  "sort_order": "199"
+ },
+ {
+  "code": "SH",
+  "code_description": null,
+  "code_name": "ST. HELENA ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.836112",
+  "name": "ST. HELENA",
+  "sort_order": "200"
+ },
+ {
+  "code": "SI",
+  "code_description": null,
+  "code_name": "SLOVENIA ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.839337",
+  "name": "SLOVENIA",
+  "sort_order": "201"
+ },
+ {
+  "code": "SJ",
+  "code_description": null,
+  "code_name": "SVALBARD & JAN MAYEN ISLANDS ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.842493",
+  "name": "SVALBARD & JAN MAYEN ISLANDS",
+  "sort_order": "202"
+ },
+ {
+  "code": "SK",
+  "code_description": null,
+  "code_name": "SLOVAK REPUBLIC ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.845858",
+  "name": "SLOVAK REPUBLIC",
+  "sort_order": "203"
+ },
+ {
+  "code": "SL",
+  "code_description": null,
+  "code_name": "SIERRA LEONE ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.849866",
+  "name": "SIERRA LEONE",
+  "sort_order": "204"
+ },
+ {
+  "code": "SM",
+  "code_description": null,
+  "code_name": "SAN MARINO ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.853229",
+  "name": "SAN MARINO",
+  "sort_order": "205"
+ },
+ {
+  "code": "SN",
+  "code_description": null,
+  "code_name": "SENEGAL ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.856376",
+  "name": "SENEGAL",
+  "sort_order": "206"
+ },
+ {
+  "code": "SO",
+  "code_description": null,
+  "code_name": "SOMALIA ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.859456",
+  "name": "SOMALIA",
+  "sort_order": "207"
+ },
+ {
+  "code": "SR",
+  "code_description": null,
+  "code_name": "SURINAME ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.863067",
+  "name": "SURINAME",
+  "sort_order": "208"
+ },
+ {
+  "code": "ST",
+  "code_description": null,
+  "code_name": "SAO TOME AND PRINCIPE ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.866470",
+  "name": "SAO TOME AND PRINCIPE",
+  "sort_order": "209"
+ },
+ {
+  "code": "SU",
+  "code_description": null,
+  "code_name": "USSR (FORMER) ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.869708",
+  "name": "USSR (FORMER)",
+  "sort_order": "210"
+ },
+ {
+  "code": "SV",
+  "code_description": null,
+  "code_name": "EL SALVADOR ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.872915",
+  "name": "EL SALVADOR",
+  "sort_order": "211"
+ },
+ {
+  "code": "SY",
+  "code_description": null,
+  "code_name": "SYRIA ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.876390",
+  "name": "SYRIA",
+  "sort_order": "212"
+ },
+ {
+  "code": "SZ",
+  "code_description": null,
+  "code_name": "SWAZILAND ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.879588",
+  "name": "SWAZILAND",
+  "sort_order": "213"
+ },
+ {
+  "code": "TC",
+  "code_description": null,
+  "code_name": "TURKS AND CAICOS ISLANDS ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.883060",
+  "name": "TURKS AND CAICOS ISLANDS",
+  "sort_order": "214"
+ },
+ {
+  "code": "TD",
+  "code_description": null,
+  "code_name": "CHAD ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.886242",
+  "name": "CHAD",
+  "sort_order": "215"
+ },
+ {
+  "code": "TF",
+  "code_description": null,
+  "code_name": "FRENCH SOUTHERN TERRITORIES ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.889449",
+  "name": "FRENCH SOUTHERN TERRITORIES",
+  "sort_order": "216"
+ },
+ {
+  "code": "TG",
+  "code_description": null,
+  "code_name": "TOGO ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.892637",
+  "name": "TOGO",
+  "sort_order": "217"
+ },
+ {
+  "code": "TH",
+  "code_description": null,
+  "code_name": "THAILAND ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.895910",
+  "name": "THAILAND",
+  "sort_order": "218"
+ },
+ {
+  "code": "TJ",
+  "code_description": null,
+  "code_name": "TAJIKISTAN ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.899394",
+  "name": "TAJIKISTAN",
+  "sort_order": "219"
+ },
+ {
+  "code": "TK",
+  "code_description": null,
+  "code_name": "TOKELAU ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.902581",
+  "name": "TOKELAU",
+  "sort_order": "220"
+ },
+ {
+  "code": "TM",
+  "code_description": null,
+  "code_name": "TURKMENISTAN ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.905701",
+  "name": "TURKMENISTAN",
+  "sort_order": "221"
+ },
+ {
+  "code": "TN",
+  "code_description": null,
+  "code_name": "TUNISIA ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.909311",
+  "name": "TUNISIA",
+  "sort_order": "222"
+ },
+ {
+  "code": "TO",
+  "code_description": null,
+  "code_name": "TONGA ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.912742",
+  "name": "TONGA",
+  "sort_order": "223"
+ },
+ {
+  "code": "TP",
+  "code_description": null,
+  "code_name": "EAST TIMOR ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.916195",
+  "name": "EAST TIMOR",
+  "sort_order": "224"
+ },
+ {
+  "code": "TR",
+  "code_description": null,
+  "code_name": "TURKEY ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.919435",
+  "name": "TURKEY",
+  "sort_order": "225"
+ },
+ {
+  "code": "TT",
+  "code_description": null,
+  "code_name": "TRINIDAD AND TOBAGO ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.922593",
+  "name": "TRINIDAD AND TOBAGO",
+  "sort_order": "226"
+ },
+ {
+  "code": "TV",
+  "code_description": null,
+  "code_name": "TUVALU ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.925761",
+  "name": "TUVALU",
+  "sort_order": "227"
+ },
+ {
+  "code": "TW",
+  "code_description": null,
+  "code_name": "TAIWAN ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.929115",
+  "name": "TAIWAN",
+  "sort_order": "228"
+ },
+ {
+  "code": "TZ",
+  "code_description": null,
+  "code_name": "TANZANIA ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.932773",
+  "name": "TANZANIA",
+  "sort_order": "229"
+ },
+ {
+  "code": "UA",
+  "code_description": null,
+  "code_name": "UKRAINE ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.936083",
+  "name": "UKRAINE",
+  "sort_order": "230"
+ },
+ {
+  "code": "UG",
+  "code_description": null,
+  "code_name": "UGANDA ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.939189",
+  "name": "UGANDA",
+  "sort_order": "231"
+ },
+ {
+  "code": "UK",
+  "code_description": null,
+  "code_name": "UNITED KINGDOM ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.943477",
+  "name": "UNITED KINGDOM",
+  "sort_order": "232"
+ },
+ {
+  "code": "UM",
+  "code_description": null,
+  "code_name": "US MINOR OUTLYING ISLANDS ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.946831",
+  "name": "US MINOR OUTLYING ISLANDS",
+  "sort_order": "233"
+ },
+ {
+  "code": "US",
+  "code_description": null,
+  "code_name": "UNITED STATES ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.950303",
+  "name": "UNITED STATES",
+  "sort_order": "234"
+ },
+ {
+  "code": "UY",
+  "code_description": null,
+  "code_name": "URUGUAY ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.953597",
+  "name": "URUGUAY",
+  "sort_order": "235"
+ },
+ {
+  "code": "UZ",
+  "code_description": null,
+  "code_name": "UZBEKISTAN ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.956725",
+  "name": "UZBEKISTAN",
+  "sort_order": "236"
+ },
+ {
+  "code": "VA",
+  "code_description": null,
+  "code_name": "VATICAN CITY STATE (HOLY SEE) ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.959881",
+  "name": "VATICAN CITY STATE (HOLY SEE)",
+  "sort_order": "237"
+ },
+ {
+  "code": "VC",
+  "code_description": null,
+  "code_name": "SAINT VINCENT & THE GRENADINES ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.963255",
+  "name": "SAINT VINCENT & THE GRENADINES",
+  "sort_order": "238"
+ },
+ {
+  "code": "VE",
+  "code_description": null,
+  "code_name": "VENEZUELA ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.966621",
+  "name": "VENEZUELA",
+  "sort_order": "239"
+ },
+ {
+  "code": "VG",
+  "code_description": null,
+  "code_name": "BRITISH VIRGIN ISLANDS ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.969795",
+  "name": "BRITISH VIRGIN ISLANDS",
+  "sort_order": "240"
+ },
+ {
+  "code": "VI",
+  "code_description": null,
+  "code_name": "VIRGIN ISLANDS (U.S.) ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.973040",
+  "name": "VIRGIN ISLANDS (U.S.)",
+  "sort_order": "241"
+ },
+ {
+  "code": "VN",
+  "code_description": null,
+  "code_name": "VIET NAM ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.976278",
+  "name": "VIET NAM",
+  "sort_order": "242"
+ },
+ {
+  "code": "VU",
+  "code_description": null,
+  "code_name": "VANUATU ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.979560",
+  "name": "VANUATU",
+  "sort_order": "243"
+ },
+ {
+  "code": "WF",
+  "code_description": null,
+  "code_name": "WALLIS AND FUTUNA ISLANDS ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.983103",
+  "name": "WALLIS AND FUTUNA ISLANDS",
+  "sort_order": "244"
+ },
+ {
+  "code": "WS",
+  "code_description": null,
+  "code_name": "SAMOA ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.986259",
+  "name": "SAMOA",
+  "sort_order": "245"
+ },
+ {
+  "code": "YE",
+  "code_description": null,
+  "code_name": "YEMEN ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.989420",
+  "name": "YEMEN",
+  "sort_order": "246"
+ },
+ {
+  "code": "YU",
+  "code_description": null,
+  "code_name": "SERBIA AND MONTENEGRO (FORMER) ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.995953",
+  "name": "SERBIA AND MONTENEGRO (FORMER)",
+  "sort_order": "248"
+ },
+ {
+  "code": "ZA",
+  "code_description": null,
+  "code_name": "SOUTH AFRICA ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.999380",
+  "name": "SOUTH AFRICA",
+  "sort_order": "249"
+ },
+ {
+  "code": "ZM",
+  "code_description": null,
+  "code_name": "ZAMBIA ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:58.002804",
+  "name": "ZAMBIA",
+  "sort_order": "250"
+ },
+ {
+  "code": "ZR",
+  "code_description": null,
+  "code_name": "(ZAIRE) SEE CD CONGO, DEMOCRATIC REPUBLIC ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:58.006172",
+  "name": "(ZAIRE) SEE CD CONGO, DEMOCRATIC REPUBLIC",
+  "sort_order": "251"
+ },
+ {
+  "code": "ZW",
+  "code_description": null,
+  "code_name": "ZIMBABWE",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:58.010790",
+  "name": "ZIMBABWE",
+  "sort_order": "252"
+ },
+ {
+  "code": "YT",
+  "code_description": null,
+  "code_name": "MAYOTTE ",
+  "docstatus": 0,
+  "doctype": "Navari eTims Country",
+  "modified": "2024-04-02 09:48:57.992661",
+  "name": "MAYOTTE",
+  "sort_order": "247"
+ }
 ]

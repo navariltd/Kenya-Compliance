@@ -1,24 +1,24 @@
 [
-  {
-    "code": "P",
-    "code_description": "Purchase",
-    "code_name": "Purchase",
-    "docstatus": 0,
-    "doctype": "Navari eTims Purchase Receipt Type",
-    "modified": "2024-04-05 12:01:02.336752",
-    "name": "Purchase",
-    "remark": null,
-    "sort_order": "1"
-  },
-  {
-    "code": "R",
-    "code_description": "Credit Note after Purchase",
-    "code_name": "Credit Note after Purchase",
-    "docstatus": 0,
-    "doctype": "Navari eTims Purchase Receipt Type",
-    "modified": "2024-04-05 12:02:32.096801",
-    "name": "Credit Note after Purchase",
-    "remark": null,
-    "sort_order": "2"
-  }
+ {
+  "code": "P",
+  "code_description": "Purchase",
+  "code_name": "Purchase",
+  "docstatus": 0,
+  "doctype": "Navari eTims Purchase Receipt Type",
+  "modified": "2024-04-05 12:01:02.336752",
+  "name": "Purchase",
+  "remark": null,
+  "sort_order": "1"
+ },
+ {
+  "code": "R",
+  "code_description": "Credit Note after Purchase",
+  "code_name": "Credit Note after Purchase",
+  "docstatus": 0,
+  "doctype": "Navari eTims Purchase Receipt Type",
+  "modified": "2024-04-05 12:02:32.096801",
+  "name": "Credit Note after Purchase",
+  "remark": null,
+  "sort_order": "2"
+ }
 ]

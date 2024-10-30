@@ -1,122 +1,122 @@
 [
-  {
-    "code": "01",
-    "code_description": "Incoming -Import",
-    "code_name": "Import",
-    "docstatus": 0,
-    "doctype": "Navari eTims Stock Movement Type",
-    "modified": "2024-03-20 11:58:39.465415",
-    "name": "01",
-    "sort_order": "1"
-  },
-  {
-    "code": "02",
-    "code_description": "Incoming -Purchase",
-    "code_name": "Purchase",
-    "docstatus": 0,
-    "doctype": "Navari eTims Stock Movement Type",
-    "modified": "2024-03-20 11:59:46.050208",
-    "name": "02",
-    "sort_order": "2"
-  },
-  {
-    "code": "04",
-    "code_description": "Incoming- Stock",
-    "code_name": "Stock Movement",
-    "docstatus": 0,
-    "doctype": "Navari eTims Stock Movement Type",
-    "modified": "2024-03-20 12:00:18.124798",
-    "name": "04",
-    "sort_order": "4"
-  },
-  {
-    "code": "05",
-    "code_description": "Incoming -Processing",
-    "code_name": "Processing",
-    "docstatus": 0,
-    "doctype": "Navari eTims Stock Movement Type",
-    "modified": "2024-03-20 12:00:33.779970",
-    "name": "05",
-    "sort_order": "5"
-  },
-  {
-    "code": "06",
-    "code_description": "Incoming -Adjustment",
-    "code_name": "Adjustment",
-    "docstatus": 0,
-    "doctype": "Navari eTims Stock Movement Type",
-    "modified": "2024-03-20 12:00:50.373324",
-    "name": "06",
-    "sort_order": "6"
-  },
-  {
-    "code": "11",
-    "code_description": "Outgoing -Sale",
-    "code_name": "Sale",
-    "docstatus": 0,
-    "doctype": "Navari eTims Stock Movement Type",
-    "modified": "2024-03-20 12:01:11.215147",
-    "name": "11",
-    "sort_order": "11"
-  },
-  {
-    "code": "12",
-    "code_description": "Outgoing- Return",
-    "code_name": "Return",
-    "docstatus": 0,
-    "doctype": "Navari eTims Stock Movement Type",
-    "modified": "2024-03-20 12:01:29.125650",
-    "name": "12",
-    "sort_order": "12"
-  },
-  {
-    "code": "13",
-    "code_description": "Outgoing- Stock Movement",
-    "code_name": "Stock Movement",
-    "docstatus": 0,
-    "doctype": "Navari eTims Stock Movement Type",
-    "modified": "2024-03-20 12:01:43.761513",
-    "name": "13",
-    "sort_order": "13"
-  },
-  {
-    "code": "14",
-    "code_description": "Outgoing- Processing",
-    "code_name": "Processing",
-    "docstatus": 0,
-    "doctype": "Navari eTims Stock Movement Type",
-    "modified": "2024-03-20 12:02:04.357600",
-    "name": "14",
-    "sort_order": "14"
-  },
-  {
-    "code": "15",
-    "code_description": "Outgoing -Discarding",
-    "code_name": "Discarding",
-    "docstatus": 0,
-    "doctype": "Navari eTims Stock Movement Type",
-    "modified": "2024-03-20 12:02:26.792979",
-    "name": "15",
-    "sort_order": "15"
-  },
-  {
-    "code": "16",
-    "code_description": "Outgoing -Adjustment",
-    "code_name": "Adjustment",
-    "docstatus": 0,
-    "doctype": "Navari eTims Stock Movement Type",
-    "modified": "2024-03-20 12:02:41.420053",
-    "name": "16",
-    "sort_order": "16"
-  },
-  {
-    "code": "03",
-    "code_description": "Incoming -Return",
-    "code_name": "Return",
-    "docstatus": 0,
-    "doctype": "Navari eTims Stock Movement Type",
-    "modified": "2024-03-20 12:00:00.545037",
-    "name": "03",
-    "sort_order": "3"
-  }
+ {
+  "code": "01",
+  "code_description": "Incoming -Import",
+  "code_name": "Import",
+  "docstatus": 0,
+  "doctype": "Navari eTims Stock Movement Type",
+  "modified": "2024-03-20 11:58:39.465415",
+  "name": "01",
+  "sort_order": "1"
+ },
+ {
+  "code": "02",
+  "code_description": "Incoming -Purchase",
+  "code_name": "Purchase",
+  "docstatus": 0,
+  "doctype": "Navari eTims Stock Movement Type",
+  "modified": "2024-03-20 11:59:46.050208",
+  "name": "02",
+  "sort_order": "2"
+ },
+ {
+  "code": "04",
+  "code_description": "Incoming- Stock",
+  "code_name": "Stock Movement",
+  "docstatus": 0,
+  "doctype": "Navari eTims Stock Movement Type",
+  "modified": "2024-03-20 12:00:18.124798",
+  "name": "04",
+  "sort_order": "4"
+ },
+ {
+  "code": "05",
+  "code_description": "Incoming -Processing",
+  "code_name": "Processing",
+  "docstatus": 0,
+  "doctype": "Navari eTims Stock Movement Type",
+  "modified": "2024-03-20 12:00:33.779970",
+  "name": "05",
+  "sort_order": "5"
+ },
+ {
+  "code": "06",
+  "code_description": "Incoming -Adjustment",
+  "code_name": "Adjustment",
+  "docstatus": 0,
+  "doctype": "Navari eTims Stock Movement Type",
+  "modified": "2024-03-20 12:00:50.373324",
+  "name": "06",
+  "sort_order": "6"
+ },
+ {
+  "code": "11",
+  "code_description": "Outgoing -Sale",
+  "code_name": "Sale",
+  "docstatus": 0,
+  "doctype": "Navari eTims Stock Movement Type",
+  "modified": "2024-03-20 12:01:11.215147",
+  "name": "11",
+  "sort_order": "11"
+ },
+ {
+  "code": "12",
+  "code_description": "Outgoing- Return",
+  "code_name": "Return",
+  "docstatus": 0,
+  "doctype": "Navari eTims Stock Movement Type",
+  "modified": "2024-03-20 12:01:29.125650",
+  "name": "12",
+  "sort_order": "12"
+ },
+ {
+  "code": "13",
+  "code_description": "Outgoing- Stock Movement",
+  "code_name": "Stock Movement",
+  "docstatus": 0,
+  "doctype": "Navari eTims Stock Movement Type",
+  "modified": "2024-03-20 12:01:43.761513",
+  "name": "13",
+  "sort_order": "13"
+ },
+ {
+  "code": "14",
+  "code_description": "Outgoing- Processing",
+  "code_name": "Processing",
+  "docstatus": 0,
+  "doctype": "Navari eTims Stock Movement Type",
+  "modified": "2024-03-20 12:02:04.357600",
+  "name": "14",
+  "sort_order": "14"
+ },
+ {
+  "code": "15",
+  "code_description": "Outgoing -Discarding",
+  "code_name": "Discarding",
+  "docstatus": 0,
+  "doctype": "Navari eTims Stock Movement Type",
+  "modified": "2024-03-20 12:02:26.792979",
+  "name": "15",
+  "sort_order": "15"
+ },
+ {
+  "code": "16",
+  "code_description": "Outgoing -Adjustment",
+  "code_name": "Adjustment",
+  "docstatus": 0,
+  "doctype": "Navari eTims Stock Movement Type",
+  "modified": "2024-03-20 12:02:41.420053",
+  "name": "16",
+  "sort_order": "16"
+ },
+ {
+  "code": "03",
+  "code_description": "Incoming -Return",
+  "code_name": "Return",
+  "docstatus": 0,
+  "doctype": "Navari eTims Stock Movement Type",
+  "modified": "2024-03-20 12:00:00.545037",
+  "name": "03",
+  "sort_order": "3"
+ }
 ]

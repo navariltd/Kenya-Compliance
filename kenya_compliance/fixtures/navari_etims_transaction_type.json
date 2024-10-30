@@ -1,46 +1,46 @@
 [
-  {
-    "code": "C",
-    "code_description": "Sales and purchase type : Copy",
-    "code_name": "Copy",
-    "docstatus": 0,
-    "doctype": "Navari eTims Transaction Type",
-    "modified": "2024-04-28 16:59:05.237478",
-    "name": "Copy",
-    "remark": null,
-    "sort_order": "1"
-  },
-  {
-    "code": "N",
-    "code_description": " Sales and purchase type : Normal",
-    "code_name": "Normal",
-    "docstatus": 0,
-    "doctype": "Navari eTims Transaction Type",
-    "modified": "2024-04-28 16:59:45.667582",
-    "name": "Normal",
-    "remark": null,
-    "sort_order": "2"
-  },
-  {
-    "code": "P",
-    "code_description": "Sales and purchase type : Proforma",
-    "code_name": "Proforma",
-    "docstatus": 0,
-    "doctype": "Navari eTims Transaction Type",
-    "modified": "2024-04-28 17:00:52.342362",
-    "name": "Proforma",
-    "remark": "Proforma Invoice",
-    "sort_order": "3"
-  },
-  {
-    "code": "T",
-    "code_description": "Sales and purchase type : Training",
-    "code_name": "Training",
-    "docstatus": 0,
-    "doctype": "Navari eTims Transaction Type",
-    "modified": "2024-04-28 17:00:45.347116",
-    "name": "Training",
-    "remark": null,
-    "sort_order": "4"
-  }
+ {
+  "code": "C",
+  "code_description": "Sales and purchase type : Copy",
+  "code_name": "Copy",
+  "docstatus": 0,
+  "doctype": "Navari eTims Transaction Type",
+  "modified": "2024-04-28 16:59:05.237478",
+  "name": "Copy",
+  "remark": null,
+  "sort_order": "1"
+ },
+ {
+  "code": "N",
+  "code_description": " Sales and purchase type : Normal",
+  "code_name": "Normal",
+  "docstatus": 0,
+  "doctype": "Navari eTims Transaction Type",
+  "modified": "2024-04-28 16:59:45.667582",
+  "name": "Normal",
+  "remark": null,
+  "sort_order": "2"
+ },
+ {
+  "code": "P",
+  "code_description": "Sales and purchase type : Proforma",
+  "code_name": "Proforma",
+  "docstatus": 0,
+  "doctype": "Navari eTims Transaction Type",
+  "modified": "2024-04-28 17:00:52.342362",
+  "name": "Proforma",
+  "remark": "Proforma Invoice",
+  "sort_order": "3"
+ },
+ {
+  "code": "T",
+  "code_description": "Sales and purchase type : Training",
+  "code_name": "Training",
+  "docstatus": 0,
+  "doctype": "Navari eTims Transaction Type",
+  "modified": "2024-04-28 17:00:45.347116",
+  "name": "Training",
+  "remark": null,
+  "sort_order": "4"
+ }
 ]

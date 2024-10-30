@@ -1,35 +1,35 @@
 [
-  {
-    "code": "2",
-    "code_description": "Finished Product",
-    "code_name": "Finished Product",
-    "docstatus": 0,
-    "doctype": "Navari eTims Product Type",
-    "modified": "2024-03-28 11:15:30.392290",
-    "name": "2",
-    "remark": null,
-    "sort_order": "2"
-  },
-  {
-    "code": "3",
-    "code_description": "Service without stock",
-    "code_name": "Service",
-    "docstatus": 0,
-    "doctype": "Navari eTims Product Type",
-    "modified": "2024-03-28 11:15:49.584379",
-    "name": "3",
-    "remark": null,
-    "sort_order": "3"
-  },
-  {
-    "code": "1",
-    "code_description": "Raw Material",
-    "code_name": "Raw Material",
-    "docstatus": 0,
-    "doctype": "Navari eTims Product Type",
-    "modified": "2024-03-28 11:14:25.918164",
-    "name": "1",
-    "remark": null,
-    "sort_order": "1"
-  }
+ {
+  "code": "2",
+  "code_description": "Finished Product",
+  "code_name": "Finished Product",
+  "docstatus": 0,
+  "doctype": "Navari eTims Product Type",
+  "modified": "2024-03-28 11:15:30.392290",
+  "name": "2",
+  "remark": null,
+  "sort_order": "2"
+ },
+ {
+  "code": "3",
+  "code_description": "Service without stock",
+  "code_name": "Service",
+  "docstatus": 0,
+  "doctype": "Navari eTims Product Type",
+  "modified": "2024-03-28 11:15:49.584379",
+  "name": "3",
+  "remark": null,
+  "sort_order": "3"
+ },
+ {
+  "code": "1",
+  "code_description": "Raw Material",
+  "code_name": "Raw Material",
+  "docstatus": 0,
+  "doctype": "Navari eTims Product Type",
+  "modified": "2024-03-28 11:14:25.918164",
+  "name": "1",
+  "remark": null,
+  "sort_order": "1"
+ }
 ]

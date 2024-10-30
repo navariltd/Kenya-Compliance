@@ -1,46 +1,46 @@
 [
-  {
-    "code": "1",
-    "code_description": null,
-    "code_name": "Unsent",
-    "docstatus": 0,
-    "doctype": "Navari eTims Import Item Status",
-    "modified": "2024-04-11 10:20:51.055155",
-    "name": "Unsent",
-    "remark": null,
-    "sort_order": "1"
-  },
-  {
-    "code": "2",
-    "code_description": null,
-    "code_name": "Waiting",
-    "docstatus": 0,
-    "doctype": "Navari eTims Import Item Status",
-    "modified": "2024-04-11 10:21:07.483768",
-    "name": "Waiting",
-    "remark": null,
-    "sort_order": "2"
-  },
-  {
-    "code": "4",
-    "code_description": null,
-    "code_name": "Cancelled",
-    "docstatus": 0,
-    "doctype": "Navari eTims Import Item Status",
-    "modified": "2024-04-11 10:21:38.992336",
-    "name": "Cancelled",
-    "remark": null,
-    "sort_order": "4"
-  },
-  {
-    "code": "3",
-    "code_description": null,
-    "code_name": "Approved",
-    "docstatus": 0,
-    "doctype": "Navari eTims Import Item Status",
-    "modified": "2024-04-11 10:21:23.961111",
-    "name": "Approved",
-    "remark": null,
-    "sort_order": "3"
-  }
+ {
+  "code": "1",
+  "code_description": null,
+  "code_name": "Unsent",
+  "docstatus": 0,
+  "doctype": "Navari eTims Import Item Status",
+  "modified": "2024-04-11 10:20:51.055155",
+  "name": "Unsent",
+  "remark": null,
+  "sort_order": "1"
+ },
+ {
+  "code": "2",
+  "code_description": null,
+  "code_name": "Waiting",
+  "docstatus": 0,
+  "doctype": "Navari eTims Import Item Status",
+  "modified": "2024-04-11 10:21:07.483768",
+  "name": "Waiting",
+  "remark": null,
+  "sort_order": "2"
+ },
+ {
+  "code": "4",
+  "code_description": null,
+  "code_name": "Cancelled",
+  "docstatus": 0,
+  "doctype": "Navari eTims Import Item Status",
+  "modified": "2024-04-11 10:21:38.992336",
+  "name": "Cancelled",
+  "remark": null,
+  "sort_order": "4"
+ },
+ {
+  "code": "3",
+  "code_description": null,
+  "code_name": "Approved",
+  "docstatus": 0,
+  "doctype": "Navari eTims Import Item Status",
+  "modified": "2024-04-11 10:21:23.961111",
+  "name": "Approved",
+  "remark": null,
+  "sort_order": "3"
+ }
 ]

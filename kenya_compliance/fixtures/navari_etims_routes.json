@@ -1,190 +1,190 @@
 [
-  {
-    "docstatus": 0,
-    "doctype": "Navari eTims Routes",
-    "modified": "2024-04-16 16:49:15.998437",
-    "name": "Navari eTims Routes",
-    "routes_table": [
-      {
-        "description": null,
-        "last_request_date": "2024-04-16 16:01:45",
-        "parent": "Navari eTims Routes",
-        "parentfield": "routes_table",
-        "parenttype": "Navari eTims Routes",
-        "url_path": "/selectInitOsdcInfo",
-        "url_path_function": "DeviceVerificationReq"
-      },
-      {
-        "description": null,
-        "last_request_date": "2024-04-17 12:28:33",
-        "parent": "Navari eTims Routes",
-        "parentfield": "routes_table",
-        "parenttype": "Navari eTims Routes",
-        "url_path": "/selectCodeList",
-        "url_path_function": "CodeSearchReq"
-      },
-      {
-        "description": null,
-        "last_request_date": "2000-01-01 15:13:33",
-        "parent": "Navari eTims Routes",
-        "parentfield": "routes_table",
-        "parenttype": "Navari eTims Routes",
-        "url_path": "/selectCustomer",
-        "url_path_function": "CustSearchReq"
-      },
-      {
-        "description": null,
-        "last_request_date": "2024-04-16 16:17:05",
-        "parent": "Navari eTims Routes",
-        "parentfield": "routes_table",
-        "parenttype": "Navari eTims Routes",
-        "url_path": "/selectNoticeList",
-        "url_path_function": "NoticeSearchReq"
-      },
-      {
-        "description": null,
-        "last_request_date": "2024-04-17 12:28:45",
-        "parent": "Navari eTims Routes",
-        "parentfield": "routes_table",
-        "parenttype": "Navari eTims Routes",
-        "url_path": "/selectItemClsList",
-        "url_path_function": "ItemClsSearchReq"
-      },
-      {
-        "description": null,
-        "last_request_date": "2024-04-17 08:29:20",
-        "parent": "Navari eTims Routes",
-        "parentfield": "routes_table",
-        "parenttype": "Navari eTims Routes",
-        "url_path": "/saveItem",
-        "url_path_function": "ItemSaveReq"
-      },
-      {
-        "description": null,
-        "last_request_date": "2000-01-01 15:13:33",
-        "parent": "Navari eTims Routes",
-        "parentfield": "routes_table",
-        "parenttype": "Navari eTims Routes",
-        "url_path": "/selectItemList",
-        "url_path_function": "ItemSearchReq"
-      },
-      {
-        "description": null,
-        "last_request_date": "2024-04-16 16:17:10",
-        "parent": "Navari eTims Routes",
-        "parentfield": "routes_table",
-        "parenttype": "Navari eTims Routes",
-        "url_path": "/selectBhfList",
-        "url_path_function": "BhfSearchReq"
-      },
-      {
-        "description": null,
-        "last_request_date": "2024-04-16 16:34:47",
-        "parent": "Navari eTims Routes",
-        "parentfield": "routes_table",
-        "parenttype": "Navari eTims Routes",
-        "url_path": "/saveBhfCustomer",
-        "url_path_function": "BhfCustSaveReq"
-      },
-      {
-        "description": null,
-        "last_request_date": "2024-04-16 16:34:51",
-        "parent": "Navari eTims Routes",
-        "parentfield": "routes_table",
-        "parenttype": "Navari eTims Routes",
-        "url_path": "/saveBhfUser",
-        "url_path_function": "BhfUserSaveReq"
-      },
-      {
-        "description": null,
-        "last_request_date": "2024-04-16 16:34:48",
-        "parent": "Navari eTims Routes",
-        "parentfield": "routes_table",
-        "parenttype": "Navari eTims Routes",
-        "url_path": "/saveBhfInsurance",
-        "url_path_function": "BhfInsuranceSaveReq"
-      },
-      {
-        "description": null,
-        "last_request_date": "2024-04-16 16:58:21",
-        "parent": "Navari eTims Routes",
-        "parentfield": "routes_table",
-        "parenttype": "Navari eTims Routes",
-        "url_path": "/selectImportItemList",
-        "url_path_function": "ImportItemSearchReq"
-      },
-      {
-        "description": null,
-        "last_request_date": "2000-01-01 15:13:33",
-        "parent": "Navari eTims Routes",
-        "parentfield": "routes_table",
-        "parenttype": "Navari eTims Routes",
-        "url_path": "/updateImportItem",
-        "url_path_function": "ImportItemUpdateReq"
-      },
-      {
-        "description": null,
-        "last_request_date": "2000-01-01 15:13:33",
-        "parent": "Navari eTims Routes",
-        "parentfield": "routes_table",
-        "parenttype": "Navari eTims Routes",
-        "url_path": "/saveTrnsSalesOsdc",
-        "url_path_function": "TrnsSalesSaveWrReq"
-      },
-      {
-        "description": null,
-        "last_request_date": "2000-01-01 15:13:33",
-        "parent": "Navari eTims Routes",
-        "parentfield": "routes_table",
-        "parenttype": "Navari eTims Routes",
-        "url_path": "/selectTrnsPurchaseSalesList",
-        "url_path_function": "TrnsPurchaseSalesReq"
-      },
-      {
-        "description": null,
-        "last_request_date": "2000-01-01 15:13:33",
-        "parent": "Navari eTims Routes",
-        "parentfield": "routes_table",
-        "parenttype": "Navari eTims Routes",
-        "url_path": "/insertTrnsPurchase",
-        "url_path_function": "TrnsPurchaseSaveReq"
-      },
-      {
-        "description": null,
-        "last_request_date": "2000-01-01 15:13:33",
-        "parent": "Navari eTims Routes",
-        "parentfield": "routes_table",
-        "parenttype": "Navari eTims Routes",
-        "url_path": "/selectStockMoveList",
-        "url_path_function": "StockMoveReq"
-      },
-      {
-        "description": null,
-        "last_request_date": "2000-01-01 15:13:33",
-        "parent": "Navari eTims Routes",
-        "parentfield": "routes_table",
-        "parenttype": "Navari eTims Routes",
-        "url_path": "/insertStockIO",
-        "url_path_function": "StockIOSaveReq"
-      },
-      {
-        "description": null,
-        "last_request_date": "2024-04-17 08:27:29",
-        "parent": "Navari eTims Routes",
-        "parentfield": "routes_table",
-        "parenttype": "Navari eTims Routes",
-        "url_path": "/saveStockMaster",
-        "url_path_function": "StockMasterSaveReq"
-      },
-      {
-        "description": null,
-        "last_request_date": "2024-04-17 08:29:50",
-        "parent": "Navari eTims Routes",
-        "parentfield": "routes_table",
-        "parenttype": "Navari eTims Routes",
-        "url_path": "/saveItemComposition",
-        "url_path_function": "SaveItemComposition"
-      }
-    ]
-  }
+ {
+  "docstatus": 0,
+  "doctype": "Navari eTims Routes",
+  "modified": "2024-04-16 16:49:15.998437",
+  "name": "Navari eTims Routes",
+  "routes_table": [
+   {
+    "description": null,
+    "last_request_date": "2024-04-16 16:01:45",
+    "parent": "Navari eTims Routes",
+    "parentfield": "routes_table",
+    "parenttype": "Navari eTims Routes",
+    "url_path": "/selectInitOsdcInfo",
+    "url_path_function": "DeviceVerificationReq"
+   },
+   {
+    "description": null,
+    "last_request_date": "2024-04-17 12:28:33",
+    "parent": "Navari eTims Routes",
+    "parentfield": "routes_table",
+    "parenttype": "Navari eTims Routes",
+    "url_path": "/selectCodeList",
+    "url_path_function": "CodeSearchReq"
+   },
+   {
+    "description": null,
+    "last_request_date": "2000-01-01 15:13:33",
+    "parent": "Navari eTims Routes",
+    "parentfield": "routes_table",
+    "parenttype": "Navari eTims Routes",
+    "url_path": "/selectCustomer",
+    "url_path_function": "CustSearchReq"
+   },
+   {
+    "description": null,
+    "last_request_date": "2024-04-16 16:17:05",
+    "parent": "Navari eTims Routes",
+    "parentfield": "routes_table",
+    "parenttype": "Navari eTims Routes",
+    "url_path": "/selectNoticeList",
+    "url_path_function": "NoticeSearchReq"
+   },
+   {
+    "description": null,
+    "last_request_date": "2024-04-17 12:28:45",
+    "parent": "Navari eTims Routes",
+    "parentfield": "routes_table",
+    "parenttype": "Navari eTims Routes",
+    "url_path": "/selectItemClsList",
+    "url_path_function": "ItemClsSearchReq"
+   },
+   {
+    "description": null,
+    "last_request_date": "2024-04-17 08:29:20",
+    "parent": "Navari eTims Routes",
+    "parentfield": "routes_table",
+    "parenttype": "Navari eTims Routes",
+    "url_path": "/saveItem",
+    "url_path_function": "ItemSaveReq"
+   },
+   {
+    "description": null,
+    "last_request_date": "2000-01-01 15:13:33",
+    "parent": "Navari eTims Routes",
+    "parentfield": "routes_table",
+    "parenttype": "Navari eTims Routes",
+    "url_path": "/selectItemList",
+    "url_path_function": "ItemSearchReq"
+   },
+   {
+    "description": null,
+    "last_request_date": "2024-04-16 16:17:10",
+    "parent": "Navari eTims Routes",
+    "parentfield": "routes_table",
+    "parenttype": "Navari eTims Routes",
+    "url_path": "/selectBhfList",
+    "url_path_function": "BhfSearchReq"
+   },
+   {
+    "description": null,
+    "last_request_date": "2024-04-16 16:34:47",
+    "parent": "Navari eTims Routes",
+    "parentfield": "routes_table",
+    "parenttype": "Navari eTims Routes",
+    "url_path": "/saveBhfCustomer",
+    "url_path_function": "BhfCustSaveReq"
+   },
+   {
+    "description": null,
+    "last_request_date": "2024-04-16 16:34:51",
+    "parent": "Navari eTims Routes",
+    "parentfield": "routes_table",
+    "parenttype": "Navari eTims Routes",
+    "url_path": "/saveBhfUser",
+    "url_path_function": "BhfUserSaveReq"
+   },
+   {
+    "description": null,
+    "last_request_date": "2024-04-16 16:34:48",
+    "parent": "Navari eTims Routes",
+    "parentfield": "routes_table",
+    "parenttype": "Navari eTims Routes",
+    "url_path": "/saveBhfInsurance",
+    "url_path_function": "BhfInsuranceSaveReq"
+   },
+   {
+    "description": null,
+    "last_request_date": "2024-04-16 16:58:21",
+    "parent": "Navari eTims Routes",
+    "parentfield": "routes_table",
+    "parenttype": "Navari eTims Routes",
+    "url_path": "/selectImportItemList",
+    "url_path_function": "ImportItemSearchReq"
+   },
+   {
+    "description": null,
+    "last_request_date": "2000-01-01 15:13:33",
+    "parent": "Navari eTims Routes",
+    "parentfield": "routes_table",
+    "parenttype": "Navari eTims Routes",
+    "url_path": "/updateImportItem",
+    "url_path_function": "ImportItemUpdateReq"
+   },
+   {
+    "description": null,
+    "last_request_date": "2000-01-01 15:13:33",
+    "parent": "Navari eTims Routes",
+    "parentfield": "routes_table",
+    "parenttype": "Navari eTims Routes",
+    "url_path": "/saveTrnsSalesOsdc",
+    "url_path_function": "TrnsSalesSaveWrReq"
+   },
+   {
+    "description": null,
+    "last_request_date": "2000-01-01 15:13:33",
+    "parent": "Navari eTims Routes",
+    "parentfield": "routes_table",
+    "parenttype": "Navari eTims Routes",
+    "url_path": "/selectTrnsPurchaseSalesList",
+    "url_path_function": "TrnsPurchaseSalesReq"
+   },
+   {
+    "description": null,
+    "last_request_date": "2000-01-01 15:13:33",
+    "parent": "Navari eTims Routes",
+    "parentfield": "routes_table",
+    "parenttype": "Navari eTims Routes",
+    "url_path": "/insertTrnsPurchase",
+    "url_path_function": "TrnsPurchaseSaveReq"
+   },
+   {
+    "description": null,
+    "last_request_date": "2000-01-01 15:13:33",
+    "parent": "Navari eTims Routes",
+    "parentfield": "routes_table",
+    "parenttype": "Navari eTims Routes",
+    "url_path": "/selectStockMoveList",
+    "url_path_function": "StockMoveReq"
+   },
+   {
+    "description": null,
+    "last_request_date": "2000-01-01 15:13:33",
+    "parent": "Navari eTims Routes",
+    "parentfield": "routes_table",
+    "parenttype": "Navari eTims Routes",
+    "url_path": "/insertStockIO",
+    "url_path_function": "StockIOSaveReq"
+   },
+   {
+    "description": null,
+    "last_request_date": "2024-04-17 08:27:29",
+    "parent": "Navari eTims Routes",
+    "parentfield": "routes_table",
+    "parenttype": "Navari eTims Routes",
+    "url_path": "/saveStockMaster",
+    "url_path_function": "StockMasterSaveReq"
+   },
+   {
+    "description": null,
+    "last_request_date": "2024-04-17 08:29:50",
+    "parent": "Navari eTims Routes",
+    "parentfield": "routes_table",
+    "parenttype": "Navari eTims Routes",
+    "url_path": "/saveItemComposition",
+    "url_path_function": "SaveItemComposition"
+   }
+  ]
+ }
 ]

@@ -1,62 +1,62 @@
 [
-  {
-    "code": "03",
-    "code_description": "Cancel Requested",
-    "code_name": "Cancel Requested",
-    "docstatus": 0,
-    "doctype": "Navari KRA eTims Transaction Progress",
-    "modified": "2024-03-11 15:27:38.964102",
-    "name": "Cancel Requested",
-    "sort_order": 3
-  },
-  {
-    "code": "04",
-    "code_description": "Canceled",
-    "code_name": "Canceled",
-    "docstatus": 0,
-    "doctype": "Navari KRA eTims Transaction Progress",
-    "modified": "2024-03-11 15:27:49.106912",
-    "name": "Canceled",
-    "sort_order": 4
-  },
-  {
-    "code": "05",
-    "code_description": "Credit Note Generated",
-    "code_name": "Credit Note Generated",
-    "docstatus": 0,
-    "doctype": "Navari KRA eTims Transaction Progress",
-    "modified": "2024-03-11 15:28:02.847682",
-    "name": "Credit Note Generated",
-    "sort_order": 5
-  },
-  {
-    "code": "06",
-    "code_description": "Transferred",
-    "code_name": "Transferred",
-    "docstatus": 0,
-    "doctype": "Navari KRA eTims Transaction Progress",
-    "modified": "2024-03-11 15:28:13.617144",
-    "name": "Transferred",
-    "sort_order": 6
-  },
-  {
-    "code": "01",
-    "code_description": "Wait for Approval",
-    "code_name": "Wait for Approval",
-    "docstatus": 0,
-    "doctype": "Navari KRA eTims Transaction Progress",
-    "modified": "2024-03-11 15:27:01.848076",
-    "name": "Wait for Approval",
-    "sort_order": 1
-  },
-  {
-    "code": "02",
-    "code_description": "Approved",
-    "code_name": "Approved",
-    "docstatus": 0,
-    "doctype": "Navari KRA eTims Transaction Progress",
-    "modified": "2024-03-11 15:27:26.812218",
-    "name": "Approved",
-    "sort_order": 2
-  }
+ {
+  "code": "03",
+  "code_description": "Cancel Requested",
+  "code_name": "Cancel Requested",
+  "docstatus": 0,
+  "doctype": "Navari KRA eTims Transaction Progress",
+  "modified": "2024-03-11 15:27:38.964102",
+  "name": "Cancel Requested",
+  "sort_order": 3
+ },
+ {
+  "code": "04",
+  "code_description": "Canceled",
+  "code_name": "Canceled",
+  "docstatus": 0,
+  "doctype": "Navari KRA eTims Transaction Progress",
+  "modified": "2024-03-11 15:27:49.106912",
+  "name": "Canceled",
+  "sort_order": 4
+ },
+ {
+  "code": "05",
+  "code_description": "Credit Note Generated",
+  "code_name": "Credit Note Generated",
+  "docstatus": 0,
+  "doctype": "Navari KRA eTims Transaction Progress",
+  "modified": "2024-03-11 15:28:02.847682",
+  "name": "Credit Note Generated",
+  "sort_order": 5
+ },
+ {
+  "code": "06",
+  "code_description": "Transferred",
+  "code_name": "Transferred",
+  "docstatus": 0,
+  "doctype": "Navari KRA eTims Transaction Progress",
+  "modified": "2024-03-11 15:28:13.617144",
+  "name": "Transferred",
+  "sort_order": 6
+ },
+ {
+  "code": "01",
+  "code_description": "Wait for Approval",
+  "code_name": "Wait for Approval",
+  "docstatus": 0,
+  "doctype": "Navari KRA eTims Transaction Progress",
+  "modified": "2024-03-11 15:27:01.848076",
+  "name": "Wait for Approval",
+  "sort_order": 1
+ },
+ {
+  "code": "02",
+  "code_description": "Approved",
+  "code_name": "Approved",
+  "docstatus": 0,
+  "doctype": "Navari KRA eTims Transaction Progress",
+  "modified": "2024-03-11 15:27:26.812218",
+  "name": "Approved",
+  "sort_order": 2
+ }
 ]

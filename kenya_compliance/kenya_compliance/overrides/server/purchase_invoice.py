@@ -183,10 +183,10 @@ def get_items_details(doc: Document) -> list:
                 "splyAmt": item.base_amount,
                 "dcRt": quantize_number(item.discount_percentage) or 0,
                 "dcAmt": quantize_number(item.discount_amount) or 0,
-                "taxblAmt": quantize_number(taxable_amount),
+                "taxblAmt": quantize_number(abs(item.net_amount)),
                 "taxTyCd": item.custom_taxation_type or "B",
-                "taxAmt": quantize_number(tax_amount),
-                "totAmt": quantize_number(tax_amount + taxable_amount),
+                "taxAmt": quantize_number(abs(item.custom_tax_amount)) or 0,
+                "totAmt": quantize_number(abs(item.net_amount) + abs(item.custom_tax_amount)),
                 "itemExprDt": None,
             }
         )
