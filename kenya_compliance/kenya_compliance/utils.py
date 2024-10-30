@@ -376,9 +376,11 @@ def get_invoice_items_list(invoice: Document) -> list[dict[str, str | int | None
                 "isrcRt": None,
                 "isrcAmt": None,
                 "taxTyCd": item.custom_taxation_type_code,
-                "taxblAmt": taxable_amount,
-                "taxAmt": tax_amount,
-                "totAmt": (taxable_amount + tax_amount),
+                "taxblAmt": round(abs(item.net_amount), 2), #taxable_amount,
+                # "taxAmt": tax_amount,
+                "taxAmt": round(abs(item.custom_tax_amount), 2),
+                "totAmt": round(abs(item.net_amount) + abs(item.custom_tax_amount), 2),
+                # "totAmt": (taxable_amount + tax_amount),
             }
         )
 
@@ -472,3 +474,44 @@ def quantize_number(number: str | int | float) -> str:
 def split_user_email(email_string: str) -> str:
     """Retrieve portion before @ from an email string"""
     return email_string.split("@")[0]
+
+
+def calculate_tax(doc: "Document") -> None:
+    """Calculate tax for each item in the document based on item-level or document-level tax template."""
+    for item in doc.items:
+        tax: float = 0
+        tax_rate: float | None = None
+        
+        # Check if the item has its own Item Tax Template
+        if item.item_tax_template:
+            tax_rate = get_item_tax_rate(item.item_tax_template)
+        else:
+            continue
+        
+        # Calculate tax if we have a valid tax rate
+        if tax_rate is not None:
+            tax = item.net_amount * tax_rate / 100
+        
+        # Set the custom tax fields in the item
+        item.custom_tax_amount = tax
+        item.custom_tax_rate = tax_rate if tax_rate else 0
+
+def get_item_tax_rate(item_tax_template: str) -> float | None:
+    """Fetch the tax rate from the Item Tax Template."""
+    tax_template = frappe.get_doc("Item Tax Template", item_tax_template)
+    if tax_template.taxes:
+        return tax_template.taxes[0].tax_rate
+    return None
+
+'''Uncomment this function if you need document-level tax rate calculation in the future
+A classic example usecase is Apex tevin typecase where the tax rate is fetched from the document's Sales Taxes and Charges Template
+'''
+# def get_doc_tax_rate(doc_tax_template: str) -> float | None:
+#     """Fetch the tax rate from the document's Sales Taxes and Charges Template."""
+#     tax_template = frappe.get_doc("Sales Taxes and Charges Template", doc_tax_template)
+#     if tax_template.taxes:
+#         return tax_template.taxes[0].rate
+#     return None
+
+def before_save_(doc: "Document", method: str | None = None) -> None:
+    calculate_tax(doc)
