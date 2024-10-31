@@ -269,9 +269,10 @@ def build_invoice_payload(
     payload = {
         # FIXME: Use document's naming series to get invcNo and not etims_serial_number field
         # FIXME: The document's number series should be based off of the branch. Switching branches should reset the number series
-        "invcNo": frappe.db.get_value(
-            "Sales Invoice", {"name": invoice.name}, ["etims_serial_number"]
-        ),
+        # "invcNo": frappe.db.get_value(
+        #     "Sales Invoice", {"name": invoice.name}, ["etims_serial_number"]
+        # ),
+        "invcNo":get_invoice_number(invoice.name),
         "orgInvcNo": (
             0
             if invoice_type_identifier == "S"
@@ -330,7 +331,6 @@ def build_invoice_payload(
         },
         "itemList": items_list,
     }
-
     return payload
 
 
@@ -344,17 +344,17 @@ def get_invoice_items_list(invoice: Document) -> list[dict[str, str | int | None
         list[dict[str, str | int | None]]: The parsed data as a list of dictionaries
     """
     # FIXME: Handle cases where same item can appear on different lines with different rates etc.
-    item_taxes = get_itemised_tax_breakup_data(invoice)
+    # item_taxes = get_itemised_tax_breakup_data(invoice)
     items_list = []
 
     for index, item in enumerate(invoice.items):
-        taxable_amount = round(int(item_taxes[index]["taxable_amount"]), 2)
-        actual_tax_amount = 0
+        # taxable_amount = round(int(item_taxes[index]["taxable_amount"]), 2)
+        # actual_tax_amount = 0
         tax_head = invoice.taxes[0].description  # Fetch tax head from taxes table
 
-        actual_tax_amount = item_taxes[index][tax_head]["tax_amount"]
+        # actual_tax_amount = item_taxes[index][tax_head]["tax_amount"]
 
-        tax_amount = round(actual_tax_amount, 2)
+        # tax_amount = round(actual_tax_amount, 2)
 
         items_list.append(
             {
@@ -376,10 +376,10 @@ def get_invoice_items_list(invoice: Document) -> list[dict[str, str | int | None
                 "isrcRt": None,
                 "isrcAmt": None,
                 "taxTyCd": item.custom_taxation_type_code,
-                "taxblAmt": round(abs(item.net_amount), 2), #taxable_amount,
+                "taxblAmt": round(item.net_amount, 2), #taxable_amount,
                 # "taxAmt": tax_amount,
-                "taxAmt": round(abs(item.custom_tax_amount), 2),
-                "totAmt": round(abs(item.net_amount) + abs(item.custom_tax_amount), 2),
+                "taxAmt": round(item.custom_tax_amount, 2),
+                "totAmt": round(item.net_amount + item.custom_tax_amount, 2),
                 # "totAmt": (taxable_amount + tax_amount),
             }
         )
@@ -515,3 +515,19 @@ A classic example usecase is Apex tevin typecase where the tax rate is fetched f
 
 def before_save_(doc: "Document", method: str | None = None) -> None:
     calculate_tax(doc)
+
+def get_invoice_number(invoice_name):
+    """
+    Extracts the numeric portion from the invoice naming series.
+    
+    Args:
+        invoice_name (str): The name of the Sales Invoice document (e.g., 'eTIMS-INV-00-00001').
+
+    Returns:
+        int: The extracted invoice number.
+    """
+    parts = invoice_name.split('-')
+    if len(parts) >= 3:
+        return int(parts[-1])
+    else:
+        raise ValueError("Invoice name format is incorrect")
