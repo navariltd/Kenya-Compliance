@@ -252,6 +252,9 @@ doc_events = {
         "validate": [
             "kenya_compliance.kenya_compliance.overrides.server.shared_overrides.validate"
         ],
+        "before_cancel":[
+            "kenya_compliance.kenya_compliance.overrides.server.sales_invoice.before_cancel"
+        ],
     },
     "Purchase Invoice": {
         "before_save":[

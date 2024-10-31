@@ -266,13 +266,16 @@ def build_invoice_payload(
 
     items_list = get_invoice_items_list(invoice)
 
+    invoice_name=invoice.name
+    if invoice.amended_from is not None:
+        invoice_name=clean_invc_no(invoice_name)
     payload = {
         # FIXME: Use document's naming series to get invcNo and not etims_serial_number field
         # FIXME: The document's number series should be based off of the branch. Switching branches should reset the number series
         # "invcNo": frappe.db.get_value(
         #     "Sales Invoice", {"name": invoice.name}, ["etims_serial_number"]
         # ),
-        "invcNo":get_invoice_number(invoice.name),
+        "invcNo":get_invoice_number(invoice_name),
         "orgInvcNo": (
             0
             if invoice_type_identifier == "S"
@@ -280,7 +283,7 @@ def build_invoice_payload(
                 "Sales Invoice", invoice.return_against
             ).custom_submission_sequence_number
         ),
-        "trdInvcNo": invoice.name,
+        "trdInvcNo": invoice_name,
         "custTin": invoice.tax_id if invoice.tax_id else None,
         "custNm": None,
         "rcptTyCd": invoice_type_identifier if invoice_type_identifier == "S" else "R",
@@ -331,6 +334,7 @@ def build_invoice_payload(
         },
         "itemList": items_list,
     }
+    # frappe.throw(str(payload))
     return payload
 
 
@@ -531,3 +535,10 @@ def get_invoice_number(invoice_name):
         return int(parts[-1])
     else:
         raise ValueError("Invoice name format is incorrect")
+
+'''For cancelled and amended invoices'''
+def clean_invc_no(invoice_name):
+    if "-" in invoice_name:
+        invoice_name = "-".join(invoice_name.split("-")[:-1])
+    return invoice_name
+
