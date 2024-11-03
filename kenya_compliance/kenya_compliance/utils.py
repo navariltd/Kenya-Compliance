@@ -266,12 +266,16 @@ def build_invoice_payload(
 
     items_list = get_invoice_items_list(invoice)
 
+    invoice_name=invoice.name
+    if invoice.amended_from is not None:
+        invoice_name=clean_invc_no(invoice_name)
     payload = {
         # FIXME: Use document's naming series to get invcNo and not etims_serial_number field
         # FIXME: The document's number series should be based off of the branch. Switching branches should reset the number series
-        "invcNo": frappe.db.get_value(
-            "Sales Invoice", {"name": invoice.name}, ["etims_serial_number"]
-        ),
+        # "invcNo": frappe.db.get_value(
+        #     "Sales Invoice", {"name": invoice.name}, ["etims_serial_number"]
+        # ),
+        "invcNo":get_invoice_number(invoice_name),
         "orgInvcNo": (
             0
             if invoice_type_identifier == "S"
@@ -279,7 +283,7 @@ def build_invoice_payload(
                 "Sales Invoice", invoice.return_against
             ).custom_submission_sequence_number
         ),
-        "trdInvcNo": invoice.name,
+        "trdInvcNo": invoice_name,
         "custTin": invoice.tax_id if invoice.tax_id else None,
         "custNm": None,
         "rcptTyCd": invoice_type_identifier if invoice_type_identifier == "S" else "R",
@@ -330,7 +334,7 @@ def build_invoice_payload(
         },
         "itemList": items_list,
     }
-
+    # frappe.throw(str(payload))
     return payload
 
 
@@ -344,17 +348,17 @@ def get_invoice_items_list(invoice: Document) -> list[dict[str, str | int | None
         list[dict[str, str | int | None]]: The parsed data as a list of dictionaries
     """
     # FIXME: Handle cases where same item can appear on different lines with different rates etc.
-    item_taxes = get_itemised_tax_breakup_data(invoice)
+    # item_taxes = get_itemised_tax_breakup_data(invoice)
     items_list = []
 
     for index, item in enumerate(invoice.items):
-        taxable_amount = round(int(item_taxes[index]["taxable_amount"]), 2)
-        actual_tax_amount = 0
+        # taxable_amount = round(int(item_taxes[index]["taxable_amount"]), 2)
+        # actual_tax_amount = 0
         tax_head = invoice.taxes[0].description  # Fetch tax head from taxes table
 
-        actual_tax_amount = item_taxes[index][tax_head]["tax_amount"]
+        # actual_tax_amount = item_taxes[index][tax_head]["tax_amount"]
 
-        tax_amount = round(actual_tax_amount, 2)
+        # tax_amount = round(actual_tax_amount, 2)
 
         items_list.append(
             {
@@ -376,9 +380,11 @@ def get_invoice_items_list(invoice: Document) -> list[dict[str, str | int | None
                 "isrcRt": None,
                 "isrcAmt": None,
                 "taxTyCd": item.custom_taxation_type_code,
-                "taxblAmt": taxable_amount,
-                "taxAmt": tax_amount,
-                "totAmt": (taxable_amount + tax_amount),
+                "taxblAmt": round(item.net_amount, 2), #taxable_amount,
+                # "taxAmt": tax_amount,
+                "taxAmt": round(item.custom_tax_amount, 2),
+                "totAmt": round(item.net_amount + item.custom_tax_amount, 2),
+                # "totAmt": (taxable_amount + tax_amount),
             }
         )
 
@@ -472,3 +478,67 @@ def quantize_number(number: str | int | float) -> str:
 def split_user_email(email_string: str) -> str:
     """Retrieve portion before @ from an email string"""
     return email_string.split("@")[0]
+
+
+def calculate_tax(doc: "Document") -> None:
+    """Calculate tax for each item in the document based on item-level or document-level tax template."""
+    for item in doc.items:
+        tax: float = 0
+        tax_rate: float | None = None
+        
+        # Check if the item has its own Item Tax Template
+        if item.item_tax_template:
+            tax_rate = get_item_tax_rate(item.item_tax_template)
+        else:
+            continue
+        
+        # Calculate tax if we have a valid tax rate
+        if tax_rate is not None:
+            tax = item.net_amount * tax_rate / 100
+        
+        # Set the custom tax fields in the item
+        item.custom_tax_amount = tax
+        item.custom_tax_rate = tax_rate if tax_rate else 0
+
+def get_item_tax_rate(item_tax_template: str) -> float | None:
+    """Fetch the tax rate from the Item Tax Template."""
+    tax_template = frappe.get_doc("Item Tax Template", item_tax_template)
+    if tax_template.taxes:
+        return tax_template.taxes[0].tax_rate
+    return None
+
+'''Uncomment this function if you need document-level tax rate calculation in the future
+A classic example usecase is Apex tevin typecase where the tax rate is fetched from the document's Sales Taxes and Charges Template
+'''
+# def get_doc_tax_rate(doc_tax_template: str) -> float | None:
+#     """Fetch the tax rate from the document's Sales Taxes and Charges Template."""
+#     tax_template = frappe.get_doc("Sales Taxes and Charges Template", doc_tax_template)
+#     if tax_template.taxes:
+#         return tax_template.taxes[0].rate
+#     return None
+
+def before_save_(doc: "Document", method: str | None = None) -> None:
+    calculate_tax(doc)
+
+def get_invoice_number(invoice_name):
+    """
+    Extracts the numeric portion from the invoice naming series.
+    
+    Args:
+        invoice_name (str): The name of the Sales Invoice document (e.g., 'eTIMS-INV-00-00001').
+
+    Returns:
+        int: The extracted invoice number.
+    """
+    parts = invoice_name.split('-')
+    if len(parts) >= 3:
+        return int(parts[-1])
+    else:
+        raise ValueError("Invoice name format is incorrect")
+
+'''For cancelled and amended invoices'''
+def clean_invc_no(invoice_name):
+    if "-" in invoice_name:
+        invoice_name = "-".join(invoice_name.split("-")[:-1])
+    return invoice_name
+
