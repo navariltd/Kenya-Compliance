@@ -1,6 +1,6 @@
 // Copyright (c) 2024, Navari Ltd and contributors
 // For license information, please see license.txt
-const doctypeName = 'Navari eTims Registered Purchases';
+const doctypeName = "Navari eTims Registered Purchases";
 
 frappe.ui.form.on(doctypeName, {
   refresh: function (frm) {
@@ -8,11 +8,11 @@ frappe.ui.form.on(doctypeName, {
 
     if (!frm.is_new()) {
       frm.add_custom_button(
-        __('Create Supplier'),
+        __("Create Supplier"),
         function () {
           frappe.call({
             method:
-              'kenya_compliance.kenya_compliance.apis.apis.create_supplier_from_fetched_registered_purchases',
+              "kenya_compliance.kenya_compliance.apis.apis.create_supplier_from_fetched_registered_purchases",
             args: {
               request_data: {
                 name: frm.doc.name,
@@ -28,14 +28,14 @@ frappe.ui.form.on(doctypeName, {
             },
           });
         },
-        __('eTims Actions'),
+        __("eTims Actions")
       );
       frm.add_custom_button(
-        __('Create Items'),
+        __("Create Items"),
         function () {
           frappe.call({
             method:
-              'kenya_compliance.kenya_compliance.apis.apis.create_items_from_fetched_registered_purchases',
+              "kenya_compliance.kenya_compliance.apis.apis.create_items_from_fetched_registered_purchases",
             args: {
               request_data: {
                 name: frm.doc.name,
@@ -49,14 +49,14 @@ frappe.ui.form.on(doctypeName, {
             },
           });
         },
-        __('eTims Actions'),
+        __("eTims Actions")
       );
       frm.add_custom_button(
-        __('Create Purchase Invoice'),
+        __("Create Purchase Invoice"),
         function () {
           frappe.call({
             method:
-              'kenya_compliance.kenya_compliance.apis.apis.create_purchase_invoice_from_request',
+              "kenya_compliance.kenya_compliance.apis.apis.create_purchase_invoice_from_request",
             args: {
               request_data: {
                 name: frm.doc.name,
@@ -75,7 +75,7 @@ frappe.ui.form.on(doctypeName, {
             },
           });
         },
-        __('eTims Actions'),
+        __("eTims Actions")
       );
       // frm.add_custom_button(
       //   __("Create Purchase Receipt"),

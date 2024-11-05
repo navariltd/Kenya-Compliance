@@ -119,7 +119,7 @@ def build_purchase_invoice_payload(doc: Document) -> dict:
         "taxblAmtB": doc.custom_taxbl_amount_b or 0,
         "taxblAmtC": doc.custom_taxbl_amount_c or 0,
         "taxblAmtD": doc.custom_taxbl_amount_d or 0,
-        "taxblAmtE": doc.custom_taxbl_amount_e or 0,
+        "taxblAmtE": doc.custom_taxbl_amount_e or 0, 
         "taxRtA": 0,
         "taxRtB": 16 if doc.custom_tax_b else 0,
         "taxRtC": 0,

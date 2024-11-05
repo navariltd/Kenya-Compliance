@@ -283,3 +283,4 @@ class TestNavariKRAeTimsSettings(FrappeTestCase):
         new_setting.save()
 
         self.assertTrue(frappe.db.exists("Accounting Dimension", "Branch", cache=False))
+ 

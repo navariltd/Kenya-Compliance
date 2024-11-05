@@ -7,4 +7,4 @@ def on_submit(doc: Document, method: str) -> None:
     """Intercepts POS invoice on submit event"""
 
     if not doc.custom_successfully_submitted:
-        generic_invoices_on_submit_override(doc, "POS Invoice")
+        generic_invoices_on_submit_override(doc, "POS Invoice") 

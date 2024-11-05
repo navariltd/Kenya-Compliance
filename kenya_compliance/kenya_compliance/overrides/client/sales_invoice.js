@@ -1,15 +1,15 @@
-const parentDoctype = 'Sales Invoice';
+const parentDoctype = "Sales Invoice";
 const childDoctype = `${parentDoctype} Item`;
-const packagingUnitDoctypeName = 'Navari eTims Packaging Unit';
-const unitOfQuantityDoctypeName = 'Navari eTims Unit of Quantity';
-const taxationTypeDoctypeName = 'Navari KRA eTims Taxation Type';
-const settingsDoctypeName = 'Navari KRA eTims Settings';
+const packagingUnitDoctypeName = "Navari eTims Packaging Unit";
+const unitOfQuantityDoctypeName = "Navari eTims Unit of Quantity";
+const taxationTypeDoctypeName = "Navari KRA eTims Taxation Type";
+const settingsDoctypeName = "Navari KRA eTims Settings";
 
 frappe.ui.form.on(parentDoctype, {
   refresh: function (frm) {
-    frm.set_value('update_stock', 1);
+    frm.set_value("update_stock", 1);
     if (frm.doc.update_stock === 1) {
-      frm.toggle_reqd('set_warehouse', true);
+      frm.toggle_reqd("set_warehouse", true);
     }
   },
   validate: function (frm) {
@@ -18,26 +18,26 @@ frappe.ui.form.on(parentDoctype, {
       {
         is_active: 1,
         bhfid: frm.doc.branch,
-        company: frappe.defaults.get_user_default('Company'),
+        company: frappe.defaults.get_user_default("Company"),
       },
       [
-        'name',
-        'company',
-        'bhfid',
-        'sales_payment_type',
-        'sales_transaction_progress',
+        "name",
+        "company",
+        "bhfid",
+        "sales_payment_type",
+        "sales_transaction_progress",
       ],
       (response) => {
         if (!frm.doc.custom_payment_type) {
-          frm.set_value('custom_payment_type', response.sales_payment_type);
+          frm.set_value("custom_payment_type", response.sales_payment_type);
         }
         if (!frm.doc.custom_transaction_progres) {
           frm.set_value(
-            'custom_transaction_progres',
-            response.sales_transaction_progress,
+            "custom_transaction_progres",
+            response.sales_transaction_progress
           );
         }
-      },
+      }
     );
   },
 });
@@ -49,14 +49,14 @@ frappe.ui.form.on(childDoctype, {
 
     if (!taxationType) {
       frappe.db.get_value(
-        'Item',
+        "Item",
         { item_code: item },
-        ['custom_taxation_type'],
+        ["custom_taxation_type"],
         (response) => {
           locals[cdt][cdn].custom_taxation_type = response.custom_taxation_type;
           locals[cdt][cdn].custom_taxation_type_code =
             response.custom_taxation_type;
-        },
+        }
       );
     }
   },
@@ -69,12 +69,12 @@ frappe.ui.form.on(childDoctype, {
         {
           name: packagingUnit,
         },
-        ['code'],
+        ["code"],
         (response) => {
           const code = response.code;
           locals[cdt][cdn].custom_packaging_unit_code = code;
-          frm.refresh_field('custom_packaging_unit_code');
-        },
+          frm.refresh_field("custom_packaging_unit_code");
+        }
       );
     }
   },
@@ -87,12 +87,12 @@ frappe.ui.form.on(childDoctype, {
         {
           name: unitOfQuantity,
         },
-        ['code'],
+        ["code"],
         (response) => {
           const code = response.code;
           locals[cdt][cdn].custom_unit_of_quantity_code = code;
-          frm.refresh_field('custom_unit_of_quantity_code');
-        },
+          frm.refresh_field("custom_unit_of_quantity_code");
+        }
       );
     }
   },
