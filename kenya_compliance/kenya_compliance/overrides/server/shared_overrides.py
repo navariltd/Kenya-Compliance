@@ -74,32 +74,34 @@ def validate(doc: Document, method: str) -> None:
         frappe.defaults.get_user_default("Company"), doc.branch
     ).scu_id
 
-    item_taxes = get_itemised_tax_breakup_data(doc)
+    # item_taxes = get_itemised_tax_breakup_data(doc)
 
-    taxes_breakdown = defaultdict(list)
-    taxable_breakdown = defaultdict(list)
-    tax_head = doc.taxes[0].description
+    # taxes_breakdown = defaultdict(list)
+    # taxable_breakdown = defaultdict(list)
+    # tax_head = doc.taxes[0].description
 
-    for index, item in enumerate(doc.items):
-        taxes_breakdown[item.custom_taxation_type_code].append(
-            item_taxes[index][tax_head]["tax_amount"]
-        )
-        taxable_breakdown[item.custom_taxation_type_code].append(
-            item_taxes[index]["taxable_amount"]
-        )
+    # for index, item in enumerate(doc.items):
+    #     taxes_breakdown[item.custom_taxation_type_code].append(
+    #         item_taxes[index][tax_head]["tax_amount"]
+    #     )
+    #     taxable_breakdown[item.custom_taxation_type_code].append(
+    #         item_taxes[index]["taxable_amount"]
+    #     )
 
-    update_tax_breakdowns(doc, (taxes_breakdown, taxable_breakdown))
+    # update_tax_breakdowns(doc, (taxes_breakdown, taxable_breakdown))
 
 
-def update_tax_breakdowns(invoice: Document, mapping: tuple) -> None:
-    invoice.custom_tax_a = round(sum(mapping[0]["A"]), 2)
-    invoice.custom_tax_b = round(sum(mapping[0]["B"]), 2)
-    invoice.custom_tax_c = round(sum(mapping[0]["C"]), 2)
-    invoice.custom_tax_d = round(sum(mapping[0]["D"]), 2)
-    invoice.custom_tax_e = round(sum(mapping[0]["E"]), 2)
+# def update_tax_breakdowns(invoice: Document, mapping: tuple) -> None:
+#     invoice.custom_tax_a = round(sum(mapping[0]["A"]), 2)
+#     invoice.custom_tax_b = round(sum(mapping[0]["B"]), 2)
+#     invoice.custom_tax_c = round(sum(mapping[0]["C"]), 2)
+#     invoice.custom_tax_d = round(sum(mapping[0]["D"]), 2)
+#     invoice.custom_tax_e = round(sum(mapping[0]["E"]), 2)
 
-    invoice.custom_taxbl_amount_a = round(sum(mapping[1]["A"]), 2)
-    invoice.custom_taxbl_amount_b = round(sum(mapping[1]["B"]), 2)
-    invoice.custom_taxbl_amount_c = round(sum(mapping[1]["C"]), 2)
-    invoice.custom_taxbl_amount_d = round(sum(mapping[1]["D"]), 2)
-    invoice.custom_taxbl_amount_e = round(sum(mapping[1]["E"]), 2)
+#     invoice.custom_taxbl_amount_a = round(sum(mapping[1]["A"]), 2)
+#     invoice.custom_taxbl_amount_b = round(sum(mapping[1]["B"]), 2)
+#     invoice.custom_taxbl_amount_c = round(sum(mapping[1]["C"]), 2)
+#     invoice.custom_taxbl_amount_d = round(sum(mapping[1]["D"]), 2)
+#     invoice.custom_taxbl_amount_e = round(sum(mapping[1]["E"]), 2)
+
+

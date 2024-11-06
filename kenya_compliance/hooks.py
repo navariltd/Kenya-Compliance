@@ -266,6 +266,9 @@ doc_events = {
         "validate": [
             "kenya_compliance.kenya_compliance.overrides.server.purchase_invoice.validate"
         ],
+        "before_cancel":[
+            "kenya_compliance.kenya_compliance.overrides.server.sales_invoice.before_cancel"
+        ],
     },
     "Item": {
         "validate": [

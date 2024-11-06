@@ -15,6 +15,7 @@ import frappe
 from frappe.model.document import Document
 from erpnext.controllers.taxes_and_totals import get_itemised_tax_breakup_data
 
+
 from .doctype.doctype_names_mapping import (
     ENVIRONMENT_SPECIFICATION_DOCTYPE_NAME,
     ROUTES_TABLE_CHILD_DOCTYPE_NAME,
@@ -233,29 +234,30 @@ def extract_document_series_number(document: Document) -> int | None:
     if len(split_invoice_name) == 5:
         return int(split_invoice_name[-2])
 
-
 def build_invoice_payload(
     invoice: Document, invoice_type_identifier: Literal["S", "C"], company_name: str
-) -> dict[str, str | int]:
+) -> dict[str, str | int | float]:
+    # Retrieve taxation data for the invoice
+    taxation_type = get_taxation_types(invoice)
+    # frappe.throw(str(taxation_type))
     """Converts relevant invoice data to a JSON payload
 
     Args:
         invoice (Document): The Invoice record to generate data from
-        invoice_type_identifier (Literal[&quot;S&quot;, &quot;C&quot;]): The
-        Invoice type identifer. S for Sales Invoice, C for Credit Notes
+        invoice_type_identifier (Literal["S", "C"]): The
+        Invoice type identifier. S for Sales Invoice, C for Credit Notes
         company_name (str): The company name used to fetch the valid settings doctype record
 
     Returns:
-        dict[str, str | int]: The payload
+        dict[str, str | int | float]: The payload
     """
     post_time = invoice.posting_time
 
+    # Ensure post_time is a string if it's a timedelta
     if isinstance(post_time, timedelta):
-        # handles instances when the posting_time is not a string
-        # especially when doing bulk submissions
         post_time = str(post_time)
 
-    # TODO: Check why posting time is always invoice submit time
+    # Parse posting date and time
     posting_date = build_datetime_from_string(
         f"{invoice.posting_date} {post_time[:8].replace('.', '')}",
         format="%Y-%m-%d %H:%M:%S",
@@ -264,24 +266,19 @@ def build_invoice_payload(
     validated_date = posting_date.strftime("%Y%m%d%H%M%S")
     sales_date = posting_date.strftime("%Y%m%d")
 
+    # Fetch list of invoice items
     items_list = get_invoice_items_list(invoice)
 
-    invoice_name=invoice.name
-    if invoice.amended_from is not None:
-        invoice_name=clean_invc_no(invoice_name)
+    # Determine the invoice number format
+    invoice_name = invoice.name
+    if invoice.amended_from:
+        invoice_name = clean_invc_no(invoice_name)
+        
     payload = {
-        # FIXME: Use document's naming series to get invcNo and not etims_serial_number field
-        # FIXME: The document's number series should be based off of the branch. Switching branches should reset the number series
-        # "invcNo": frappe.db.get_value(
-        #     "Sales Invoice", {"name": invoice.name}, ["etims_serial_number"]
-        # ),
-        "invcNo":get_invoice_number(invoice_name),
+        "invcNo": get_invoice_number(invoice_name),
         "orgInvcNo": (
-            0
-            if invoice_type_identifier == "S"
-            else frappe.get_doc(
-                "Sales Invoice", invoice.return_against
-            ).custom_submission_sequence_number
+            0 if invoice_type_identifier == "S"
+            else frappe.get_doc("Sales Invoice", invoice.return_against).custom_submission_sequence_number
         ),
         "trdInvcNo": invoice_name,
         "custTin": invoice.tax_id if invoice.tax_id else None,
@@ -297,21 +294,22 @@ def build_invoice_payload(
         "rfdDt": None,
         "rfdRsnCd": None,
         "totItemCnt": len(items_list),
-        "taxblAmtA": invoice.custom_taxbl_amount_a,
-        "taxblAmtB": invoice.custom_taxbl_amount_b,
-        "taxblAmtC": invoice.custom_taxbl_amount_c,
-        "taxblAmtD": invoice.custom_taxbl_amount_d,
-        "taxblAmtE": invoice.custom_taxbl_amount_e,
-        "taxRtA": 0,
-        "taxRtB": 16 if invoice.custom_tax_b else 0,
-        "taxRtC": 0,
-        "taxRtD": 0,
-        "taxRtE": 8 if invoice.custom_tax_e else 0,
-        "taxAmtA": invoice.custom_tax_a,
-        "taxAmtB": invoice.custom_tax_b,
-        "taxAmtC": invoice.custom_tax_c,
-        "taxAmtD": invoice.custom_tax_d,
-        "taxAmtE": invoice.custom_tax_e,
+        
+        "taxRtA": taxation_type.get("A", {}).get("tax_rate", 0),
+        "taxRtB": taxation_type.get("B", {}).get("tax_rate", 0),
+        "taxRtC": taxation_type.get("C", {}).get("tax_rate", 0),
+        "taxRtD": taxation_type.get("D", {}).get("tax_rate", 0),
+        "taxRtE": taxation_type.get("E", {}).get("tax_rate", 0),
+        "taxAmtA": taxation_type.get("A", {}).get("tax_amount", 0),
+        "taxAmtB": taxation_type.get("B", {}).get("tax_amount", 0),
+        "taxAmtC": taxation_type.get("C", {}).get("tax_amount", 0),
+        "taxAmtD": taxation_type.get("D", {}).get("tax_amount", 0),
+        "taxAmtE": taxation_type.get("E", {}).get("tax_amount", 0),
+        "taxblAmtA": taxation_type.get("A", {}).get("taxable_amount", 0),
+        "taxblAmtB": taxation_type.get("B", {}).get("taxable_amount", 0),
+        "taxblAmtC": taxation_type.get("C", {}).get("taxable_amount", 0),
+        "taxblAmtD": taxation_type.get("D", {}).get("taxable_amount", 0),
+        "taxblAmtE": taxation_type.get("E", {}).get("taxable_amount", 0),
         "totTaxblAmt": round(invoice.base_net_total, 2),
         "totTaxAmt": round(invoice.total_taxes_and_charges, 2),
         "totAmt": round(invoice.grand_total, 2),
@@ -334,8 +332,114 @@ def build_invoice_payload(
         },
         "itemList": items_list,
     }
-    # frappe.throw(str(payload))
+    
     return payload
+
+# def build_invoice_payload(
+#     invoice: Document, invoice_type_identifier: Literal["S", "C"], company_name: str
+# ) -> dict[str, str | int]:
+#     taxation_type = get_taxation_types(invoice)
+#     # frappe.throw(str(taxation_type))
+   
+#     """Converts relevant invoice data to a JSON payload
+
+#     Args:
+#         invoice (Document): The Invoice record to generate data from
+#         invoice_type_identifier (Literal[&quot;S&quot;, &quot;C&quot;]): The
+#         Invoice type identifer. S for Sales Invoice, C for Credit Notes
+#         company_name (str): The company name used to fetch the valid settings doctype record
+
+#     Returns:
+#         dict[str, str | int]: The payload
+#     """
+#     post_time = invoice.posting_time
+
+#     if isinstance(post_time, timedelta):
+#         # handles instances when the posting_time is not a string
+#         # especially when doing bulk submissions
+#         post_time = str(post_time)
+
+#     # TODO: Check why posting time is always invoice submit time
+#     posting_date = build_datetime_from_string(
+#         f"{invoice.posting_date} {post_time[:8].replace('.', '')}",
+#         format="%Y-%m-%d %H:%M:%S",
+#     )
+
+#     validated_date = posting_date.strftime("%Y%m%d%H%M%S")
+#     sales_date = posting_date.strftime("%Y%m%d")
+
+#     items_list = get_invoice_items_list(invoice)
+
+#     invoice_name=invoice.name
+#     if invoice.amended_from is not None:
+#         invoice_name=clean_invc_no(invoice_name)
+#     payload = {
+#         # FIXME: Use document's naming series to get invcNo and not etims_serial_number field
+#         # FIXME: The document's number series should be based off of the branch. Switching branches should reset the number series
+#         # "invcNo": frappe.db.get_value(
+#         #     "Sales Invoice", {"name": invoice.name}, ["etims_serial_number"]
+#         # ),
+#         "invcNo":get_invoice_number(invoice_name),
+#         "orgInvcNo": (
+#             0
+#             if invoice_type_identifier == "S"
+#             else frappe.get_doc(
+#                 "Sales Invoice", invoice.return_against
+#             ).custom_submission_sequence_number
+#         ),
+#         "trdInvcNo": invoice_name,
+#         "custTin": invoice.tax_id if invoice.tax_id else None,
+#         "custNm": None,
+#         "rcptTyCd": invoice_type_identifier if invoice_type_identifier == "S" else "R",
+#         "pmtTyCd": invoice.custom_payment_type_code,
+#         "salesSttsCd": invoice.custom_transaction_progress_code,
+#         "cfmDt": validated_date,
+#         "salesDt": sales_date,
+#         "stockRlsDt": validated_date,
+#         "cnclReqDt": None,
+#         "cnclDt": None,
+#         "rfdDt": None,
+#         "rfdRsnCd": None,
+#         "totItemCnt": len(items_list),
+#         "taxblAmtA": invoice.custom_taxbl_amount_a,
+#         "taxblAmtB": invoice.custom_taxbl_amount_b,
+#         "taxblAmtC": invoice.custom_taxbl_amount_c,
+#         "taxblAmtD": invoice.custom_taxbl_amount_d,
+#         "taxblAmtE": invoice.custom_taxbl_amount_e,
+#         "taxRtA": 0,
+#         "taxRtB": 16 if invoice.custom_tax_b else 0,
+#         "taxRtC": 0,
+#         "taxRtD": 0,
+#         "taxRtE": 8 if invoice.custom_tax_e else 0,
+#         "taxAmtA": invoice.custom_tax_a,
+#         "taxAmtB": invoice.custom_tax_b,
+#         "taxAmtC": invoice.custom_tax_c,
+#         "taxAmtD": invoice.custom_tax_d,
+#         "taxAmtE": invoice.custom_tax_e,
+#         "totTaxblAmt": round(invoice.base_net_total, 2),
+#         "totTaxAmt": round(invoice.total_taxes_and_charges, 2),
+#         "totAmt": round(invoice.grand_total, 2),
+#         "prchrAcptcYn": "Y",
+#         "remark": None,
+#         "regrId": split_user_email(invoice.owner),
+#         "regrNm": invoice.owner,
+#         "modrId": split_user_email(invoice.modified_by),
+#         "modrNm": invoice.modified_by,
+#         "receipt": {
+#             "custTin": invoice.tax_id if invoice.tax_id else None,
+#             "custMblNo": None,
+#             "rptNo": 1,
+#             "rcptPbctDt": validated_date,
+#             "trdeNm": "",
+#             "adrs": "",
+#             "topMsg": "ERPNext",
+#             "btmMsg": "",
+#             "prchrAcptcYn": "Y",
+#         },
+#         "itemList": items_list,
+#     }
+#     # frappe.throw(str(payload))
+#     return payload
 
 
 def get_invoice_items_list(invoice: Document) -> list[dict[str, str | int | None]]:
@@ -354,7 +458,7 @@ def get_invoice_items_list(invoice: Document) -> list[dict[str, str | int | None
     for index, item in enumerate(invoice.items):
         # taxable_amount = round(int(item_taxes[index]["taxable_amount"]), 2)
         # actual_tax_amount = 0
-        tax_head = invoice.taxes[0].description  # Fetch tax head from taxes table
+        # tax_head = invoice.taxes[0].description  # Fetch tax head from taxes table
 
         # actual_tax_amount = item_taxes[index][tax_head]["tax_amount"]
 
@@ -542,3 +646,28 @@ def clean_invc_no(invoice_name):
         invoice_name = "-".join(invoice_name.split("-")[:-1])
     return invoice_name
 
+def get_taxation_types(doc):
+    taxation_totals = {}
+
+    # Loop through each item in the Sales Invoice
+    for item in doc.items:
+        taxation_type = item.custom_taxation_type
+        taxable_amount = item.net_amount  
+        tax_amount = item.custom_tax_amount  
+
+        # Fetch the tax rate for the current taxation type from the specified doctype
+        tax_rate = frappe.db.get_value("Navari KRA eTims Taxation Type", taxation_type, "userdfncd1")
+        # If the taxation type already exists in the dictionary, update the totals
+        if taxation_type in taxation_totals:
+            taxation_totals[taxation_type]["taxable_amount"] += taxable_amount
+            taxation_totals[taxation_type]["tax_amount"] += tax_amount
+
+        else:
+            taxation_totals[taxation_type] = {
+                "tax_rate": tax_rate,
+                "tax_amount": tax_amount,
+                "taxable_amount": taxable_amount
+            }
+
+
+    return taxation_totals
