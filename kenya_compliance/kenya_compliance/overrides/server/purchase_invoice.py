@@ -25,7 +25,8 @@ endpoints_builder = EndpointsBuilder()
 
 def validate(doc: Document, method: str) -> None:
     item_taxes = get_itemised_tax_breakup_data(doc)
-
+    if not doc.branch:
+        frappe.throw("Please ensure the branch is set before submitting the document")
     taxes_breakdown = defaultdict(list)
     taxable_breakdown = defaultdict(list)
     if not doc.taxes:

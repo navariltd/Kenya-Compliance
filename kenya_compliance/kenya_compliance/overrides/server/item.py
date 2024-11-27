@@ -9,6 +9,7 @@ from frappe.model.document import Document
 from .... import __version__
 from ...apis.apis import perform_item_registration
 from ...utils import split_user_email
+from frappe import _
 
 
 @deprecation.deprecated(
@@ -128,3 +129,8 @@ def validate(doc: Document, method: str) -> None:
             doc.set("taxes", [])
             for template in relevant_tax_templates:
                 doc.append("taxes", {"item_tax_template": template.name})
+
+@frappe.whitelist()
+def prevent_item_deletion(doc, method):
+    if doc.custom_item_registered == 1:  # Assuming 1 means registered, adjust as needed
+        frappe.throw(_("Cannot delete registered items"))

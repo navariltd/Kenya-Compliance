@@ -65,10 +65,12 @@ def bulk_submit_sales_invoices(docs_list: str) -> None:
 def bulk_register_item(docs_list: str) -> None:
     data = json.loads(docs_list)
     all_items = frappe.db.get_all("Item", {"custom_item_registered": 0}, ["name"])
-
     for record in data:
         for item in all_items:
-            if record == item.item_code:
+            if record == item.name:
+                item=frappe.get_doc("Item", record, for_update=False)
+                valuation_rate = item.valuation_rate if item.valuation_rate is not None else 0
+
                 request_data = {
                     "name": item.name,
                     "company_name": frappe.defaults.get_user_default("Company"),
@@ -83,7 +85,7 @@ def bulk_register_item(docs_list: str) -> None:
                     "taxTyCd": item.get("custom_taxation_type", "B"),
                     "btchNo": None,
                     "bcd": None,
-                    "dftPrc": round(item.valuation_rate, 2),
+                    "dftPrc": round(valuation_rate, 2),
                     "grpPrcL1": None,
                     "grpPrcL2": None,
                     "grpPrcL3": None,
@@ -98,7 +100,6 @@ def bulk_register_item(docs_list: str) -> None:
                     "modrId": split_user_email(item.modified_by),
                     "modrNm": item.modified_by,
                 }
-
                 perform_item_registration(request_data=json.dumps(request_data))
 
 
@@ -368,11 +369,12 @@ def perform_import_item_search(request_data: str) -> None:
 
     route_path, last_request_date = get_route_path("ImportItemSearchReq")
 
+    '''Use last_request_date as the last request date if it exists, else use the current date - 1 year'''
     if headers and server_url and route_path:
         request_date = add_to_date(datetime.now(), years=-1).strftime("%Y%m%d%H%M%S")
+        last_request_date = last_request_date.strftime("%Y%m%d%H%M%S") or request_date
         url = f"{server_url}{route_path}"
-        payload = {"lastReqDt": request_date}
-
+        payload = {"lastReqDt": last_request_date}
         endpoints_builder.headers = headers
         endpoints_builder.url = url
         endpoints_builder.payload = payload
@@ -395,7 +397,6 @@ def perform_import_item_search_all_branches() -> None:
         )
 
         perform_import_item_search(request_data)
-
 
 @frappe.whitelist()
 def perform_purchases_search(request_data: str) -> None:

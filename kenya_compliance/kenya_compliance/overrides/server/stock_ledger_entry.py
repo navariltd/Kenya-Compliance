@@ -222,7 +222,7 @@ def on_update(doc: Document, method: str | None = None) -> None:
 
     server_url = get_server_url(company_name, record.branch)
     route_path, last_request_date = get_route_path("StockIOSaveReq")
-
+    print(str(payload))
     if headers and server_url and route_path:
         url = f"{server_url}{route_path}"
 

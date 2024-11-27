@@ -78,7 +78,6 @@ def send_stock_information() -> None:
         {"docstatus": 1, "custom_submitted_successfully": 0},
         ["name"],
     )
-
     for entry in all_stock_ledger_entries:
         doc = frappe.get_doc(
             "Stock Ledger Entry", entry.name, for_update=False
