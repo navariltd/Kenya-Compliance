@@ -6,11 +6,4 @@ from frappe.model.document import Document
 
 
 class NavarieTimsRoutes(Document):
-    """Routes Table Doctype"""
-
-    def validate(self) -> None:
-        """Validation Hook"""
-
-        # Call validations in child tables
-        for child in self.routes_table:
-            child.validate()
+	pass

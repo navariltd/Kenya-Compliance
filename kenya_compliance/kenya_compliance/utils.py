@@ -110,29 +110,57 @@ def is_valid_url(url: str) -> bool:
     return bool(re.match(pattern, url))
 
 
+# def get_route_path(
+#     search_field: str,
+#     vendor: str,
+#     routes_table_doctype: str = ROUTES_TABLE_CHILD_DOCTYPE_NAME,
+# ) -> tuple[str, str] | None:
+
+#     query = f"""
+#     SELECT
+#         url_path,
+#         last_request_date
+#     FROM `tab{routes_table_doctype}`
+#     WHERE url_path_function LIKE '{search_field}'
+#     AND parent LIKE '{ROUTES_TABLE_DOCTYPE_NAME}'
+#     LIMIT 1
+#     """
+
+#     results = frappe.db.sql(query, as_dict=True)
+
+#     if results:
+#         return (results[0].url_path, results[0].last_request_date)
 def get_route_path(
     search_field: str,
+    vendor: str="OSCU KRA",
     routes_table_doctype: str = ROUTES_TABLE_CHILD_DOCTYPE_NAME,
+    parent_doctype: str = ROUTES_TABLE_DOCTYPE_NAME,
 ) -> tuple[str, str] | None:
 
     query = f"""
     SELECT
-        url_path,
-        last_request_date
-    FROM `tab{routes_table_doctype}`
-    WHERE url_path_function LIKE '{search_field}'
-    AND parent LIKE '{ROUTES_TABLE_DOCTYPE_NAME}'
+        child.url_path,
+        child.last_request_date
+    FROM `tab{routes_table_doctype}` AS child
+    JOIN `tab{parent_doctype}` AS parent
+    ON child.parent = parent.name
+    WHERE child.url_path_function LIKE '{search_field}'
+    AND parent.vendor LIKE '{vendor}'
     LIMIT 1
     """
 
     results = frappe.db.sql(query, as_dict=True)
 
     if results:
-        return (results[0].url_path, results[0].last_request_date)
+        return (results[0]["url_path"], results[0]["last_request_date"])
+
+    return None
+
 
 
 def get_environment_settings(
     company_name: str,
+    vendor: str,
     doctype: str = SETTINGS_DOCTYPE_NAME,
     environment: str = "Sandbox",
     branch_id: str = "00",
@@ -141,6 +169,7 @@ def get_environment_settings(
     query = f"""
     SELECT server_url,
         name,
+        vendor,
         tin,
         dvcsrlno,
         bhfid,
@@ -150,6 +179,7 @@ def get_environment_settings(
     FROM `tab{doctype}`
     WHERE company = '{company_name}'
         AND env = '{environment}'
+        AND vendor = '{vendor}'
         AND name IN (
             SELECT name
             FROM `tab{doctype}`
@@ -159,9 +189,7 @@ def get_environment_settings(
 
     if branch_id:
         query += f"AND bhfid = '{branch_id}';"
-
     setting_doctype = frappe.db.sql(query, as_dict=True)
-
     if setting_doctype:
         return setting_doctype[0]
 
@@ -200,8 +228,8 @@ def get_current_environment_state(
     return environment
 
 
-def get_server_url(company_name: str, branch_id: str = "00") -> str | None:
-    settings = get_curr_env_etims_settings(company_name, branch_id)
+def get_server_url(company_name: str,vendor: str, branch_id: str = "00") -> str | None:
+    settings = get_curr_env_etims_settings(company_name,vendor, branch_id)
 
     if settings:
         server_url = settings.get("server_url")
@@ -211,8 +239,8 @@ def get_server_url(company_name: str, branch_id: str = "00") -> str | None:
     return
 
 
-def build_headers(company_name: str, branch_id: str = "00") -> dict[str, str] | None:
-    settings = get_curr_env_etims_settings(company_name, branch_id=branch_id)
+def build_headers(company_name: str, vendor:str, branch_id: str = "00") -> dict[str, str] | None:
+    settings = get_curr_env_etims_settings(company_name,vendor, branch_id=branch_id)
 
     if settings:
         headers = {
@@ -515,21 +543,21 @@ def update_last_request_date(
 
 
 def get_curr_env_etims_settings(
-    company_name: str, branch_id: str = "00"
+    company_name: str,vendor: str, branch_id: str = "00"
 ) -> Document | None:
     current_environment = get_current_environment_state(
         ENVIRONMENT_SPECIFICATION_DOCTYPE_NAME
     )
     settings = get_environment_settings(
-        company_name, environment=current_environment, branch_id=branch_id
+        company_name,vendor, environment=current_environment, branch_id=branch_id
     )
 
     if settings:
         return settings
 
 
-def get_most_recent_sales_number(company_name: str) -> int | None:
-    settings = get_curr_env_etims_settings(company_name)
+def get_most_recent_sales_number(company_name: str, vendor="OSCU KRA") -> int | None:
+    settings = get_curr_env_etims_settings(company_name, vendor)
 
     if settings:
         return settings.most_recent_sales_number

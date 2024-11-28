@@ -148,11 +148,11 @@ def send_item_inventory_information() -> None:
 
 
 @frappe.whitelist()
-def refresh_code_lists() -> str | None:
+def refresh_code_lists(vendor: str="OSCU KRA") -> str | None:
     company_name: str | None = frappe.defaults.get_user_default("Company")
 
-    headers = build_headers(company_name)
-    server_url = get_server_url(company_name)
+    headers = build_headers(company_name, vendor)
+    server_url = get_server_url(company_name, vendor)
 
     code_search_route_path, last_request_date = get_route_path(
         "CodeSearchReq"
@@ -177,11 +177,11 @@ def refresh_code_lists() -> str | None:
 
 
 @frappe.whitelist()
-def get_item_classification_codes() -> str | None:
+def get_item_classification_codes(vendor="OSCU KRA") -> str | None:
     company_name: str | None = frappe.defaults.get_user_default("Company")
 
-    headers = build_headers(company_name)
-    server_url = get_server_url(company_name)
+    headers = build_headers(company_name, vendor)
+    server_url = get_server_url(company_name, vendor)
 
     item_cls_route_path, last_request_date = get_route_path(
         "ItemClsSearchReq"

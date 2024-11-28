@@ -1,46 +1,79 @@
 {
-  "actions": [],
-  "creation": "2024-02-20 02:21:19.125884",
-  "doctype": "DocType",
-  "engine": "InnoDB",
-  "field_order": ["routes_mapping_section", "routes_table"],
-  "fields": [
-    {
-      "fieldname": "routes_table",
-      "fieldtype": "Table",
-      "label": "Routes Table",
-      "options": "Navari KRA eTims Route Table Item"
-    },
-    {
-      "fieldname": "routes_mapping_section",
-      "fieldtype": "Section Break",
-      "label": "Routes Mapping"
-    }
-  ],
-  "index_web_pages_for_search": 1,
-  "issingle": 1,
-  "links": [],
-  "modified": "2024-02-22 04:42:50.908040",
-  "modified_by": "Administrator",
-  "module": "Kenya Compliance",
-  "name": "Navari eTims Routes",
-  "label": "eTims Routes",
-  "owner": "Administrator",
-  "permissions": [
-    {
-      "create": 1,
-      "delete": 1,
-      "email": 1,
-      "print": 1,
-      "read": 1,
-      "role": "System Manager",
-      "share": 1,
-      "write": 1
-    }
-  ],
-  "sort_field": "modified",
-  "sort_order": "DESC",
-  "states": [],
-  "track_changes": 1,
-  "track_views": 1
+ "actions": [],
+ "autoname": "format:{company} - {vendor}",
+ "creation": "2024-11-28 10:25:37.185527",
+ "default_view": "List",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "vendor_settings_section",
+  "company",
+  "column_break_rgwp",
+  "vendor",
+  "routes_mapping_section",
+  "routes_table"
+ ],
+ "fields": [
+  {
+   "fieldname": "vendor_settings_section",
+   "fieldtype": "Section Break",
+   "label": "Vendor Settings"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_rgwp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "vendor",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Vendor",
+   "options": "\nOSCU KRA\nVSCU Slade 360\nPergamon",
+   "reqd": 1
+  },
+  {
+   "fieldname": "routes_mapping_section",
+   "fieldtype": "Section Break",
+   "label": "Routes Mapping"
+  },
+  {
+   "fieldname": "routes_table",
+   "fieldtype": "Table",
+   "label": "Routes Table",
+   "options": "Navari KRA eTims Route Table Item"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-11-28 10:27:29.129037",
+ "modified_by": "Administrator",
+ "module": "Kenya Compliance",
+ "name": "Navari eTims Routes",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_views": 1
 }
