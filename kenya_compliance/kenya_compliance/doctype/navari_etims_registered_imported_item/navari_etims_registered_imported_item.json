@@ -1,172 +1,179 @@
 {
-  "actions": [],
-  "allow_rename": 1,
-  "autoname": "field:task_code",
-  "creation": "2024-05-06 10:19:33.747064",
-  "doctype": "DocType",
-  "engine": "InnoDB",
-  "field_order": [
-    "item_name",
-    "origin_nation_code",
-    "declaration_date",
-    "item_sequence",
-    "gross_weight",
-    "package",
-    "quantity",
-    "suppliers_name",
-    "invoice_foreign_currency_amount",
-    "column_break_cbnh",
-    "task_code",
-    "export_nation_code",
-    "declaration_number",
-    "hs_code",
-    "net_weight",
-    "packaging_unit_code",
-    "quantity_unit_code",
-    "agent_name",
-    "invoice_foreign_currency",
-    "invoice_foreign_currency_rate"
-  ],
-  "fields": [
-    {
-      "fieldname": "item_name",
-      "fieldtype": "Data",
-      "label": "Item Name"
-    },
-    {
-      "fieldname": "task_code",
-      "fieldtype": "Data",
-      "label": "Task Code",
-      "unique": 1
-    },
-    {
-      "fieldname": "declaration_date",
-      "fieldtype": "Date",
-      "label": "Declaration Date"
-    },
-    {
-      "fieldname": "item_sequence",
-      "fieldtype": "Int",
-      "label": "Item Sequence"
-    },
-    {
-      "fieldname": "declaration_number",
-      "fieldtype": "Data",
-      "label": "Declaration Number"
-    },
-    {
-      "fieldname": "hs_code",
-      "fieldtype": "Data",
-      "label": "HS Code"
-    },
-    {
-      "fieldname": "column_break_cbnh",
-      "fieldtype": "Column Break"
-    },
-    {
-      "fieldname": "origin_nation_code",
-      "fieldtype": "Link",
-      "label": "Origin Nation Code",
-      "options": "Navari eTims Country"
-    },
-    {
-      "fieldname": "export_nation_code",
-      "fieldtype": "Link",
-      "label": "Export Nation Code",
-      "options": "Navari eTims Country"
-    },
-    {
-      "fieldname": "package",
-      "fieldtype": "Data",
-      "label": "Package"
-    },
-    {
-      "fieldname": "packaging_unit_code",
-      "fieldtype": "Link",
-      "label": "Packaging Unit Code",
-      "options": "Navari eTims Packaging Unit"
-    },
-    {
-      "fieldname": "quantity",
-      "fieldtype": "Int",
-      "label": "Quantity"
-    },
-    {
-      "fieldname": "quantity_unit_code",
-      "fieldtype": "Link",
-      "label": "Quantity Unit Code",
-      "options": "Navari eTims Unit of Quantity"
-    },
-    {
-      "fieldname": "gross_weight",
-      "fieldtype": "Float",
-      "label": "Gross Weight",
-      "precision": "2"
-    },
-    {
-      "fieldname": "net_weight",
-      "fieldtype": "Float",
-      "label": "Net Weight"
-    },
-    {
-      "fieldname": "suppliers_name",
-      "fieldtype": "Data",
-      "label": "Supplier's Name"
-    },
-    {
-      "fieldname": "agent_name",
-      "fieldtype": "Data",
-      "label": "Agent Name"
-    },
-    {
-      "fieldname": "invoice_foreign_currency_amount",
-      "fieldtype": "Data",
-      "label": "Invoice Foreign Currency Amount"
-    },
-    {
-      "fieldname": "invoice_foreign_currency",
-      "fieldtype": "Data",
-      "label": "Invoice Foreign Currency"
-    },
-    {
-      "fieldname": "invoice_foreign_currency_rate",
-      "fieldtype": "Data",
-      "label": "Invoice Foreign Currency Rate"
-    }
-  ],
-  "in_create": 1,
-  "index_web_pages_for_search": 1,
-  "links": [
-    {
-      "link_doctype": "Purchase Invoice",
-      "link_fieldname": "custom_source_registered_imported_item"
-    }
-  ],
-  "modified": "2024-08-30 15:47:26.632485",
-  "modified_by": "Administrator",
-  "module": "Kenya Compliance",
-  "name": "Navari eTims Registered Imported Item",
-  "naming_rule": "By fieldname",
-  "owner": "Administrator",
-  "permissions": [
-    {
-      "create": 1,
-      "delete": 1,
-      "email": 1,
-      "export": 1,
-      "print": 1,
-      "read": 1,
-      "report": 1,
-      "role": "System Manager",
-      "share": 1,
-      "write": 1
-    }
-  ],
-  "search_fields": "item_name, task_code",
-  "show_title_field_in_link": 1,
-  "sort_field": "modified",
-  "sort_order": "DESC",
-  "states": [],
-  "title_field": "item_name",
-  "track_changes": 1
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:task_code",
+ "creation": "2024-05-06 10:19:33.747064",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "item_name",
+  "origin_nation_code",
+  "declaration_date",
+  "item_sequence",
+  "gross_weight",
+  "package",
+  "quantity",
+  "suppliers_name",
+  "invoice_foreign_currency_amount",
+  "rate",
+  "column_break_cbnh",
+  "task_code",
+  "export_nation_code",
+  "declaration_number",
+  "hs_code",
+  "net_weight",
+  "packaging_unit_code",
+  "quantity_unit_code",
+  "agent_name",
+  "invoice_foreign_currency",
+  "invoice_foreign_currency_rate"
+ ],
+ "fields": [
+  {
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "label": "Item Name"
+  },
+  {
+   "fieldname": "task_code",
+   "fieldtype": "Data",
+   "label": "Task Code",
+   "unique": 1
+  },
+  {
+   "fieldname": "declaration_date",
+   "fieldtype": "Date",
+   "label": "Declaration Date"
+  },
+  {
+   "fieldname": "item_sequence",
+   "fieldtype": "Int",
+   "label": "Item Sequence"
+  },
+  {
+   "fieldname": "declaration_number",
+   "fieldtype": "Data",
+   "label": "Declaration Number"
+  },
+  {
+   "fieldname": "hs_code",
+   "fieldtype": "Data",
+   "label": "HS Code"
+  },
+  {
+   "fieldname": "column_break_cbnh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "origin_nation_code",
+   "fieldtype": "Link",
+   "label": "Origin Nation Code",
+   "options": "Navari eTims Country"
+  },
+  {
+   "fieldname": "export_nation_code",
+   "fieldtype": "Link",
+   "label": "Export Nation Code",
+   "options": "Navari eTims Country"
+  },
+  {
+   "fieldname": "package",
+   "fieldtype": "Data",
+   "label": "Package"
+  },
+  {
+   "fieldname": "packaging_unit_code",
+   "fieldtype": "Link",
+   "label": "Packaging Unit Code",
+   "options": "Navari eTims Packaging Unit"
+  },
+  {
+   "fieldname": "quantity",
+   "fieldtype": "Int",
+   "label": "Quantity"
+  },
+  {
+   "fieldname": "quantity_unit_code",
+   "fieldtype": "Link",
+   "label": "Quantity Unit Code",
+   "options": "Navari eTims Unit of Quantity"
+  },
+  {
+   "fieldname": "gross_weight",
+   "fieldtype": "Float",
+   "label": "Gross Weight",
+   "precision": "2"
+  },
+  {
+   "fieldname": "net_weight",
+   "fieldtype": "Float",
+   "label": "Net Weight"
+  },
+  {
+   "fieldname": "suppliers_name",
+   "fieldtype": "Data",
+   "label": "Supplier's Name"
+  },
+  {
+   "fieldname": "agent_name",
+   "fieldtype": "Data",
+   "label": "Agent Name"
+  },
+  {
+   "fieldname": "invoice_foreign_currency_amount",
+   "fieldtype": "Data",
+   "label": "Invoice Foreign Currency Amount"
+  },
+  {
+   "fieldname": "invoice_foreign_currency",
+   "fieldtype": "Data",
+   "label": "Invoice Foreign Currency"
+  },
+  {
+   "fieldname": "invoice_foreign_currency_rate",
+   "fieldtype": "Data",
+   "label": "Invoice Foreign Currency Rate"
+  },
+  {
+   "fieldname": "rate",
+   "fieldtype": "Currency",
+   "label": "Rate",
+   "options": "invoice_foreign_currency"
+  }
+ ],
+ "in_create": 1,
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "link_doctype": "Purchase Invoice",
+   "link_fieldname": "custom_source_registered_imported_item"
+  }
+ ],
+ "modified": "2024-11-29 10:29:23.412182",
+ "modified_by": "Administrator",
+ "module": "Kenya Compliance",
+ "name": "Navari eTims Registered Imported Item",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "item_name, task_code",
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "item_name",
+ "track_changes": 1
 }

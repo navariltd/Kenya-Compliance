@@ -612,7 +612,6 @@ def perform_stock_movement_search(request_data: str, vendor="OSCU KRA") -> None:
     if headers and server_url and route_path:
         url = f"{server_url}{route_path}"
         payload = {"lastReqDt": request_date}
-
         endpoints_builder.headers = headers
         endpoints_builder.url = url
         endpoints_builder.payload = payload
@@ -627,6 +626,18 @@ def perform_stock_movement_search(request_data: str, vendor="OSCU KRA") -> None:
             job_name=token_hex(100),
         )
 
+@frappe.whitelist()
+def perform_stock_movement_search_all_branches() -> None:
+    all_credentials = frappe.get_all(
+        SETTINGS_DOCTYPE_NAME,
+        ["name", "bhfid", "communication_key", "tin", "company"],
+    )
+
+    for credential in all_credentials:
+        request_data = json.dumps(
+            {"company_name": credential.company, "branch_id": credential.bhfid}
+        )
+        perform_stock_movement_search(request_data)
 
 @frappe.whitelist()
 def submit_item_composition(request_data: str, vendor="OSCU KRA") -> None:
@@ -727,7 +738,6 @@ def create_supplier(supplier_details: dict) -> Document:
 @frappe.whitelist()
 def create_items_from_fetched_registered_purchases(request_data: str) -> None:
     data = json.loads(request_data)
-
     if data["items"]:
         items = data["items"]
         for item in items:
