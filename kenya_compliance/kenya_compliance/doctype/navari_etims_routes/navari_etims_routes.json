@@ -35,7 +35,7 @@
    "fieldname": "vendor",
    "fieldtype": "Select",
    "in_list_view": 1,
-   "label": "Vendor",
+   "label": "API Provider",
    "options": "\nOSCU KRA\nVSCU Slade 360\nPergamon",
    "reqd": 1
   },
@@ -53,7 +53,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-11-28 10:27:29.129037",
+ "modified": "2024-11-29 08:38:06.929415",
  "modified_by": "Administrator",
  "module": "Kenya Compliance",
  "name": "Navari eTims Routes",

@@ -252,6 +252,13 @@ def build_headers(company_name: str, vendor:str, branch_id: str = "00") -> dict[
 
         return headers
 
+def get_branch_id(company_name: str, vendor: str) -> str | None:
+    settings = get_curr_env_etims_settings(company_name, vendor)
+
+    if settings:
+        return settings.bhfid
+
+    return None
 
 def extract_document_series_number(document: Document) -> int | None:
     split_invoice_name = document.name.split("-")

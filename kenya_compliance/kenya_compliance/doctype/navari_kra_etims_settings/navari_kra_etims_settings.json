@@ -308,7 +308,7 @@
   {
    "fieldname": "vendor",
    "fieldtype": "Select",
-   "label": "Vendor",
+   "label": "API Provider",
    "options": "\nOSCU KRA\nVSCU Slade 360\nPergamon",
    "reqd": 1
   }
@@ -321,7 +321,7 @@
    "link_fieldname": "reference_docname"
   }
  ],
- "modified": "2024-11-28 10:15:43.219826",
+ "modified": "2024-11-29 08:37:26.434270",
  "modified_by": "Administrator",
  "module": "Kenya Compliance",
  "name": "Navari KRA eTims Settings",
