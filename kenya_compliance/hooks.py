@@ -273,7 +273,9 @@ doc_events = {
     "Item": {
         "validate": [
             "kenya_compliance.kenya_compliance.overrides.server.item.validate"
+            
         ],
+        "on_trash": "kenya_compliance.kenya_compliance.overrides.server.item.prevent_item_deletion"
     },
 }
 

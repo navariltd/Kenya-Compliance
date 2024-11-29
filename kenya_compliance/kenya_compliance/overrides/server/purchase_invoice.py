@@ -25,7 +25,8 @@ endpoints_builder = EndpointsBuilder()
 
 def validate(doc: Document, method: str) -> None:
     item_taxes = get_itemised_tax_breakup_data(doc)
-
+    if not doc.branch:
+        frappe.throw("Please ensure the branch is set before submitting the document")
     taxes_breakdown = defaultdict(list)
     taxable_breakdown = defaultdict(list)
     if not doc.taxes:
@@ -63,9 +64,9 @@ def on_submit(doc: Document, method: str) -> None:
     if doc.is_return == 0 and doc.update_stock == 1:
         # TODO: Handle cases when item tax templates have not been picked
         company_name = doc.company
-
-        headers = build_headers(company_name, doc.branch)
-        server_url = get_server_url(company_name, doc.branch)
+        vendor="OSCU KRA"
+        headers = build_headers(company_name,vendor, doc.branch)
+        server_url = get_server_url(company_name,vendor, doc.branch)
         route_path, last_request_date = get_route_path("TrnsPurchaseSaveReq")
 
         if headers and server_url and route_path:
