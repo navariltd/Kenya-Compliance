@@ -4,3 +4,4 @@
 
 [post_model_sync]
 # Patches added in this section will be executed after doctypes are migrated
+kenya_compliance.kenya_compliance.patch.purchase_invoice

@@ -78,7 +78,7 @@ frappe.ui.form.on(doctypeName, {
       frappe.db.get_value(
         'Item',
         { custom_referenced_imported_item: frm.doc.name },
-        ['custom_item_registered'],
+        ['custom_item_registered','name'],
         (response) => {
           if (parseInt(response.custom_item_registered) === 1) {
             frm.add_custom_button(
@@ -98,6 +98,7 @@ frappe.ui.form.on(doctypeName, {
                       currency: frm.doc.invoice_foreign_currency,
                       amount: frm.doc.invoice_foreign_currency_amount,
                       items: item,
+                      task_code: frm.doc.task_code,
                     },
                   },
                   callback: (response) => {

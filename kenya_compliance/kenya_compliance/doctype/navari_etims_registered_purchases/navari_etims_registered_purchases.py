@@ -3,12 +3,11 @@
 
 import frappe
 from frappe.model.document import Document
-
+import json
 
 class NavarieTimsRegisteredPurchases(Document):
     pass
-import json
-import frappe
+
 
 @frappe.whitelist()
 def validate_item_mapped_and_registered(items):
@@ -24,7 +23,7 @@ def validate_item_mapped_and_registered(items):
                 filters={
                     "item_name": item.get("item_name"),
                     "item_code": item.get("item_name"),
-                    # "custom_item_classification": item.get("item_classification_code"),
+                    #"custom_item_classification": item.get("item_classification_code"),
                     #"custom_item_code_etims":item.get("item_code"),
                     "custom_taxation_type": item.get("taxation_type_code"),
                 },
@@ -37,4 +36,4 @@ def validate_item_mapped_and_registered(items):
         frappe.response["message"] = True
     except Exception as e:
         frappe.log_error(f"Error validating items: {str(e)}")
-        
+

@@ -68,39 +68,52 @@ def bulk_register_item(docs_list: str) -> None:
     for record in data:
         for item in all_items:
             if record == item.name:
-                item=frappe.get_doc("Item", record, for_update=False)
-                valuation_rate = item.valuation_rate if item.valuation_rate is not None else 0
+                process_single_item(record)
 
-                request_data = {
-                    "name": item.name,
-                    "company_name": frappe.defaults.get_user_default("Company"),
-                    "itemCd": item.custom_item_code_etims,
-                    "itemClsCd": item.custom_item_classification,
-                    "itemTyCd": item.custom_product_type,
-                    "itemNm": item.item_name,
-                    "temStdNm": None,
-                    "orgnNatCd": item.custom_etims_country_of_origin_code,
-                    "pkgUnitCd": item.custom_packaging_unit_code,
-                    "qtyUnitCd": item.custom_unit_of_quantity_code,
-                    "taxTyCd": item.get("custom_taxation_type", "B"),
-                    "btchNo": None,
-                    "bcd": None,
-                    "dftPrc": round(valuation_rate, 2),
-                    "grpPrcL1": None,
-                    "grpPrcL2": None,
-                    "grpPrcL3": None,
-                    "grpPrcL4": None,
-                    "grpPrcL5": None,
-                    "addInfo": None,
-                    "sftyQty": None,
-                    "isrcAplcbYn": "Y",
-                    "useYn": "Y",
-                    "regrId": split_user_email(item.owner),
-                    "regrNm": item.owner,
-                    "modrId": split_user_email(item.modified_by),
-                    "modrNm": item.modified_by,
-                }
-                perform_item_registration(request_data=json.dumps(request_data))
+
+@frappe.whitelist()
+def process_single_item(record: str) -> None:
+    """
+    Process a single item for registration, construct the payload, and perform registration.
+    
+    Args:
+        record (str): Name of the item to process.
+    """
+    item = frappe.get_doc("Item", record, for_update=False)
+    
+    valuation_rate = item.valuation_rate if item.valuation_rate is not None else 0
+
+    request_data = {
+        "name": item.name,
+        "company_name": frappe.defaults.get_user_default("Company"),
+        "itemCd": item.custom_item_code_etims,
+        "itemClsCd": item.custom_item_classification,
+        "itemTyCd": item.custom_product_type,
+        "itemNm": item.item_name,
+        "temStdNm": None,
+        "orgnNatCd": item.custom_etims_country_of_origin_code,
+        "pkgUnitCd": item.custom_packaging_unit_code,
+        "qtyUnitCd": item.custom_unit_of_quantity_code,
+        "taxTyCd": item.get("custom_taxation_type", "B"),
+        "btchNo": None,
+        "bcd": None,
+        "dftPrc": round(valuation_rate, 2),
+        "grpPrcL1": None,
+        "grpPrcL2": None,
+        "grpPrcL3": None,
+        "grpPrcL4": None,
+        "grpPrcL5": None,
+        "addInfo": None,
+        "sftyQty": None,
+        "isrcAplcbYn": "Y",
+        "useYn": "Y",
+        "regrId": split_user_email(item.owner),
+        "regrNm": item.owner,
+        "modrId": split_user_email(item.modified_by),
+        "modrNm": item.modified_by,
+    }
+
+    perform_item_registration(request_data=json.dumps(request_data))
 
 
 @frappe.whitelist()
@@ -320,7 +333,7 @@ def create_branch_user() -> None:
         doc.system_user = user.email
         doc.branch_id = frappe.get_value(
             "Branch", {"custom_branch_code": "00"}, ["name"]
-        )  # Created users are assigned to Branch 00
+        )
 
         doc.save()
 
@@ -746,7 +759,7 @@ def create_items_from_fetched_registered_purchases(request_data: str) -> None:
 
 def create_item(item: dict | frappe._dict) -> Document:
     item_code = item.get("item_code", None)
-
+    
     new_item = frappe.new_doc("Item")
     new_item.is_stock_item = 0  # Default to 0
     new_item.item_code = item["item_name"]
@@ -781,7 +794,8 @@ def create_item(item: dict | frappe._dict) -> Document:
         new_item.custom_referenced_imported_item = item["imported_item"]
 
     new_item.insert(ignore_mandatory=True, ignore_if_duplicate=True)
-
+    if new_item.custom_item_classification is not None:
+        process_single_item(new_item.name)
     return new_item
 
 
@@ -858,9 +872,10 @@ def create_purchase_invoice_from_request(request_data: str) -> None:
                 "custom_packaging_unit": item["packaging_unit_code"],
                 "custom_unit_of_quantity": item["quantity_unit_code"],
                 "custom_taxation_type": item["taxation_type_code"],
+                "task_code": item["task_code"],
             },
         )
-
+    validate_mapping_and_registration_of_items(data["items"])
     purchase_invoice.insert(ignore_mandatory=True)
 
     frappe.msgprint("Purchase Invoices have been created")
@@ -928,3 +943,10 @@ def create_stock_entry_from_stock_movement(request_data: str) -> None:
     stock_entry.save()
 
     frappe.msgprint(f"Stock Entry {stock_entry.name} created successfully")
+
+def validate_mapping_and_registration_of_items(items):
+    for item in items:
+        item_code = item.get("item_code") or item.get("item_name")
+        from kenya_compliance.kenya_compliance.overrides.server.purchase_invoice import validation_message
+        validation_message(item_code)
+        

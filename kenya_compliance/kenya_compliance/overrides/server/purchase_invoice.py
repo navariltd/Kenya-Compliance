@@ -176,9 +176,13 @@ def get_items_details(doc: Document) -> list:
 
 def validate_item_registration(items):
     for item in items:
-        item_doc = frappe.get_doc("Item", item.item_code)
-        if item_doc.custom_item_registered == 0:
-            # Generate a link to the item form
-            item_link = get_link_to_form("Item", item.item_code)
-            frappe.throw(f"Go and register the item: {item_link}")
+        item_code = item.item_code
+        validation_message(item_code)
+        
+def validation_message(item_code):
+	item_doc = frappe.get_doc("Item", item_code)
+	if item_doc.custom_item_registered == 0:
+		# Generate a link to the item form
+		item_link = get_link_to_form("Item", item_code)
+		frappe.throw(f"Go and register the item: {item_link}")
 
