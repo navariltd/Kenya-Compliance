@@ -399,13 +399,13 @@ def perform_import_item_search_all_branches() -> None:
         perform_import_item_search(request_data)
 
 @frappe.whitelist()
-def perform_purchases_search(request_data: str) -> None:
+def perform_purchases_search(request_data: str, vendor: str="OSCU KRA") -> None:
     data: dict = json.loads(request_data)
 
     company_name = data["company_name"]
 
-    headers = build_headers(company_name)
-    server_url = get_server_url(company_name)
+    headers = build_headers(company_name, vendor)
+    server_url = get_server_url(company_name, vendor)
     route_path, last_request_date = get_route_path("TrnsPurchaseSalesReq")
 
     if headers and server_url and route_path:
@@ -413,7 +413,7 @@ def perform_purchases_search(request_data: str) -> None:
 
         url = f"{server_url}{route_path}"
         payload = {"lastReqDt": request_date}
-
+        frappe.throw(str(payload))
         endpoints_builder.headers = headers
         endpoints_builder.url = url
         endpoints_builder.payload = payload

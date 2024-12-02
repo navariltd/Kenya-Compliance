@@ -147,9 +147,13 @@
   {
    "link_doctype": "Purchase Invoice",
    "link_fieldname": "custom_source_registered_imported_item"
+  },
+  {
+   "link_doctype": "Item",
+   "link_fieldname": "custom_referenced_imported_item"
   }
  ],
- "modified": "2024-11-29 10:29:23.412182",
+ "modified": "2024-12-02 08:48:07.182002",
  "modified_by": "Administrator",
  "module": "Kenya Compliance",
  "name": "Navari eTims Registered Imported Item",
