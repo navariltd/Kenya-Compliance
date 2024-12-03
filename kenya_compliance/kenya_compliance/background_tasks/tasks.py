@@ -1,5 +1,4 @@
 import json
-from datetime import datetime, timedelta
 
 import frappe
 import frappe.defaults
@@ -17,7 +16,6 @@ from ..doctype.doctype_names_mapping import (
 )
 from ..overrides.server.stock_ledger_entry import on_update
 from ..utils import (
-    authenticate_and_get_token,
     build_headers,
     get_route_path,
     get_server_url,
@@ -204,7 +202,6 @@ def get_item_classification_codes(vendor="OSCU KRA") -> str | None:
         endpoints_builder.payload = payload
         endpoints_builder.error_callback = on_error
 
-        # Fetch and update item classification codes from ItemClsSearchReq endpoint
         endpoints_builder.url = f"{server_url}{item_cls_route_path}"
         endpoints_builder.success_callback = update_item_classification_codes
 
@@ -235,152 +232,108 @@ def run_updater_functions(response: dict) -> None:
             update_countries(class_list)
 
 
-def update_unit_of_quantity(data: dict) -> None:
-    doc: Document | None = None
-
-    for unit_of_quantity in data["dtlList"]:
+def update_documents(
+    data: dict | list,
+    doctype_name: str,
+    field_mapping: dict,
+    filter_field: str = "code",
+) -> None:
+    if isinstance(data, str):
         try:
-            doc = frappe.get_doc(UNIT_OF_QUANTITY_DOCTYPE_NAME, unit_of_quantity["cd"])
+            data = json.loads(data)
+        except json.JSONDecodeError:
+            raise ValueError(f"Invalid JSON string: {data}")
 
+    doc_list = data if isinstance(data, list) else data.get("results", data)
+
+    for record in doc_list:
+        if isinstance(record, str):
+            continue
+
+        filter_value = record.get(filter_field)
+        try:
+            doc = frappe.get_doc(doctype_name, filter_value)
         except frappe.DoesNotExistError:
-            doc = frappe.new_doc(UNIT_OF_QUANTITY_DOCTYPE_NAME)
+            doc = frappe.new_doc(doctype_name)
 
-        finally:
-            doc.code = unit_of_quantity["cd"]
-            doc.sort_order = unit_of_quantity["srtOrd"]
-            doc.code_name = unit_of_quantity["cdNm"]
-            doc.code_description = unit_of_quantity["cdDesc"]
+        for field, value in field_mapping.items():
+            if callable(value):
+                setattr(doc, field, value(record))
+            else:
+                setattr(doc, field, record.get(value, ""))
 
-            doc.save()
+        doc.save()
 
     frappe.db.commit()
+
+
+def update_unit_of_quantity(data: dict) -> None:
+    field_mapping = {
+        "code": "code",
+        "sort_order": "sort_order",
+        "code_name": "name",
+        "code_description": "description",
+    }
+    update_documents(data, UNIT_OF_QUANTITY_DOCTYPE_NAME, field_mapping)
+
+
+def update_packaging_units(data: dict) -> None:
+    field_mapping = {
+        "code": "code",
+        "code_name": "name",
+        "sort_order": "sort_order",
+        "code_description": "description",
+    }
+    update_documents(data, PACKAGING_UNIT_DOCTYPE_NAME, field_mapping)
+
+
+def update_item_classification_codes(response: dict | list) -> None:
+    field_mapping = {
+        "itemclscd": "classification_code",
+        "itemclslvl": "classification_level",
+        "itemclsnm": "classification_name",
+        "taxtycd": "tax_type_code",
+        "useyn": lambda x: 1 if x.get("is_used") else 0,
+        "mjrtgyn": lambda x: 1 if x.get("is_frequently_used") else 0,
+    }
+    update_documents(
+        response,
+        ITEM_CLASSIFICATIONS_DOCTYPE_NAME,
+        field_mapping,
+        filter_field="classification_code",
+    )
 
 
 def update_taxation_type(data: dict) -> None:
     doc: Document | None = None
+    tax_list = data.get("results", [])
 
-    for taxation_type in data["dtlList"]:
+    for taxation_type in tax_list:
+        code = (
+            taxation_type["tax_code"]
+            if taxation_type["tax_code"]
+            else taxation_type["name"]
+        )
         try:
-            doc = frappe.get_doc(TAXATION_TYPE_DOCTYPE_NAME, taxation_type["cd"])
+            doc = frappe.get_doc(TAXATION_TYPE_DOCTYPE_NAME, code)
 
-        except frappe.DoesNotExistError:
+        except:
             doc = frappe.new_doc(TAXATION_TYPE_DOCTYPE_NAME)
 
         finally:
-            doc.cd = taxation_type["cd"]
-            doc.cdnm = taxation_type["cdNm"]
-            doc.cddesc = taxation_type["cdDesc"]
-            doc.useyn = 1 if taxation_type["useYn"] == "Y" else 0
-            doc.srtord = taxation_type["srtOrd"]
-            doc.userdfncd1 = taxation_type["userDfnCd1"]
-            doc.userdfncd2 = taxation_type["userDfnCd2"]
-            doc.userdfncd3 = taxation_type["userDfnCd3"]
+            doc.cd = code
+            doc.cdnm = taxation_type["name"]
+            doc.cddesc = taxation_type["description"]
+            doc.useyn = 1 if taxation_type["active"] else 0
+            doc.srtord = taxation_type["percentage"]
 
             doc.save()
 
     frappe.db.commit()
 
 
-def update_packaging_units(data: dict) -> None:
+def update_countries(data: list) -> None:
     doc: Document | None = None
-
-    for packaging_unit in data["dtlList"]:
-        try:
-            doc = frappe.get_doc(PACKAGING_UNIT_DOCTYPE_NAME, packaging_unit["cd"])
-
-        except frappe.DoesNotExistError:
-            doc = frappe.new_doc(PACKAGING_UNIT_DOCTYPE_NAME)
-
-        finally:
-            doc.code = packaging_unit["cd"]
-            doc.code_name = packaging_unit["cdNm"]
-            doc.sort_order = packaging_unit["srtOrd"]
-            doc.code_description = packaging_unit["cdDesc"]
-
-            doc.save()
-
-    frappe.db.commit()
-
-
-def update_countries(data: dict) -> None:
-    doc: Document | None = None
-
-    for country in data["dtlList"]:
-        try:
-            doc = frappe.get_doc(COUNTRIES_DOCTYPE_NAME, country["cdNm"])
-
-        except frappe.DoesNotExistError:
-            doc = frappe.new_doc(COUNTRIES_DOCTYPE_NAME)
-
-        finally:
-            doc.code = country["cd"]
-            doc.code_name = country["cdNm"]
-            doc.sort_order = country["srtOrd"]
-            doc.code_description = country["cdDesc"]
-
-            doc.save()
-
-    frappe.db.commit()
-
-
-def update_item_classification_codes(response: dict) -> None:
-    code_list = response["data"]["itemClsList"]
-    existing_classifications = {
-        classification["name"]: classification
-        for classification in frappe.get_all(ITEM_CLASSIFICATIONS_DOCTYPE_NAME, ["*"])
-    }
-
-    for item_classification in code_list:
-        if item_classification["itemClsCd"] in existing_classifications:
-            # Prefer Raw SQL since using the ORM causes performance degradation. Still under investigation
-            update_query = f"""
-                UPDATE `tab{ITEM_CLASSIFICATIONS_DOCTYPE_NAME}`
-                SET itemclscd = '{item_classification["itemClsCd"]}',
-                    itemclslvl = '{item_classification["itemClsLvl"]}',
-                    itemclsnm = '{item_classification["itemClsNm"].replace("'", " ")}',
-                    taxtycd = '{item_classification["taxTyCd"]}',
-                    useyn = '{1 if item_classification["useYn"] == "Y" else 0}',
-                    mjrtgyn  = '{1 if item_classification["mjrTgYn"] == "Y" else 0}',
-                    modified = SYSDATE()
-                WHERE name = '{item_classification["itemClsCd"]}';
-            """
-
-            frappe.db.sql(update_query)
-
-        else:
-            insert_query = f"""
-                INSERT INTO `tab{ITEM_CLASSIFICATIONS_DOCTYPE_NAME}`
-                    (name, itemclscd, itemclslvl, itemclsnm, taxtycd, useyn, mjrtgyn, creation)
-                VALUES
-                    ('{item_classification["itemClsCd"]}',
-                     '{item_classification["itemClsCd"]}',
-                     '{item_classification["itemClsLvl"]}',
-                     '{item_classification["itemClsNm"].replace("'", " ")}',
-                     '{item_classification["taxTyCd"]}',
-                     '{1 if item_classification["useYn"] == "Y" else 0}',
-                     '{1 if item_classification["mjrTgYn"] == "Y" else 0}',
-                     SYSDATE());
-            """
-
-            frappe.db.sql(insert_query)
-
-    frappe.db.commit()
-
-
-
-def update_currencies(data: dict) -> None:
-    doc: Document | None = None
-    if len(data) > 0:
-         update_slade_countries(data)
-    
-
-def update_slade_countries(data: dict) -> None:
-    """
-    Updates or creates country records in the system based on the given data.
-
-    Args:
-        data (dict): A dictionary where keys are country codes and values are country details.
-    """
     for code, details in data.items():
         try:
             country_name = details.get("name", "").strip().lower()
@@ -393,10 +346,9 @@ def update_slade_countries(data: dict) -> None:
         doc.code = code
         doc.code_name = details.get("name")
         doc.currency_code = details.get("currency_code")
-        doc.sort_order = details.get("sort_order", 0) 
-        doc.code_description = details.get("description", "")  
-        
+        doc.sort_order = details.get("sort_order", 0)
+        doc.code_description = details.get("description", "")
+
         doc.save()
 
     frappe.db.commit()
-

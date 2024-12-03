@@ -1,12 +1,12 @@
 from __future__ import annotations
 
 import asyncio
+from datetime import datetime
 from typing import Callable, Literal
 from urllib import parse
 
 import aiohttp
 import requests
-from datetime import datetime
 
 import frappe
 from frappe.integrations.utils import create_request_log
@@ -14,9 +14,9 @@ from frappe.model.document import Document
 
 from ..logger import etims_logger
 from ..utils import (
-    make_post_request, 
-    update_last_request_date, 
-    update_navari_settings_with_token
+    make_post_request,
+    update_last_request_date,
+    update_navari_settings_with_token,
 )
 
 
@@ -311,7 +311,7 @@ class Slade360EndpointsBuilder(BaseEndpointsBuilder):
         callback: Callable[[dict | str, str, str, str], None],
     ) -> None:
         self._error_callback_handler = callback
-        
+
     def refresh_token(self, document_name) -> str:
         """Fetch a new token and update the headers."""
         try:
@@ -329,9 +329,11 @@ class Slade360EndpointsBuilder(BaseEndpointsBuilder):
         except requests.exceptions.RequestException as error:
             frappe.throw(f"Error refreshing token: {error}", frappe.AuthenticationError)
 
-
     def make_remote_call(
-        self, doctype: Document | str | None = None, document_name: str | None = None, retrying: bool = False
+        self,
+        doctype: Document | str | None = None,
+        document_name: str | None = None,
+        retrying: bool = False,
     ) -> None:
         """Handles communication to Slade360 servers."""
         if (
@@ -365,9 +367,13 @@ class Slade360EndpointsBuilder(BaseEndpointsBuilder):
 
         try:
             if self._method == "POST":
-                response = requests.post(self._url, json=self._payload, headers=self._headers)
+                response = requests.post(
+                    self._url, json=self._payload, headers=self._headers
+                )
             elif self._method == "GET":
-                response = requests.get(self._url, headers=self._headers, params=self._payload)
+                response = requests.get(
+                    self._url, headers=self._headers, params=self._payload
+                )
 
             response_data = response.json()
 
@@ -384,7 +390,11 @@ class Slade360EndpointsBuilder(BaseEndpointsBuilder):
                 self.refresh_token(document_name)
                 self.make_remote_call(doctype, document_name, retrying=True)
             else:
-                error = response_data if isinstance(response_data, str) else response_data.get("error") or response_data.get("detail")
+                error = (
+                    response_data
+                    if isinstance(response_data, str)
+                    else response_data.get("error") or response_data.get("detail")
+                )
                 update_integration_request(
                     self.integration_request.name,
                     status="Failed",
@@ -401,7 +411,6 @@ class Slade360EndpointsBuilder(BaseEndpointsBuilder):
         except requests.exceptions.RequestException as error:
             self.error = error
             self.notify()
-
 
 
 def update_integration_request(

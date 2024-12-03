@@ -58,9 +58,9 @@
   "communication_key",
   "auth_details_section",
   "access_token",
-  "token_expiry",
-  "column_break_wmkd",
   "expires_in",
+  "column_break_wmkd",
+  "token_expiry",
   "column_break_fznv",
   "refresh_token"
  ],
@@ -372,7 +372,8 @@
   {
    "fieldname": "access_token",
    "fieldtype": "Data",
-   "label": "Access Token"
+   "label": "Access Token",
+   "read_only": 1
   },
   {
    "fieldname": "column_break_wmkd",
@@ -422,7 +423,7 @@
    "link_fieldname": "reference_docname"
   }
  ],
- "modified": "2024-12-03 09:46:27.083519",
+ "modified": "2024-12-03 10:54:13.062533",
  "modified_by": "Administrator",
  "module": "Kenya Compliance",
  "name": "Navari Slade360 eTims Settings",

@@ -1,5 +1,6 @@
-import frappe
 import json
+
+import frappe
 from frappe.model.document import Document
 
 from .logger import etims_logger
@@ -45,7 +46,9 @@ def handle_slade_errors(
     integration_request_name: str | None = None,
 ) -> None:
     # Prepare detailed error message
-    error_detail = json.dumps(response, indent=4)  # Format error details for readability
+    error_detail = json.dumps(
+        response, indent=4
+    )  # Format error details for readability
     log_message = f"Error in route: {route}\n"
     log_message += f"Response: {error_detail}\n"
 
@@ -63,4 +66,3 @@ def handle_slade_errors(
     except Exception as e:
         # If logging fails, fall back to standard error logging
         etims_logger.error(f"Error while logging Slade error: {str(e)}")
-

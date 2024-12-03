@@ -61,44 +61,7 @@ frappe.ui.form.on("Navari Slade360 eTims Settings", {
               },
             },
 
-            callback: (response) => {
-              if (response && response.message) {
-                frappe.msgprint({
-                  title: __("Response"),
-                  message: response.message,
-                  indicator: "green",
-                });
-              }
-            },
-            error: (error) => {
-              // Error Handling is Defered to the Server
-            },
-          });
-        },
-        __("eTims Actions")
-      );
-
-      frm.add_custom_button(
-        __("Get Countries & Currencies"),
-        function () {
-          frappe.call({
-            method:
-              "kenya_compliance.kenya_compliance.apis.slade.get_currencies",
-            args: {
-              request_data: {
-                name: frm.doc.name,
-                company_name: companyName,
-              },
-            },
-            callback: (response) => {
-              if (response && response.message) {
-                frappe.msgprint({
-                  title: __("Response"),
-                  message: response.message,
-                  indicator: "green",
-                });
-              }
-            },
+            callback: (response) => {},
             error: (error) => {
               // Error Handling is Defered to the Server
             },

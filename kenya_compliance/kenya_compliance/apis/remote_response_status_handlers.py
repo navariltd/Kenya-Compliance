@@ -43,7 +43,8 @@ def on_error(
         doctype=doctype,
         document_name=document_name,
     )
-    
+
+
 def on_slade_error(
     response: dict | str,
     url: str | None = None,
@@ -65,7 +66,6 @@ def on_slade_error(
         doctype=doctype,
         document_name=document_name,
     )
-    
 
 
 """
@@ -297,24 +297,53 @@ def create_and_link_purchase_item(item: dict, parent_record: str) -> None:
     registered_item.save()
 
 
-def notices_search_on_success(response: dict) -> None:
-    notices_list = response["data"]["noticeList"]
+def notices_search_on_success(response: dict | list) -> None:
+    notices = response if isinstance(response, list) else response.get("results")
+    if isinstance(notices, list):
+        for notice in notices:
+            print(notice)
+            create_notice_if_new(notice)
+    else:
+        frappe.log_error(
+            title="Invalid Response Format",
+            message="Expected a list or single notice in the response",
+        )
 
-    for notice in notices_list:
-        doc = frappe.new_doc(NOTICES_DOCTYPE_NAME)
 
-        doc.notice_number = notice["noticeNo"]
-        doc.title = notice["title"]
-        doc.registration_name = notice["regrNm"]
-        doc.details_url = notice["dtlUrl"]
-        doc.registration_datetime = notice["regDt"]
-        doc.contents = notice["cont"]
+def create_notice_if_new(notice: dict) -> None:
+    exists = frappe.db.exists(
+        NOTICES_DOCTYPE_NAME, {"notice_number": notice.get("notice_number")}
+    )
+    if exists:
+        return
 
-        try:
-            doc.submit()
+    doc = frappe.new_doc(NOTICES_DOCTYPE_NAME)
+    doc.update(
+        {
+            "notice_number": notice.get("notice_number"),
+            "title": notice.get("title"),
+            "registration_name": notice.get("registration_name"),
+            "details_url": notice.get("detail_url"),
+            "registration_datetime": datetime.fromisoformat(
+                notice.get("registration_date")
+            ).strftime("%Y-%m-%d %H:%M:%S"),
+            "contents": notice.get("content"),
+        }
+    )
+    doc.save()
 
-        except frappe.exceptions.DuplicateEntryError:
-            frappe.log_error(title="Duplicate entries")
+    try:
+        doc.submit()
+    except frappe.exceptions.DuplicateEntryError:
+        frappe.log_error(
+            title="Duplicate Entry Error",
+            message=f"Duplicate notice detected: {notice.get('notice_number')}",
+        )
+    except Exception as e:
+        frappe.log_error(
+            title="Notice Creation Failed",
+            message=f"Error creating notice {notice.get('notice_number')}: {str(e)}",
+        )
 
 
 def stock_mvt_search_on_success(response: dict) -> None:

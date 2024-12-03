@@ -239,16 +239,13 @@ def get_server_url(company_name: str, vendor: str, branch_id: str = "00") -> str
 
     return
 
+
 def get_slade_server_url(company_name: str, branch_id: str = "00") -> str | None:
     settings = frappe.db.get_value(
-        "Navari Slade360 eTims Settings", 
-        {
-            "bhfid": branch_id,
-            "company": company_name,
-            "is_active": 1 
-        }, 
-        [ "server_url"], 
-        as_dict=True
+        "Navari Slade360 eTims Settings",
+        {"bhfid": branch_id, "company": company_name, "is_active": 1},
+        ["server_url"],
+        as_dict=True,
     )
 
     if settings:
@@ -278,32 +275,54 @@ def build_headers(
 def build_slade_headers(
     company_name: str, branch_id: str = "00"
 ) -> dict[str, str] | None:
+    """
+    Build headers for Slade360 API requests.
+    Checks for token validity and refreshes the token if expired.
+
+    Args:
+        company_name (str): The name of the company.
+        branch_id (str, optional): The branch ID. Defaults to "00".
+
+    Returns:
+        dict[str, str] | None: The headers including the refreshed token or None if failed.
+    """
     settings = frappe.db.get_value(
-        "Navari Slade360 eTims Settings", 
-        {
-            "bhfid": branch_id,
-            "company": company_name,
-            "is_active": 1 
-        }, 
-        [ "access_token"], 
-        as_dict=True
+        "Navari Slade360 eTims Settings",
+        {"bhfid": branch_id, "company": company_name, "is_active": 1},
+        ["access_token", "token_expiry", "name"],
+        as_dict=True,
     )
 
     if settings:
         access_token = settings.get("access_token")
-        
-        if not access_token:
+        token_expiry = settings.get("token_expiry")
+
+        if not access_token or not token_expiry:
             return None
 
+        if (
+            datetime.strptime(str(token_expiry).split(".")[0], "%Y-%m-%d %H:%M:%S")
+            < datetime.now()
+        ):
+            new_settings = update_navari_settings_with_token(settings.get("name"))
+
+            if not new_settings:
+                frappe.throw(
+                    "Failed to refresh token. Please check your Slade360 integration settings.",
+                    frappe.AuthenticationError,
+                )
+
+            access_token = new_settings.access_token
+
         headers = {
-            "Authorization": f"Bearer {access_token}",  
+            "Authorization": f"Bearer {access_token}",
             "Content-Type": "application/json",
             "Accept": "application/json",
         }
 
         return headers
 
-
+    return None
 
 
 def get_branch_id(company_name: str, vendor: str) -> str | None:
@@ -820,7 +839,6 @@ def authenticate_and_get_token(
         raise Exception(
             f"Authentication failed: {response.status_code} - {response.text}"
         )
-
 
 
 @frappe.whitelist()

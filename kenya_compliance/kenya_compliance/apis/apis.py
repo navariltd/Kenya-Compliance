@@ -583,7 +583,7 @@ def perform_notice_search(request_data: str) -> None:
 
     if headers and server_url and route_path:
         url = f"{server_url}{route_path}"
-        payload = {"lastReqDt": request_date} 
+        payload = {"lastReqDt": request_date}
 
         endpoints_builder.headers = headers
         endpoints_builder.url = url

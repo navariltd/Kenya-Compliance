@@ -1,11 +1,7 @@
-import asyncio
-from datetime import datetime
-from functools import partial
 from typing import Any
 from unittest.mock import AsyncMock, MagicMock, patch
 
 import frappe
-from frappe.model.delete_doc import delete_doc
 from frappe.tests.utils import FrappeTestCase
 
 from .api_builder import EndpointsBuilder
