@@ -439,13 +439,13 @@ def perform_purchases_search(request_data: str, vendor: str="OSCU KRA") -> None:
 
 
 @frappe.whitelist()
-def submit_inventory(request_data: str) -> None:
+def submit_inventory(request_data: str, vendor: str="OSCU KRA") -> None:
     data: dict = json.loads(request_data)
 
     company_name = frappe.defaults.get_user_default("Company")
 
-    headers = build_headers(company_name, data["branch_id"])
-    server_url = get_server_url(company_name, data["branch_id"])
+    headers = build_headers(company_name,vendor, data["branch_id"])
+    server_url = get_server_url(company_name,vendor, data["branch_id"])
     route_path, last_request_date = get_route_path("StockMasterSaveReq")
 
     if headers and server_url and route_path:
@@ -880,7 +880,6 @@ def create_purchase_invoice_from_request(request_data: str) -> None:
 
     frappe.msgprint("Purchase Invoices have been created")
 
-
 @frappe.whitelist()
 def ping_server(request_data: str) -> None:
     url = json.loads(request_data)["server_url"]
@@ -946,7 +945,13 @@ def create_stock_entry_from_stock_movement(request_data: str) -> None:
 
 def validate_mapping_and_registration_of_items(items):
     for item in items:
-        item_code = item.get("item_code") or item.get("item_name")
+        task_code = item.get("task_code") or item.get("item_name")
+        items = frappe.get_all("Item", 
+		filters={"custom_referenced_imported_item": task_code}, 
+		fields=["name","item_name","item_code"]
+	)
+        if items:
+            item_name = items[0].name
         from kenya_compliance.kenya_compliance.overrides.server.purchase_invoice import validation_message
-        validation_message(item_code)
+        validation_message(item_name)
         

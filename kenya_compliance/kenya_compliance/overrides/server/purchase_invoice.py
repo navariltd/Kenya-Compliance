@@ -54,7 +54,6 @@ def on_submit(doc: Document, method: str) -> None:
 	if not doc.branch:
 		frappe.throw("Please ensure the branch is set before submitting the document")
 	validate_item_registration(doc.items)
-	frappe.throw(str(doc.items))
 	if doc.is_return == 0 and doc.update_stock == 1:
 		# TODO: Handle cases when item tax templates have not been picked
 		company_name = doc.company
@@ -175,14 +174,18 @@ def get_items_details(doc: Document) -> list:
 	return items_list
 
 def validate_item_registration(items):
-    for item in items:
-        item_code = item.item_code
-        validation_message(item_code)
-        
+	for item in items:
+		item_code = item.item_code
+		validation_message(item_code)
+		
 def validation_message(item_code):
-	item_doc = frappe.get_doc("Item", item_code)
-	if item_doc.custom_item_registered == 0:
-		# Generate a link to the item form
-		item_link = get_link_to_form("Item", item_code)
-		frappe.throw(f"Go and register the item: {item_link}")
+    item_doc = frappe.get_doc("Item", item_code)
+    
+    if item_doc.custom_referenced_imported_item and (item_doc.custom_item_registered == 0 or item_doc.custom_imported_item_submitted == 0):
+        item_link = get_link_to_form("Item", item_doc.name)
+        frappe.throw(f"Register or submit the item: {item_link}")
+    
+    elif not item_doc.custom_referenced_imported_item and item_doc.custom_item_registered == 0:
+        item_link = get_link_to_form("Item", item_doc.name)
+        frappe.throw(f"Register the item: {item_link}")
 

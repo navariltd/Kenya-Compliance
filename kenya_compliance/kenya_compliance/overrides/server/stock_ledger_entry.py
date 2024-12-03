@@ -448,7 +448,7 @@ def on_update(doc: Document, method: str | None = None) -> None:
         else:
             payload["sarTyCd"] = "11"
 
-    server_url = get_server_url(company_name, record.branch)
+    server_url = get_server_url(company_name,vendor, record.branch)
     route_path, last_request_date = get_route_path("StockIOSaveReq")
     if headers and server_url and route_path:
         url = f"{server_url}{route_path}"
