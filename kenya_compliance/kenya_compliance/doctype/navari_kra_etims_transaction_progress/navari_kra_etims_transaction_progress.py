@@ -6,4 +6,4 @@ from frappe.model.document import Document
 
 
 class NavariKRAeTimsTransactionProgress(Document):
-	pass
+    pass

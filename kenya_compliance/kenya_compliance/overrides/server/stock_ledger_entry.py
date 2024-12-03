@@ -16,8 +16,8 @@ from ...utils import (
     extract_document_series_number,
     get_route_path,
     get_server_url,
-    split_user_email,
     quantize_number,
+    split_user_email,
 )
 
 endpoints_builder = EndpointsBuilder()
@@ -248,9 +248,10 @@ endpoints_builder = EndpointsBuilder()
 #             document_name=doc.name,
 #         )
 
+
 def on_update(doc: Document, method: str | None = None) -> None:
     company_name = doc.company
-    vendor="OSCU KRA"
+    vendor = "OSCU KRA"
     all_items = frappe.db.get_all(
         "Item", ["*"]
     )  # Get all items to filter and fetch metadata
@@ -274,7 +275,7 @@ def on_update(doc: Document, method: str | None = None) -> None:
         "modrNm": record.modified_by,
         "modrId": split_user_email(record.modified_by),
     }
-    headers = build_headers(company_name,vendor, record.branch)
+    headers = build_headers(company_name, vendor, record.branch)
 
     if doc.voucher_type == "Stock Reconciliation":
         items_list = get_stock_recon_movement_items_details(
@@ -326,7 +327,7 @@ def on_update(doc: Document, method: str | None = None) -> None:
 
             if doc.actual_qty < 0:
                 # If the record warehouse is the source warehouse
-                headers = build_headers(doc.company,vendor, doc_warehouse_branch_id)
+                headers = build_headers(doc.company, vendor, doc_warehouse_branch_id)
                 payload["custBhfId"] = get_warehouse_branch_id(
                     voucher_details.t_warehouse
                 )
@@ -334,7 +335,7 @@ def on_update(doc: Document, method: str | None = None) -> None:
 
             else:
                 # If the record warehouse is the target warehouse
-                headers = build_headers(doc.company,vendor, doc_warehouse_branch_id)
+                headers = build_headers(doc.company, vendor, doc_warehouse_branch_id)
                 payload["custBhfId"] = get_warehouse_branch_id(
                     voucher_details.s_warehouse
                 )
@@ -409,9 +410,7 @@ def on_update(doc: Document, method: str | None = None) -> None:
         current_item = list(
             filter(lambda item: item["itemNm"] == doc.item_code, items_list)
         )  # Get current item only
-        tax_details = list(filter(lambda i: i["item"] == doc.item_code, item_taxes))[
-            0
-        ]  
+        tax_details = list(filter(lambda i: i["item"] == doc.item_code, item_taxes))[0]
         # filter current items tax details
 
         # current_item[0]["taxblAmt"] = round(
@@ -474,6 +473,7 @@ def on_update(doc: Document, method: str | None = None) -> None:
             doctype="Stock Ledger Entry",
             document_name=doc.name,
         )
+
 
 def get_stock_entry_movement_items_details(
     records: list[Document], all_items: list[Document]
@@ -590,7 +590,9 @@ def get_purchase_docs_items_details(
                         "taxTyCd": fetched_item.custom_taxation_type_code or "B",
                         "taxblAmt": quantize_number(item.net_amount),
                         "taxAmt": quantize_number(item.custom_tax_amount) or 0,
-                        "totAmt": quantize_number(item.net_amount + item.custom_tax_amount),
+                        "totAmt": quantize_number(
+                            item.net_amount + item.custom_tax_amount
+                        ),
                         "is_imported_item": (
                             True
                             if (
@@ -639,7 +641,9 @@ def get_notes_docs_items_details(
                         "taxTyCd": fetched_item.custom_taxation_type_code or "B",
                         "taxblAmt": quantize_number(item.net_amount),
                         "taxAmt": quantize_number(item.custom_tax_amount) or 0,
-                        "totAmt": quantize_number(item.net_amount + item.custom_tax_amount),
+                        "totAmt": quantize_number(
+                            item.net_amount + item.custom_tax_amount
+                        ),
                     }
                 )
 

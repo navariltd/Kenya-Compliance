@@ -2,18 +2,19 @@
 # See license.txt
 
 from unittest.mock import patch
+
 import frappe
 from frappe.model.delete_doc import delete_doc
 from frappe.model.document import Document
 from frappe.tests.utils import FrappeTestCase
 
+from ...background_tasks.tasks import send_sales_invoices_information
 from ..doctype_names_mapping import (
     PRODUCTION_SERVER_URL,
     SANDBOX_SERVER_URL,
     SETTINGS_DOCTYPE_NAME,
 )
 from .navari_kra_etims_settings import NavariKRAeTimsSettings
-from ...background_tasks.tasks import send_sales_invoices_information
 
 
 def mock_before_insert(*args) -> None:

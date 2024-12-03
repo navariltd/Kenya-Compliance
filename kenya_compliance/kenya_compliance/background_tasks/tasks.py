@@ -1,4 +1,5 @@
 import json
+from datetime import datetime, timedelta
 
 import frappe
 import frappe.defaults
@@ -15,7 +16,12 @@ from ..doctype.doctype_names_mapping import (
     UNIT_OF_QUANTITY_DOCTYPE_NAME,
 )
 from ..overrides.server.stock_ledger_entry import on_update
-from ..utils import build_headers, get_route_path, get_server_url
+from ..utils import (
+    authenticate_and_get_token,
+    build_headers,
+    get_route_path,
+    get_server_url,
+)
 
 endpoints_builder = EndpointsBuilder()
 
@@ -148,7 +154,7 @@ def send_item_inventory_information() -> None:
 
 
 @frappe.whitelist()
-def refresh_code_lists(vendor: str="OSCU KRA") -> str | None:
+def refresh_code_lists(vendor: str = "OSCU KRA") -> str | None:
     company_name: str | None = frappe.defaults.get_user_default("Company")
 
     headers = build_headers(company_name, vendor)
@@ -359,3 +365,38 @@ def update_item_classification_codes(response: dict) -> None:
             frappe.db.sql(insert_query)
 
     frappe.db.commit()
+
+
+
+def update_currencies(data: dict) -> None:
+    doc: Document | None = None
+    if len(data) > 0:
+         update_slade_countries(data)
+    
+
+def update_slade_countries(data: dict) -> None:
+    """
+    Updates or creates country records in the system based on the given data.
+
+    Args:
+        data (dict): A dictionary where keys are country codes and values are country details.
+    """
+    for code, details in data.items():
+        try:
+            country_name = details.get("name", "").strip().lower()
+            doc = frappe.get_doc(
+                COUNTRIES_DOCTYPE_NAME, {"name": ["like", country_name]}
+            )
+        except:
+            doc = frappe.new_doc(COUNTRIES_DOCTYPE_NAME)
+
+        doc.code = code
+        doc.code_name = details.get("name")
+        doc.currency_code = details.get("currency_code")
+        doc.sort_order = details.get("sort_order", 0) 
+        doc.code_description = details.get("description", "")  
+        
+        doc.save()
+
+    frappe.db.commit()
+

@@ -18,7 +18,7 @@ from ..doctype.doctype_names_mapping import (
     UNIT_OF_QUANTITY_DOCTYPE_NAME,
     USER_DOCTYPE_NAME,
 )
-from ..handlers import handle_errors
+from ..handlers import handle_errors, handle_slade_errors
 from ..utils import get_qr_code
 
 
@@ -43,6 +43,29 @@ def on_error(
         doctype=doctype,
         document_name=document_name,
     )
+    
+def on_slade_error(
+    response: dict | str,
+    url: str | None = None,
+    doctype: str | None = None,
+    document_name: str | None = None,
+) -> None:
+    """Base "on-error" callback.
+
+    Args:
+        response (dict | str): The remote response
+        url (str | None, optional): The remote address. Defaults to None.
+        doctype (str | None, optional): The doctype calling the remote address. Defaults to None.
+        document_name (str | None, optional): The document calling the remote address. Defaults to None.
+        integration_reqeust_name (str | None, optional): The created Integration Request document name. Defaults to None.
+    """
+    handle_slade_errors(
+        response,
+        route=url,
+        doctype=doctype,
+        document_name=document_name,
+    )
+    
 
 
 """

@@ -243,39 +243,34 @@ doc_events = {
     # 		"on_trash": "method"
     # 	}
     "Sales Invoice": {
-        "before_save":[
-            "kenya_compliance.kenya_compliance.utils.before_save_"
-        ],
+        "before_save": ["kenya_compliance.kenya_compliance.utils.before_save_"],
         "on_submit": [
             "kenya_compliance.kenya_compliance.overrides.server.sales_invoice.on_submit"
         ],
         "validate": [
             "kenya_compliance.kenya_compliance.overrides.server.shared_overrides.validate"
         ],
-        "before_cancel":[
+        "before_cancel": [
             "kenya_compliance.kenya_compliance.overrides.server.sales_invoice.before_cancel"
         ],
     },
     "Purchase Invoice": {
-        "before_save":[
-            "kenya_compliance.kenya_compliance.utils.before_save_"
-        ],
+        "before_save": ["kenya_compliance.kenya_compliance.utils.before_save_"],
         "on_submit": [
             "kenya_compliance.kenya_compliance.overrides.server.purchase_invoice.on_submit"
         ],
         "validate": [
             "kenya_compliance.kenya_compliance.overrides.server.purchase_invoice.validate"
         ],
-        "before_cancel":[
+        "before_cancel": [
             "kenya_compliance.kenya_compliance.overrides.server.sales_invoice.before_cancel"
         ],
     },
     "Item": {
         "validate": [
             "kenya_compliance.kenya_compliance.overrides.server.item.validate"
-            
         ],
-        "on_trash": "kenya_compliance.kenya_compliance.overrides.server.item.prevent_item_deletion"
+        "on_trash": "kenya_compliance.kenya_compliance.overrides.server.item.prevent_item_deletion",
     },
 }
 

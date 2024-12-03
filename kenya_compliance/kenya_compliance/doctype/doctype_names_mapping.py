@@ -3,7 +3,7 @@
 from typing import Final
 
 # Doctypes
-SETTINGS_DOCTYPE_NAME: Final[str] = "Navari KRA eTims Settings"
+SETTINGS_DOCTYPE_NAME: Final[str] = "Navari Slade360 eTims Settings"
 ROUTES_TABLE_DOCTYPE_NAME: Final[str] = "Navari eTims Routes"
 ROUTES_TABLE_CHILD_DOCTYPE_NAME: Final[str] = "Navari KRA eTims Route Table Item"
 ITEM_CLASSIFICATIONS_DOCTYPE_NAME: Final[str] = "Navari KRA eTims Item Classification"

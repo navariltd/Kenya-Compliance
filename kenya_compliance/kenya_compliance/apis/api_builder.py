@@ -5,13 +5,19 @@ from typing import Callable, Literal
 from urllib import parse
 
 import aiohttp
+import requests
+from datetime import datetime
 
 import frappe
 from frappe.integrations.utils import create_request_log
 from frappe.model.document import Document
 
 from ..logger import etims_logger
-from ..utils import make_post_request, update_last_request_date
+from ..utils import (
+    make_post_request, 
+    update_last_request_date, 
+    update_navari_settings_with_token
+)
 
 
 class BaseEndpointsBuilder:
@@ -235,6 +241,167 @@ class EndpointsBuilder(BaseEndpointsBuilder):
         ) as error:
             self.error = error
             self.notify()
+
+
+class Slade360EndpointsBuilder(BaseEndpointsBuilder):
+    """
+    Slade360 Endpoints Builder class.
+    Facilitates communication with Slade360 APIs using GET and POST methods.
+    """
+
+    def __init__(self) -> None:
+        super().__init__()
+        self._url: str | None = None
+        self._payload: dict | None = None
+        self._headers: dict | None = None
+        self._method: Literal["GET", "POST"] | None = None
+        self._success_callback_handler: Callable | None = None
+        self._error_callback_handler: Callable | None = None
+
+        self.attach(ErrorObserver())
+
+    @property
+    def method(self) -> Literal["GET", "POST"] | None:
+        """The HTTP method to use for the request"""
+        return self._method
+
+    @method.setter
+    def method(self, new_method: Literal["GET", "POST"]) -> None:
+        self._method = new_method
+
+    @property
+    def url(self) -> str | None:
+        return self._url
+
+    @url.setter
+    def url(self, new_url: str) -> None:
+        self._url = new_url
+
+    @property
+    def payload(self) -> dict | None:
+        return self._payload
+
+    @payload.setter
+    def payload(self, new_payload: dict) -> None:
+        self._payload = new_payload
+
+    @property
+    def headers(self) -> dict | None:
+        return self._headers
+
+    @headers.setter
+    def headers(self, new_headers: dict) -> None:
+        self._headers = new_headers
+
+    @property
+    def success_callback(self) -> Callable | None:
+        return self._success_callback_handler
+
+    @success_callback.setter
+    def success_callback(self, callback: Callable) -> None:
+        self._success_callback_handler = callback
+
+    @property
+    def error_callback(self) -> Callable | None:
+        return self._error_callback_handler
+
+    @error_callback.setter
+    def error_callback(
+        self,
+        callback: Callable[[dict | str, str, str, str], None],
+    ) -> None:
+        self._error_callback_handler = callback
+        
+    def refresh_token(self, document_name) -> str:
+        """Fetch a new token and update the headers."""
+        try:
+            settings = update_navari_settings_with_token(document_name)
+
+            if settings:
+                new_token = settings.access_token
+                self._headers["Authorization"] = f"Bearer {new_token}"
+                return new_token
+            else:
+                frappe.throw(
+                    f"Failed to refresh token",
+                    frappe.AuthenticationError,
+                )
+        except requests.exceptions.RequestException as error:
+            frappe.throw(f"Error refreshing token: {error}", frappe.AuthenticationError)
+
+
+    def make_remote_call(
+        self, doctype: Document | str | None = None, document_name: str | None = None, retrying: bool = False
+    ) -> None:
+        """Handles communication to Slade360 servers."""
+        if (
+            self._url is None
+            or self._headers is None
+            or self._method is None
+            or self._success_callback_handler is None
+            or self._error_callback_handler is None
+        ):
+            frappe.throw(
+                """Please ensure all required parameters (URL, headers, method, success, and error callbacks) are set.""",
+                frappe.MandatoryError,
+                title="Setup Error",
+                is_minimizable=True,
+            )
+
+        self.doctype, self.document_name = doctype, document_name
+        parsed_url = parse.urlparse(self._url)
+        route_path = f"/{parsed_url.path.split('/')[-1]}"
+
+        if not retrying:
+            self.integration_request = create_request_log(
+                data=self._payload,
+                is_remote_request=True,
+                service_name="Slade360",
+                request_headers=self._headers,
+                url=self._url,
+                reference_docname=document_name,
+                reference_doctype=doctype,
+            )
+
+        try:
+            if self._method == "POST":
+                response = requests.post(self._url, json=self._payload, headers=self._headers)
+            elif self._method == "GET":
+                response = requests.get(self._url, headers=self._headers, params=self._payload)
+
+            response_data = response.json()
+
+            if response.status_code == 200:
+                self._success_callback_handler(response_data)
+
+                update_integration_request(
+                    self.integration_request.name,
+                    status="Completed",
+                    output=str(response_data),
+                    error=None,
+                )
+            elif response.status_code == 401 and not retrying:
+                self.refresh_token(document_name)
+                self.make_remote_call(doctype, document_name, retrying=True)
+            else:
+                error = response_data if isinstance(response_data, str) else response_data.get("error") or response_data.get("detail")
+                update_integration_request(
+                    self.integration_request.name,
+                    status="Failed",
+                    output=None,
+                    error=error,
+                )
+                self._error_callback_handler(
+                    response_data,
+                    url=route_path,
+                    doctype=doctype,
+                    document_name=document_name,
+                )
+
+        except requests.exceptions.RequestException as error:
+            self.error = error
+            self.notify()
+
 
 
 def update_integration_request(

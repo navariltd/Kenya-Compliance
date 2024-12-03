@@ -2,8 +2,9 @@
 # See license.txt
 
 import frappe
-from ..doctype_names_mapping import COUNTRIES_DOCTYPE_NAME
 from frappe.tests.utils import FrappeTestCase
+
+from ..doctype_names_mapping import COUNTRIES_DOCTYPE_NAME
 
 
 class TestNavarieTimsCountry(FrappeTestCase):

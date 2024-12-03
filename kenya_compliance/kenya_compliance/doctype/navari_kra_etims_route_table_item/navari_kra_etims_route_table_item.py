@@ -1,9 +1,10 @@
 # Copyright (c) 2024, Navari Ltd and contributors
 # For license information, please see license.txt
 
+from datetime import datetime
+
 # import frappe
 from frappe.model.document import Document
-from datetime import datetime
 
 
 class NavariKRAeTimsRouteTableItem(Document):

@@ -16,9 +16,10 @@ def on_submit(doc: Document, method: str) -> None:
     ):
         generic_invoices_on_submit_override(doc, "Sales Invoice")
 
+
 def before_cancel(doc: Document, method: str) -> None:
     """Disallow cancelling of submitted invoice to eTIMS."""
-    
+
     if doc.doctype == "Sales Invoice" and doc.custom_successfully_submitted:
         frappe.throw(
             "This invoice has already been <b>submitted</b> to eTIMS and cannot be <span style='color:red'>Canceled.</span>\n"
