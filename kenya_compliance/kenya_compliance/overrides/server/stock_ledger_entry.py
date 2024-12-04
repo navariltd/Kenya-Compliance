@@ -412,23 +412,7 @@ def on_update(doc: Document, method: str | None = None) -> None:
         tax_details = list(filter(lambda i: i["item"] == doc.item_code, item_taxes))[
             0
         ]  
-        # filter current items tax details
-
-        # current_item[0]["taxblAmt"] = round(
-        #     tax_details["taxable_amount"] / current_item[0]["qty"], 2
-        # )  # calculate taxable amt
-        # current_item[0]["totAmt"] = round(
-        #     tax_details["taxable_amount"] / current_item[0]["qty"], 2
-        # )  # calculate total amt
-
-        # actual_tax_amount = 0
-        # tax_head = doc.taxes[0].description
-
-        # actual_tax_amount = tax_details[tax_head]["tax_amount"]
-
-        # current_item[0]["taxAmt"] = round(
-        #     actual_tax_amount / current_item[0]["qty"], 2
-        # )  # calculate tax amt
+      
 
         payload["itemList"] = current_item
         payload["totItemCnt"] = len(current_item)
