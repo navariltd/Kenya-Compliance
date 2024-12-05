@@ -426,7 +426,6 @@ def perform_purchases_search(request_data: str, vendor: str="OSCU KRA") -> None:
 
         url = f"{server_url}{route_path}"
         payload = {"lastReqDt": request_date}
-        frappe.throw(str(payload))
         endpoints_builder.headers = headers
         endpoints_builder.url = url
         endpoints_builder.payload = payload
@@ -872,8 +871,8 @@ def create_purchase_invoice_from_request(request_data: str) -> None:
                 "custom_packaging_unit": item["packaging_unit_code"],
                 "custom_unit_of_quantity": item["quantity_unit_code"],
                 "custom_taxation_type": item["taxation_type_code"],
-                "task_code": item["task_code"],
-            },
+                "task_code": item.get("task_code", ''),
+},
         )
     validate_mapping_and_registration_of_items(data["items"])
     purchase_invoice.insert(ignore_mandatory=True)
@@ -952,6 +951,6 @@ def validate_mapping_and_registration_of_items(items):
 	)
         if items:
             item_name = items[0].name
-        from kenya_compliance.kenya_compliance.overrides.server.purchase_invoice import validation_message
-        validation_message(item_name)
+            from kenya_compliance.kenya_compliance.overrides.server.purchase_invoice import validation_message
+            validation_message(item_name)
         
