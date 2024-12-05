@@ -5,5 +5,5 @@
 from frappe.tests.utils import FrappeTestCase
 
 
-class TestNavarieTimsRoutes(FrappeTestCase):
+class TestNavarieTimsRoute(FrappeTestCase):
 	pass

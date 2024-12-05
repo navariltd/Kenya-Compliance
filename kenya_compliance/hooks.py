@@ -12,6 +12,7 @@ from .kenya_compliance.doctype.doctype_names_mapping import (
     TRANSACTION_PROGRESS_DOCTYPE_NAME,
     TRANSACTION_TYPE_DOCTYPE_NAME,
     UNIT_OF_QUANTITY_DOCTYPE_NAME,
+    ROUTES_URL_FUNCTION_DOCTYPE_NAME
 )
 
 app_name = "kenya_compliance"
@@ -58,6 +59,7 @@ fixtures = [
     {"dt": UNIT_OF_QUANTITY_DOCTYPE_NAME},
     {"dt": IMPORTED_ITEMS_STATUS_DOCTYPE_NAME},
     {"dt": ROUTES_TABLE_DOCTYPE_NAME},
+    {"dt": ROUTES_URL_FUNCTION_DOCTYPE_NAME},
     {"dt": COUNTRIES_DOCTYPE_NAME},
     {"dt": ITEM_CLASSIFICATIONS_DOCTYPE_NAME},
     {

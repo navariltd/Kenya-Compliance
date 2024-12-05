@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class NavarieTimsRoutes(Document):
+class NavariEtimsURLPathFunction(Document):
 	pass

@@ -1,0 +1,162 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Navari Etims URL Path Function",
+  "modified": "2024-12-05 11:46:21.829990",
+  "name": "DeviceVerificationReq",
+  "url_path": "/selectInitOsdcInfo",
+  "url_path_function": "DeviceVerificationReq"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Navari Etims URL Path Function",
+  "modified": "2024-12-05 11:49:22.867299",
+  "name": "CodeSearchReq",
+  "url_path": "/selectCodeList",
+  "url_path_function": "CodeSearchReq"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Navari Etims URL Path Function",
+  "modified": "2024-12-05 11:49:36.125893",
+  "name": "CustSearchReq",
+  "url_path": "/selectCustomer",
+  "url_path_function": "CustSearchReq"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Navari Etims URL Path Function",
+  "modified": "2024-12-05 11:49:48.368709",
+  "name": "NoticeSearchReq",
+  "url_path": "/selectNoticeList",
+  "url_path_function": "NoticeSearchReq"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Navari Etims URL Path Function",
+  "modified": "2024-12-05 11:50:03.904688",
+  "name": "ItemClsSearchReq",
+  "url_path": "/selectItemClsList",
+  "url_path_function": "ItemClsSearchReq"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Navari Etims URL Path Function",
+  "modified": "2024-12-05 11:50:21.602288",
+  "name": "ItemSaveReq",
+  "url_path": "/saveItem",
+  "url_path_function": "ItemSaveReq"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Navari Etims URL Path Function",
+  "modified": "2024-12-05 11:51:01.653690",
+  "name": "ItemSearchReq",
+  "url_path": "/selectItemList",
+  "url_path_function": "ItemSearchReq"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Navari Etims URL Path Function",
+  "modified": "2024-12-05 11:51:13.185851",
+  "name": "BhfSearchReq",
+  "url_path": "/selectBhfList",
+  "url_path_function": "BhfSearchReq"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Navari Etims URL Path Function",
+  "modified": "2024-12-05 11:51:23.977923",
+  "name": "BhfCustSaveReq",
+  "url_path": "/saveBhfCustomer",
+  "url_path_function": "BhfCustSaveReq"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Navari Etims URL Path Function",
+  "modified": "2024-12-05 11:51:36.958594",
+  "name": "BhfUserSaveReq",
+  "url_path": "/saveBhfUser",
+  "url_path_function": "BhfUserSaveReq"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Navari Etims URL Path Function",
+  "modified": "2024-12-05 11:51:49.723380",
+  "name": "BhfInsuranceSaveReq",
+  "url_path": "/saveBhfInsurance",
+  "url_path_function": "BhfInsuranceSaveReq"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Navari Etims URL Path Function",
+  "modified": "2024-12-05 11:52:00.719580",
+  "name": "ImportItemSearchReq",
+  "url_path": "/selectImportItemList",
+  "url_path_function": "ImportItemSearchReq"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Navari Etims URL Path Function",
+  "modified": "2024-12-05 11:52:12.267777",
+  "name": "ImportItemUpdateReq",
+  "url_path": "/updateImportItem",
+  "url_path_function": "ImportItemUpdateReq"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Navari Etims URL Path Function",
+  "modified": "2024-12-05 11:52:34.780316",
+  "name": "TrnsSalesSaveWrReq",
+  "url_path": "/saveTrnsSalesOsdc",
+  "url_path_function": "TrnsSalesSaveWrReq"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Navari Etims URL Path Function",
+  "modified": "2024-12-05 11:52:46.325200",
+  "name": "TrnsPurchaseSalesReq",
+  "url_path": "/selectTrnsPurchaseSalesList",
+  "url_path_function": "TrnsPurchaseSalesReq"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Navari Etims URL Path Function",
+  "modified": "2024-12-05 11:52:56.554122",
+  "name": "TrnsPurchaseSaveReq",
+  "url_path": "/insertTrnsPurchase",
+  "url_path_function": "TrnsPurchaseSaveReq"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Navari Etims URL Path Function",
+  "modified": "2024-12-05 11:53:09.270096",
+  "name": "StockMoveReq",
+  "url_path": "/selectStockMoveList",
+  "url_path_function": "StockMoveReq"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Navari Etims URL Path Function",
+  "modified": "2024-12-05 11:53:24.433209",
+  "name": "StockIOSaveReq",
+  "url_path": "/insertStockIO",
+  "url_path_function": "StockIOSaveReq"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Navari Etims URL Path Function",
+  "modified": "2024-12-05 11:53:37.551105",
+  "name": "StockMasterSaveReq",
+  "url_path": "/saveStockMaster",
+  "url_path_function": "StockMasterSaveReq"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Navari Etims URL Path Function",
+  "modified": "2024-12-05 11:53:48.476051",
+  "name": "SaveItemComposition",
+  "url_path": "/saveItemComposition",
+  "url_path_function": "SaveItemComposition"
+ }
+]
