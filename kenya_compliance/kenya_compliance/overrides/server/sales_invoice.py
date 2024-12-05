@@ -25,7 +25,6 @@ def before_cancel(doc: Document, method: str) -> None:
             "If you need to make adjustments, please create a Credit Note instead."
         )
     elif doc.doctype == "Purchase Invoice" and doc.custom_submitted_successfully:
-        frappe.throw("Here")
         frappe.throw(
             "This invoice has already been <b>submitted</b> to eTIMS and cannot be <span style='color:red'>Canceled.</span>.\nIf you need to make adjustments, please create a Debit Note instead."
         )
