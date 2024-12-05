@@ -426,7 +426,6 @@ def perform_purchases_search(request_data: str, vendor: str="OSCU KRA") -> None:
 
         url = f"{server_url}{route_path}"
         payload = {"lastReqDt": request_date}
-        frappe.throw(str(payload))
         endpoints_builder.headers = headers
         endpoints_builder.url = url
         endpoints_builder.payload = payload
