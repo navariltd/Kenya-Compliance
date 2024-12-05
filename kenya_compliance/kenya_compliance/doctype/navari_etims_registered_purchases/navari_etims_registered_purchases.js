@@ -30,27 +30,62 @@ frappe.ui.form.on(doctypeName, {
         },
         __('eTims Actions'),
       );
-      frm.add_custom_button(
-        __('Create Items'),
-        function () {
-          frappe.call({
-            method:
-              'kenya_compliance.kenya_compliance.apis.apis.create_items_from_fetched_registered_purchases',
-            args: {
-              request_data: {
-                name: frm.doc.name,
-                company_name: companyName,
-                items: frm.doc.items,
+      // frm.add_custom_button(
+      //   __('Create Items'),
+      //   function () {
+      //     frappe.call({
+      //       method:
+      //         'kenya_compliance.kenya_compliance.apis.apis.create_items_from_fetched_registered_purchases',
+      //       args: {
+      //         request_data: {
+      //           name: frm.doc.name,
+      //           company_name: companyName,
+      //           items: frm.doc.items,
+      //         },
+      //       },
+      //       callback: (response) => {},
+      //       error: (error) => {
+      //         // Error Handling is Defered to the Server
+      //       },
+      //     });
+      //   },
+      //   __('eTims Actions'),
+      // );
+  // Check for unmapped items before adding the "Create Items" button
+  frappe.call({
+    method: 'kenya_compliance.kenya_compliance.doctype.navari_etims_registered_purchases.navari_etims_registered_purchases.validate_item_mapped_and_registered',
+    args: {
+      items: frm.doc.items,
+    },
+    callback: (response) => {
+      if (response.message === false) {
+        frm.add_custom_button(
+          __('Create Items'),
+          function () {
+            frappe.call({
+              method:
+                'kenya_compliance.kenya_compliance.apis.apis.create_items_from_fetched_registered_purchases',
+              args: {
+                request_data: {
+                  name: frm.doc.name,
+                  company_name: companyName,
+                  items: frm.doc.items,
+                },
               },
-            },
-            callback: (response) => {},
-            error: (error) => {
-              // Error Handling is Defered to the Server
-            },
-          });
-        },
-        __('eTims Actions'),
-      );
+              callback: (response) => {},
+              error: (error) => {
+              },
+            });
+          },
+          __('eTims Actions'),
+        );
+      }
+    },
+    error: (error) => {
+      frappe.msgprint(__('Failed to validate items.'));
+    },
+  });
+
       frm.add_custom_button(
         __('Create Purchase Invoice'),
         function () {

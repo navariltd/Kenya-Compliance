@@ -120,7 +120,6 @@ def submit_inventory_on_success(response: dict, document_name: str) -> None:
         {"custom_inventory_submitted_successfully": 1},
     )
 
-
 def sales_information_submission_on_success(
     response: dict,
     invoice_type: str,
@@ -370,7 +369,13 @@ def imported_items_search_on_success(response: dict) -> None:
 
     for item in items:
         doc = frappe.new_doc(REGISTERED_IMPORTED_ITEM_DOCTYPE_NAME)
-
+        if frappe.db.exists(
+            REGISTERED_IMPORTED_ITEM_DOCTYPE_NAME,
+            {
+                "task_code": item["taskCd"],
+            },
+        ):
+            continue
         doc.item_name = item["itemNm"]
         doc.task_code = item["taskCd"]
         doc.declaration_date = datetime.strptime(item["dclDe"], "%d%m%Y")
@@ -398,14 +403,14 @@ def imported_items_search_on_success(response: dict) -> None:
         doc.invoice_foreign_currency_amount = item["invcFcurAmt"]
         doc.invoice_foreign_currency = item["invcFcurCd"]
         doc.invoice_foreign_currency_rate = item["invcFcurExcrt"]
+        doc.rate = item["invcFcurAmt"] / item["qty"]
 
         doc.save()
 
     frappe.msgprint(
         "Imported Items Fetched. Go to <b>Navari eTims Registered Imported Item</b> Doctype for more information"
     )
-
-
+   
 def search_branch_request_on_success(response: dict) -> None:
     for branch in response["data"]["bhfList"]:
         doc = None
