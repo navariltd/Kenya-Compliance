@@ -188,6 +188,9 @@ def purchase_search_on_success(reponse: dict) -> None:
 
 
 def create_purchase_from_search_details(fetched_purchase: dict) -> str:
+    existing_unique_id = check_duplicate_registered_purchase(fetched_purchase)
+    if existing_unique_id:
+        return existing_unique_id
     doc = frappe.new_doc(REGISTERED_PURCHASES_DOCTYPE_NAME)
 
     doc.supplier_name = fetched_purchase["spplrNm"]
@@ -233,6 +236,28 @@ def create_purchase_from_search_details(fetched_purchase: dict) -> str:
         frappe.log_error(title="Duplicate entries")
 
     return doc.name
+
+def check_duplicate_registered_purchase(fetched_purchase: dict) -> str:
+    """
+    Check if a Registered Purchase already exists based on a unique ID.
+
+    Args:
+        fetched_purchase (dict): The purchase details fetched from the source.
+
+    Returns:
+        str: The unique ID if the Registered Purchase exists, else None.
+    """
+   
+    unique_id = f"{fetched_purchase['spplrTin']}-{fetched_purchase['spplrInvcNo']}"
+
+    if frappe.db.exists(REGISTERED_PURCHASES_DOCTYPE_NAME, unique_id):
+        frappe.log_error(
+            title="Duplicate Registered Purchase",
+            message=f"Purchase with ID {unique_id} already exists. Skipping creation."
+        )
+        return unique_id
+    
+    return None
 
 
 def create_and_link_purchase_item(item: dict, parent_record: str) -> None:

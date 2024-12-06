@@ -285,9 +285,14 @@ doc_events = {
 # ---------------
 
 scheduler_events = {
+    "cron": {
+		"0/2 * * * *": [
+        "kenya_compliance.kenya_compliance.background_tasks.tasks.send_item_inventory_information",
+		],
+		
+	},
     "all": [
         "kenya_compliance.kenya_compliance.background_tasks.tasks.send_stock_information",
-        "kenya_compliance.kenya_compliance.background_tasks.tasks.send_item_inventory_information",
     ],
     # 	"daily": [
     # 		"kenya_compliance.tasks.daily"
