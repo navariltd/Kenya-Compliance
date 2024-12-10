@@ -110,26 +110,6 @@ def is_valid_url(url: str) -> bool:
     return bool(re.match(pattern, url))
 
 
-# def get_route_path(
-#     search_field: str,
-#     vendor: str,
-#     routes_table_doctype: str = ROUTES_TABLE_CHILD_DOCTYPE_NAME,
-# ) -> tuple[str, str] | None:
-
-#     query = f"""
-#     SELECT
-#         url_path,
-#         last_request_date
-#     FROM `tab{routes_table_doctype}`
-#     WHERE url_path_function LIKE '{search_field}'
-#     AND parent LIKE '{ROUTES_TABLE_DOCTYPE_NAME}'
-#     LIMIT 1
-#     """
-
-#     results = frappe.db.sql(query, as_dict=True)
-
-#     if results:
-#         return (results[0].url_path, results[0].last_request_date)
 def get_route_path(
     search_field: str,
     vendor: str="OSCU KRA",
@@ -370,6 +350,8 @@ def build_invoice_payload(
     
     return payload
 
+
+
 # def build_invoice_payload(
 #     invoice: Document, invoice_type_identifier: Literal["S", "C"], company_name: str
 # ) -> dict[str, str | int]:
@@ -491,13 +473,6 @@ def get_invoice_items_list(invoice: Document) -> list[dict[str, str | int | None
     items_list = []
 
     for index, item in enumerate(invoice.items):
-        # taxable_amount = round(int(item_taxes[index]["taxable_amount"]), 2)
-        # actual_tax_amount = 0
-        # tax_head = invoice.taxes[0].description  # Fetch tax head from taxes table
-
-        # actual_tax_amount = item_taxes[index][tax_head]["tax_amount"]
-
-        # tax_amount = round(actual_tax_amount, 2)
 
         items_list.append(
             {
@@ -706,3 +681,11 @@ def get_taxation_types(doc):
 
 
     return taxation_totals
+
+def get_first_branch_id() -> str | None:
+    settings = frappe.get_all("Navari KRA eTims Settings", filters={"is_active": 1}, fields=["bhfid"], limit=1)
+
+    if settings:
+        return settings[0].bhfid
+
+    return None
