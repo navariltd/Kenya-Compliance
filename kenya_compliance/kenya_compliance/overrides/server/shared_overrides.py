@@ -74,7 +74,8 @@ def validate(doc: Document, method: str) -> None:
     doc.custom_scu_id = get_curr_env_etims_settings(
         frappe.defaults.get_user_default("Company"),vendor, doc.branch
     ).scu_id
-
+    if not doc.branch:
+        frappe.throw("Please ensure the branch is set before saving the documents")
     # item_taxes = get_itemised_tax_breakup_data(doc)
 
     # taxes_breakdown = defaultdict(list)

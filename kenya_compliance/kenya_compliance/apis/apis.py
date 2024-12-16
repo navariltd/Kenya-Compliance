@@ -11,6 +11,7 @@ import frappe.defaults
 from frappe.model.document import Document
 from frappe.utils.dateutils import add_to_date
 
+
 from ..doctype.doctype_names_mapping import (
     COUNTRIES_DOCTYPE_NAME,
     SETTINGS_DOCTYPE_NAME,
@@ -23,6 +24,7 @@ from ..utils import (
     get_server_url,
     make_get_request,
     split_user_email,
+    get_first_branch_id,
 )
 from .api_builder import EndpointsBuilder
 from .remote_response_status_handlers import (
@@ -801,7 +803,7 @@ def create_item(item: dict | frappe._dict) -> Document:
 @frappe.whitelist()
 def create_purchase_invoice_from_request(request_data: str) -> None:
     data = json.loads(request_data)
-
+    bhifd=get_first_branch_id()
     # Check if supplier exists
     supplier = None
     if not frappe.db.exists("Supplier", data["supplier_name"], cache=False):
@@ -825,7 +827,7 @@ def create_purchase_invoice_from_request(request_data: str) -> None:
     purchase_invoice.custom_supplier_branch_id = data["supplier_branch_id"]
     purchase_invoice.bill_no = data["supplier_invoice_no"]
     purchase_invoice.bill_date = data["supplier_invoice_date"]
-
+    purchase_invoice.bhifd = bhifd
     if "currency" in data:
         # The "currency" key is only available when creating from Imported Item
         purchase_invoice.currency = data["currency"]
