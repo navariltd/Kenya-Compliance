@@ -9,7 +9,7 @@ frappe.listview_settings[doctypeName] = {
       function (listview) {
         frappe.call({
           method:
-            "kenya_compliance.kenya_compliance.apis.apis.perform_purchases_search",
+            "kenya_compliance.kenya_compliance.apis.apis.perform_purchases_search_all_branches",
           args: {
             request_data: {
               company_name: companyName,
