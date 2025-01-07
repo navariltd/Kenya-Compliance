@@ -1,0 +1,391 @@
+[
+ {
+  "company": "ERPNext eTIMS Test Co",
+  "docstatus": 0,
+  "doctype": "Navari eTims Route",
+  "modified": "2024-12-05 11:00:00.141922",
+  "name": "ERPNext eTIMS Test Co - VSCU Slade 360",
+  "routes_table": [
+   {
+    "description": null,
+    "last_request_date": "2024-04-16 16:01:45",
+    "parent": "ERPNext eTIMS Test Co - VSCU Slade 360",
+    "parentfield": "routes_table",
+    "parenttype": "Navari eTims Route",
+    "url_path": "/selectInitOsdcInfo",
+    "url_path_function": "DeviceVerificationReq"
+   },
+   {
+    "description": null,
+    "last_request_date": "2024-12-02 08:32:21",
+    "parent": "ERPNext eTIMS Test Co - VSCU Slade 360",
+    "parentfield": "routes_table",
+    "parenttype": "Navari eTims Route",
+    "url_path": "/selectCodeList",
+    "url_path_function": "CodeSearchReq"
+   },
+   {
+    "description": null,
+    "last_request_date": "2024-12-04 10:21:43",
+    "parent": "ERPNext eTIMS Test Co - VSCU Slade 360",
+    "parentfield": "routes_table",
+    "parenttype": "Navari eTims Route",
+    "url_path": "/selectCustomer",
+    "url_path_function": "CustSearchReq"
+   },
+   {
+    "description": null,
+    "last_request_date": "2024-12-06 12:23:22",
+    "parent": "ERPNext eTIMS Test Co - VSCU Slade 360",
+    "parentfield": "routes_table",
+    "parenttype": "Navari eTims Route",
+    "url_path": "/selectNoticeList",
+    "url_path_function": "NoticeSearchReq"
+   },
+   {
+    "description": null,
+    "last_request_date": "2024-11-27 10:14:29",
+    "parent": "ERPNext eTIMS Test Co - VSCU Slade 360",
+    "parentfield": "routes_table",
+    "parenttype": "Navari eTims Route",
+    "url_path": "/selectItemClsList",
+    "url_path_function": "ItemClsSearchReq"
+   },
+   {
+    "description": null,
+    "last_request_date": "2024-12-05 17:00:17",
+    "parent": "ERPNext eTIMS Test Co - VSCU Slade 360",
+    "parentfield": "routes_table",
+    "parenttype": "Navari eTims Route",
+    "url_path": "/saveItem",
+    "url_path_function": "ItemSaveReq"
+   },
+   {
+    "description": null,
+    "last_request_date": "2000-01-01 15:13:33",
+    "parent": "ERPNext eTIMS Test Co - VSCU Slade 360",
+    "parentfield": "routes_table",
+    "parenttype": "Navari eTims Route",
+    "url_path": "/selectItemList",
+    "url_path_function": "ItemSearchReq"
+   },
+   {
+    "description": null,
+    "last_request_date": "2024-04-16 16:17:10",
+    "parent": "ERPNext eTIMS Test Co - VSCU Slade 360",
+    "parentfield": "routes_table",
+    "parenttype": "Navari eTims Route",
+    "url_path": "/selectBhfList",
+    "url_path_function": "BhfSearchReq"
+   },
+   {
+    "description": null,
+    "last_request_date": "2024-04-16 16:34:47",
+    "parent": "ERPNext eTIMS Test Co - VSCU Slade 360",
+    "parentfield": "routes_table",
+    "parenttype": "Navari eTims Route",
+    "url_path": "/saveBhfCustomer",
+    "url_path_function": "BhfCustSaveReq"
+   },
+   {
+    "description": null,
+    "last_request_date": "2024-04-16 16:34:51",
+    "parent": "ERPNext eTIMS Test Co - VSCU Slade 360",
+    "parentfield": "routes_table",
+    "parenttype": "Navari eTims Route",
+    "url_path": "/saveBhfUser",
+    "url_path_function": "BhfUserSaveReq"
+   },
+   {
+    "description": null,
+    "last_request_date": "2024-04-16 16:34:48",
+    "parent": "ERPNext eTIMS Test Co - VSCU Slade 360",
+    "parentfield": "routes_table",
+    "parenttype": "Navari eTims Route",
+    "url_path": "/saveBhfInsurance",
+    "url_path_function": "BhfInsuranceSaveReq"
+   },
+   {
+    "description": null,
+    "last_request_date": "2024-12-03 08:44:49",
+    "parent": "ERPNext eTIMS Test Co - VSCU Slade 360",
+    "parentfield": "routes_table",
+    "parenttype": "Navari eTims Route",
+    "url_path": "/selectImportItemList",
+    "url_path_function": "ImportItemSearchReq"
+   },
+   {
+    "description": null,
+    "last_request_date": "2024-12-03 10:10:38",
+    "parent": "ERPNext eTIMS Test Co - VSCU Slade 360",
+    "parentfield": "routes_table",
+    "parenttype": "Navari eTims Route",
+    "url_path": "/updateImportItem",
+    "url_path_function": "ImportItemUpdateReq"
+   },
+   {
+    "description": null,
+    "last_request_date": "2024-12-04 11:33:24",
+    "parent": "ERPNext eTIMS Test Co - VSCU Slade 360",
+    "parentfield": "routes_table",
+    "parenttype": "Navari eTims Route",
+    "url_path": "/saveTrnsSalesOsdc",
+    "url_path_function": "TrnsSalesSaveWrReq"
+   },
+   {
+    "description": null,
+    "last_request_date": "2024-12-06 12:47:53",
+    "parent": "ERPNext eTIMS Test Co - VSCU Slade 360",
+    "parentfield": "routes_table",
+    "parenttype": "Navari eTims Route",
+    "url_path": "/selectTrnsPurchaseSalesList",
+    "url_path_function": "TrnsPurchaseSalesReq"
+   },
+   {
+    "description": null,
+    "last_request_date": "2024-12-05 17:04:36",
+    "parent": "ERPNext eTIMS Test Co - VSCU Slade 360",
+    "parentfield": "routes_table",
+    "parenttype": "Navari eTims Route",
+    "url_path": "/insertTrnsPurchase",
+    "url_path_function": "TrnsPurchaseSaveReq"
+   },
+   {
+    "description": null,
+    "last_request_date": "2024-11-29 10:59:27",
+    "parent": "ERPNext eTIMS Test Co - VSCU Slade 360",
+    "parentfield": "routes_table",
+    "parenttype": "Navari eTims Route",
+    "url_path": "/selectStockMoveList",
+    "url_path_function": "StockMoveReq"
+   },
+   {
+    "description": null,
+    "last_request_date": "2024-12-05 17:04:46",
+    "parent": "ERPNext eTIMS Test Co - VSCU Slade 360",
+    "parentfield": "routes_table",
+    "parenttype": "Navari eTims Route",
+    "url_path": "/insertStockIO",
+    "url_path_function": "StockIOSaveReq"
+   },
+   {
+    "description": null,
+    "last_request_date": "2024-12-05 17:08:40",
+    "parent": "ERPNext eTIMS Test Co - VSCU Slade 360",
+    "parentfield": "routes_table",
+    "parenttype": "Navari eTims Route",
+    "url_path": "/saveStockMaster",
+    "url_path_function": "StockMasterSaveReq"
+   },
+   {
+    "description": null,
+    "last_request_date": "2024-04-17 08:29:50",
+    "parent": "ERPNext eTIMS Test Co - VSCU Slade 360",
+    "parentfield": "routes_table",
+    "parenttype": "Navari eTims Route",
+    "url_path": "/saveItemComposition",
+    "url_path_function": "SaveItemComposition"
+   }
+  ],
+  "vendor": "VSCU Slade 360"
+ },
+ {
+  "company": "ERPNext eTIMS Test Co",
+  "docstatus": 0,
+  "doctype": "Navari eTims Route",
+  "modified": "2024-12-05 11:00:20.905523",
+  "name": "ERPNext eTIMS Test Co - Pergamon",
+  "routes_table": [],
+  "vendor": "Pergamon"
+ },
+ {
+  "company": "ERPNext eTIMS Test Co",
+  "docstatus": 0,
+  "doctype": "Navari eTims Route",
+  "modified": "2024-12-16 12:21:46.383166",
+  "name": "ERPNext eTIMS Test Co - OSCU KRA",
+  "routes_table": [
+   {
+    "description": null,
+    "last_request_date": "2025-01-06 12:47:26",
+    "parent": "ERPNext eTIMS Test Co - OSCU KRA",
+    "parentfield": "routes_table",
+    "parenttype": "Navari eTims Route",
+    "url_path": "/selectInitOsdcInfo",
+    "url_path_function": "DeviceVerificationReq"
+   },
+   {
+    "description": null,
+    "last_request_date": "2024-12-02 08:32:21",
+    "parent": "ERPNext eTIMS Test Co - OSCU KRA",
+    "parentfield": "routes_table",
+    "parenttype": "Navari eTims Route",
+    "url_path": "/selectCodeList",
+    "url_path_function": "CodeSearchReq"
+   },
+   {
+    "description": null,
+    "last_request_date": "2024-12-04 10:21:43",
+    "parent": "ERPNext eTIMS Test Co - OSCU KRA",
+    "parentfield": "routes_table",
+    "parenttype": "Navari eTims Route",
+    "url_path": "/selectCustomer",
+    "url_path_function": "CustSearchReq"
+   },
+   {
+    "description": null,
+    "last_request_date": "2024-12-06 21:00:15",
+    "parent": "ERPNext eTIMS Test Co - OSCU KRA",
+    "parentfield": "routes_table",
+    "parenttype": "Navari eTims Route",
+    "url_path": "/selectNoticeList",
+    "url_path_function": "NoticeSearchReq"
+   },
+   {
+    "description": null,
+    "last_request_date": "2024-11-27 10:14:29",
+    "parent": "ERPNext eTIMS Test Co - OSCU KRA",
+    "parentfield": "routes_table",
+    "parenttype": "Navari eTims Route",
+    "url_path": "/selectItemClsList",
+    "url_path_function": "ItemClsSearchReq"
+   },
+   {
+    "description": null,
+    "last_request_date": "2024-12-04 10:00:42",
+    "parent": "ERPNext eTIMS Test Co - OSCU KRA",
+    "parentfield": "routes_table",
+    "parenttype": "Navari eTims Route",
+    "url_path": "/saveItem",
+    "url_path_function": "ItemSaveReq"
+   },
+   {
+    "description": null,
+    "last_request_date": "2000-01-01 15:13:33",
+    "parent": "ERPNext eTIMS Test Co - OSCU KRA",
+    "parentfield": "routes_table",
+    "parenttype": "Navari eTims Route",
+    "url_path": "/selectItemList",
+    "url_path_function": "ItemSearchReq"
+   },
+   {
+    "description": null,
+    "last_request_date": "2024-04-16 16:17:10",
+    "parent": "ERPNext eTIMS Test Co - OSCU KRA",
+    "parentfield": "routes_table",
+    "parenttype": "Navari eTims Route",
+    "url_path": "/selectBhfList",
+    "url_path_function": "BhfSearchReq"
+   },
+   {
+    "description": null,
+    "last_request_date": "2024-04-16 16:34:47",
+    "parent": "ERPNext eTIMS Test Co - OSCU KRA",
+    "parentfield": "routes_table",
+    "parenttype": "Navari eTims Route",
+    "url_path": "/saveBhfCustomer",
+    "url_path_function": "BhfCustSaveReq"
+   },
+   {
+    "description": null,
+    "last_request_date": "2024-04-16 16:34:51",
+    "parent": "ERPNext eTIMS Test Co - OSCU KRA",
+    "parentfield": "routes_table",
+    "parenttype": "Navari eTims Route",
+    "url_path": "/saveBhfUser",
+    "url_path_function": "BhfUserSaveReq"
+   },
+   {
+    "description": null,
+    "last_request_date": "2024-04-16 16:34:48",
+    "parent": "ERPNext eTIMS Test Co - OSCU KRA",
+    "parentfield": "routes_table",
+    "parenttype": "Navari eTims Route",
+    "url_path": "/saveBhfInsurance",
+    "url_path_function": "BhfInsuranceSaveReq"
+   },
+   {
+    "description": null,
+    "last_request_date": "2024-12-06 17:07:34",
+    "parent": "ERPNext eTIMS Test Co - OSCU KRA",
+    "parentfield": "routes_table",
+    "parenttype": "Navari eTims Route",
+    "url_path": "/selectImportItemList",
+    "url_path_function": "ImportItemSearchReq"
+   },
+   {
+    "description": null,
+    "last_request_date": "2000-12-03 10:10:38",
+    "parent": "ERPNext eTIMS Test Co - OSCU KRA",
+    "parentfield": "routes_table",
+    "parenttype": "Navari eTims Route",
+    "url_path": "/updateImportItem",
+    "url_path_function": "ImportItemUpdateReq"
+   },
+   {
+    "description": null,
+    "last_request_date": "2000-12-16 08:28:59",
+    "parent": "ERPNext eTIMS Test Co - OSCU KRA",
+    "parentfield": "routes_table",
+    "parenttype": "Navari eTims Route",
+    "url_path": "/saveTrnsSalesOsdc",
+    "url_path_function": "TrnsSalesSaveWrReq"
+   },
+   {
+    "description": null,
+    "last_request_date": "2025-01-06 12:57:03",
+    "parent": "ERPNext eTIMS Test Co - OSCU KRA",
+    "parentfield": "routes_table",
+    "parenttype": "Navari eTims Route",
+    "url_path": "/selectTrnsPurchaseSalesList",
+    "url_path_function": "TrnsPurchaseSalesReq"
+   },
+   {
+    "description": null,
+    "last_request_date": "2000-12-04 10:12:55",
+    "parent": "ERPNext eTIMS Test Co - OSCU KRA",
+    "parentfield": "routes_table",
+    "parenttype": "Navari eTims Route",
+    "url_path": "/insertTrnsPurchase",
+    "url_path_function": "TrnsPurchaseSaveReq"
+   },
+   {
+    "description": null,
+    "last_request_date": "2024-11-29 10:59:27",
+    "parent": "ERPNext eTIMS Test Co - OSCU KRA",
+    "parentfield": "routes_table",
+    "parenttype": "Navari eTims Route",
+    "url_path": "/selectStockMoveList",
+    "url_path_function": "StockMoveReq"
+   },
+   {
+    "description": null,
+    "last_request_date": "2024-12-16 08:38:00",
+    "parent": "ERPNext eTIMS Test Co - OSCU KRA",
+    "parentfield": "routes_table",
+    "parenttype": "Navari eTims Route",
+    "url_path": "/insertStockIO",
+    "url_path_function": "StockIOSaveReq"
+   },
+   {
+    "description": null,
+    "last_request_date": "2000-12-10 10:38:54",
+    "parent": "ERPNext eTIMS Test Co - OSCU KRA",
+    "parentfield": "routes_table",
+    "parenttype": "Navari eTims Route",
+    "url_path": "/saveStockMaster",
+    "url_path_function": "StockMasterSaveReq"
+   },
+   {
+    "description": null,
+    "last_request_date": "2000-04-17 08:29:50",
+    "parent": "ERPNext eTIMS Test Co - OSCU KRA",
+    "parentfield": "routes_table",
+    "parenttype": "Navari eTims Route",
+    "url_path": "/saveItemComposition",
+    "url_path_function": "SaveItemComposition"
+   }
+  ],
+  "vendor": "OSCU KRA"
+ }
+]

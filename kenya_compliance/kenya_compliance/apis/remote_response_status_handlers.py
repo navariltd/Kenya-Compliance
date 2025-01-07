@@ -176,9 +176,8 @@ def stock_mvt_submission_on_success(response: dict, document_name: str) -> None:
         "Stock Ledger Entry", document_name, {"custom_submitted_successfully": 1}
     )
 
-
-def purchase_search_on_success(reponse: dict) -> None:
-    sales_list = reponse["data"]["saleList"]
+def purchase_search_on_success(response: dict) -> None:
+    sales_list = response["data"]["saleList"]
 
     for sale in sales_list:
         created_record = create_purchase_from_search_details(sale)
@@ -261,6 +260,8 @@ def check_duplicate_registered_purchase(fetched_purchase: dict) -> str:
 
 
 def create_and_link_purchase_item(item: dict, parent_record: str) -> None:
+    '''There is an issue with the way its creating items from fetched purchases. Need some fix.
+    KRA is down and am very annoyed because its really wasting my whole time.'''
     item_cls_code = item["itemClsCd"]
 
     if not frappe.db.exists(ITEM_CLASSIFICATIONS_DOCTYPE_NAME, item_cls_code):

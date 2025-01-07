@@ -414,13 +414,26 @@ def perform_import_item_search_all_branches() -> None:
         perform_import_item_search(request_data)
 
 @frappe.whitelist()
+def perform_purchases_search_all_branches(request_data:str) -> None:
+    all_credentials = frappe.get_all(
+        SETTINGS_DOCTYPE_NAME,
+        ["name", "bhfid", "communication_key", "tin", "company"],
+    )
+
+    for credential in all_credentials:
+        request_data = json.dumps(
+            {"company_name": credential.company, "branch_id": credential.bhfid}
+        )
+        perform_purchases_search(request_data)
+        
+@frappe.whitelist()
 def perform_purchases_search(request_data: str, vendor: str="OSCU KRA") -> None:
     data: dict = json.loads(request_data)
 
     company_name = data["company_name"]
-
-    headers = build_headers(company_name, vendor)
-    server_url = get_server_url(company_name, vendor)
+    branch_id=data["branch_id"]
+    headers = build_headers(company_name, vendor,branch_id)
+    server_url = get_server_url(company_name, vendor, branch_id)
     route_path, last_request_date = get_route_path("TrnsPurchaseSalesReq")
 
     if headers and server_url and route_path:
@@ -803,7 +816,7 @@ def create_item(item: dict | frappe._dict) -> Document:
 @frappe.whitelist()
 def create_purchase_invoice_from_request(request_data: str) -> None:
     data = json.loads(request_data)
-    bhfId=get_first_branch_id()
+    branch_id=get_first_branch_id()
     # Check if supplier exists
     supplier = None
     if not frappe.db.exists("Supplier", data["supplier_name"], cache=False):
@@ -827,7 +840,7 @@ def create_purchase_invoice_from_request(request_data: str) -> None:
     purchase_invoice.custom_supplier_branch_id = data["supplier_branch_id"]
     purchase_invoice.bill_no = data["supplier_invoice_no"]
     purchase_invoice.bill_date = data["supplier_invoice_date"]
-    purchase_invoice.branch = bhfId
+    purchase_invoice.branch = branch_id
     if "currency" in data:
         # The "currency" key is only available when creating from Imported Item
         purchase_invoice.currency = data["currency"]

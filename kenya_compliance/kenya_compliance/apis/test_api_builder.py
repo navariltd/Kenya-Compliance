@@ -113,3 +113,5 @@ class TestApis(FrappeTestCase):
 
         self.assertIsNotNone(record)
         self.assertEqual(record[0].error, mock_response["resultMsg"])
+
+

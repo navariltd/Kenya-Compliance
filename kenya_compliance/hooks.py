@@ -107,6 +107,12 @@ fixtures = [
             ]
         ],
     },
+    {
+        "doctype": "Workspace",
+        "filters": [
+            ["name", "=", "eTims Integration"],
+        ],
+    },
 ]
 # Includes in <head>
 # ------------------
