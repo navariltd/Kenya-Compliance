@@ -176,9 +176,8 @@ def stock_mvt_submission_on_success(response: dict, document_name: str) -> None:
         "Stock Ledger Entry", document_name, {"custom_submitted_successfully": 1}
     )
 
-
-def purchase_search_on_success(reponse: dict) -> None:
-    sales_list = reponse["data"]["saleList"]
+def purchase_search_on_success(response: dict) -> None:
+    sales_list = response["data"]["saleList"]
 
     for sale in sales_list:
         created_record = create_purchase_from_search_details(sale)
