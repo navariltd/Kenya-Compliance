@@ -11,6 +11,7 @@ import frappe.defaults
 from frappe.model.document import Document
 from frappe.utils.dateutils import add_to_date
 
+
 from ..doctype.doctype_names_mapping import (
     COUNTRIES_DOCTYPE_NAME,
     SETTINGS_DOCTYPE_NAME,
@@ -23,6 +24,7 @@ from ..utils import (
     get_server_url,
     make_get_request,
     split_user_email,
+    get_first_branch_id,
 )
 from .api_builder import EndpointsBuilder
 from .remote_response_status_handlers import (
@@ -65,45 +67,59 @@ def bulk_submit_sales_invoices(docs_list: str) -> None:
 def bulk_register_item(docs_list: str) -> None:
     data = json.loads(docs_list)
     all_items = frappe.db.get_all("Item", {"custom_item_registered": 0}, ["name"])
-
     for record in data:
         for item in all_items:
-            if record == item.item_code:
-                request_data = {
-                    "name": item.name,
-                    "company_name": frappe.defaults.get_user_default("Company"),
-                    "itemCd": item.custom_item_code_etims,
-                    "itemClsCd": item.custom_item_classification,
-                    "itemTyCd": item.custom_product_type,
-                    "itemNm": item.item_name,
-                    "temStdNm": None,
-                    "orgnNatCd": item.custom_etims_country_of_origin_code,
-                    "pkgUnitCd": item.custom_packaging_unit_code,
-                    "qtyUnitCd": item.custom_unit_of_quantity_code,
-                    "taxTyCd": item.get("custom_taxation_type", "B"),
-                    "btchNo": None,
-                    "bcd": None,
-                    "dftPrc": round(item.valuation_rate, 2),
-                    "grpPrcL1": None,
-                    "grpPrcL2": None,
-                    "grpPrcL3": None,
-                    "grpPrcL4": None,
-                    "grpPrcL5": None,
-                    "addInfo": None,
-                    "sftyQty": None,
-                    "isrcAplcbYn": "Y",
-                    "useYn": "Y",
-                    "regrId": split_user_email(item.owner),
-                    "regrNm": item.owner,
-                    "modrId": split_user_email(item.modified_by),
-                    "modrNm": item.modified_by,
-                }
-
-                perform_item_registration(request_data=json.dumps(request_data))
+            if record == item.name:
+                process_single_item(record)
 
 
 @frappe.whitelist()
-def perform_customer_search(request_data: str) -> None:
+def process_single_item(record: str) -> None:
+    """
+    Process a single item for registration, construct the payload, and perform registration.
+    
+    Args:
+        record (str): Name of the item to process.
+    """
+    item = frappe.get_doc("Item", record, for_update=False)
+    
+    valuation_rate = item.valuation_rate if item.valuation_rate is not None else 0
+
+    request_data = {
+        "name": item.name,
+        "company_name": frappe.defaults.get_user_default("Company"),
+        "itemCd": item.custom_item_code_etims,
+        "itemClsCd": item.custom_item_classification,
+        "itemTyCd": item.custom_product_type,
+        "itemNm": item.item_name,
+        "temStdNm": None,
+        "orgnNatCd": item.custom_etims_country_of_origin_code,
+        "pkgUnitCd": item.custom_packaging_unit_code,
+        "qtyUnitCd": item.custom_unit_of_quantity_code,
+        "taxTyCd": item.get("custom_taxation_type", "B"),
+        "btchNo": None,
+        "bcd": None,
+        "dftPrc": round(valuation_rate, 2),
+        "grpPrcL1": None,
+        "grpPrcL2": None,
+        "grpPrcL3": None,
+        "grpPrcL4": None,
+        "grpPrcL5": None,
+        "addInfo": None,
+        "sftyQty": None,
+        "isrcAplcbYn": "Y",
+        "useYn": "Y",
+        "regrId": split_user_email(item.owner),
+        "regrNm": item.owner,
+        "modrId": split_user_email(item.modified_by),
+        "modrNm": item.modified_by,
+    }
+
+    perform_item_registration(request_data=json.dumps(request_data))
+
+
+@frappe.whitelist()
+def perform_customer_search(request_data: str, vendor="OSCU KRA") -> None:
     """Search customer details in the eTims Server
 
     Args:
@@ -113,8 +129,8 @@ def perform_customer_search(request_data: str) -> None:
 
     company_name = data["company_name"]
 
-    headers = build_headers(company_name)
-    server_url = get_server_url(company_name)
+    headers = build_headers(company_name, vendor)
+    server_url = get_server_url(company_name, vendor)
     route_path, last_request_date = get_route_path("CustSearchReq")
 
     if headers and server_url and route_path:
@@ -141,13 +157,13 @@ def perform_customer_search(request_data: str) -> None:
 
 
 @frappe.whitelist()
-def perform_item_registration(request_data: str) -> dict | None:
+def perform_item_registration(request_data: str, vendor="OSCU KRA") -> dict | None:
     data: dict = json.loads(request_data)
 
     company_name = data.pop("company_name")
 
-    headers = build_headers(company_name)
-    server_url = get_server_url(company_name)
+    headers = build_headers(company_name, vendor)
+    server_url = get_server_url(company_name, vendor)
     route_path, last_request_date = get_route_path("ItemSaveReq")
 
     if headers and server_url and route_path:
@@ -173,13 +189,13 @@ def perform_item_registration(request_data: str) -> dict | None:
 
 
 @frappe.whitelist()
-def send_insurance_details(request_data: str) -> None:
+def send_insurance_details(request_data: str, vendor="OSCU KRA") -> None:
     data: dict = json.loads(request_data)
 
     company_name = data["company_name"]
 
-    headers = build_headers(company_name)
-    server_url = get_server_url(company_name)
+    headers = build_headers(company_name, vendor)
+    server_url = get_server_url(company_name, vendor)
     route_path, last_request_date = get_route_path("BhfInsuranceSaveReq")
 
     if headers and server_url and route_path:
@@ -215,13 +231,13 @@ def send_insurance_details(request_data: str) -> None:
 
 
 @frappe.whitelist()
-def send_branch_customer_details(request_data: str) -> None:
+def send_branch_customer_details(request_data: str, vendor="OSCU KRA") -> None:
     data: dict = json.loads(request_data)
 
     company_name = data["company_name"]
 
-    headers = build_headers(company_name)
-    server_url = get_server_url(company_name)
+    headers = build_headers(company_name, vendor),
+    server_url = get_server_url(company_name, vendor)
     route_path, last_request_date = get_route_path("BhfCustSaveReq")
 
     if headers and server_url and route_path:
@@ -262,11 +278,11 @@ def send_branch_customer_details(request_data: str) -> None:
 
 
 @frappe.whitelist()
-def save_branch_user_details(request_data: str) -> None:
+def save_branch_user_details(request_data: str, vendor="OSCU KRA") -> None:
     data: dict = json.loads(request_data)
     company_name = data["company_name"]
-    headers = build_headers(company_name)
-    server_url = get_server_url(company_name)
+    headers = build_headers(company_name, vendor)
+    server_url = get_server_url(company_name, vendor)
     route_path, last_request_date = get_route_path("BhfUserSaveReq")
 
     if headers and server_url and route_path:
@@ -319,7 +335,7 @@ def create_branch_user() -> None:
         doc.system_user = user.email
         doc.branch_id = frappe.get_value(
             "Branch", {"custom_branch_code": "00"}, ["name"]
-        )  # Created users are assigned to Branch 00
+        )
 
         doc.save()
 
@@ -327,12 +343,12 @@ def create_branch_user() -> None:
 
 
 @frappe.whitelist()
-def perform_item_search(request_data: str) -> None:
+def perform_item_search(request_data: str, vendor="OSCU KRA") -> None:
     data: dict = json.loads(request_data)
 
     company_name = data["company_name"]
-    headers = build_headers(company_name)
-    server_url = get_server_url(company_name)
+    headers = build_headers(company_name, vendor)
+    server_url = get_server_url(company_name, vendor)
     route_path, last_request_date = get_route_path("ItemSearchReq")
 
     if headers and server_url and route_path:
@@ -353,26 +369,27 @@ def perform_item_search(request_data: str) -> None:
 
 
 @frappe.whitelist()
-def perform_import_item_search(request_data: str) -> None:
+def perform_import_item_search(request_data: str, vendor="OSCU KRA") -> None:
     data: dict = json.loads(request_data)
 
     company_name = data["company_name"]
 
     if "branch_code" in data:
-        headers = build_headers(company_name, data["branch_code"])
-        server_url = get_server_url(company_name, data["branch_code"])
+        headers = build_headers(company_name,vendor, data["branch_code"])
+        server_url = get_server_url(company_name,vendor, data["branch_code"])
 
     else:
-        headers = build_headers(company_name)
-        server_url = get_server_url(company_name)
+        headers = build_headers(company_name, vendor)
+        server_url = get_server_url(company_name, vendor)
 
     route_path, last_request_date = get_route_path("ImportItemSearchReq")
 
+    '''Use last_request_date as the last request date if it exists, else use the current date - 1 year'''
     if headers and server_url and route_path:
         request_date = add_to_date(datetime.now(), years=-1).strftime("%Y%m%d%H%M%S")
+        last_request_date = last_request_date.strftime("%Y%m%d%H%M%S") or request_date
         url = f"{server_url}{route_path}"
-        payload = {"lastReqDt": request_date}
-
+        payload = {"lastReqDt": last_request_date}
         endpoints_builder.headers = headers
         endpoints_builder.url = url
         endpoints_builder.payload = payload
@@ -396,15 +413,14 @@ def perform_import_item_search_all_branches() -> None:
 
         perform_import_item_search(request_data)
 
-
 @frappe.whitelist()
-def perform_purchases_search(request_data: str) -> None:
+def perform_purchases_search(request_data: str, vendor: str="OSCU KRA") -> None:
     data: dict = json.loads(request_data)
 
     company_name = data["company_name"]
 
-    headers = build_headers(company_name)
-    server_url = get_server_url(company_name)
+    headers = build_headers(company_name, vendor)
+    server_url = get_server_url(company_name, vendor)
     route_path, last_request_date = get_route_path("TrnsPurchaseSalesReq")
 
     if headers and server_url and route_path:
@@ -412,7 +428,6 @@ def perform_purchases_search(request_data: str) -> None:
 
         url = f"{server_url}{route_path}"
         payload = {"lastReqDt": request_date}
-
         endpoints_builder.headers = headers
         endpoints_builder.url = url
         endpoints_builder.payload = payload
@@ -425,13 +440,13 @@ def perform_purchases_search(request_data: str) -> None:
 
 
 @frappe.whitelist()
-def submit_inventory(request_data: str) -> None:
+def submit_inventory(request_data: str, vendor: str="OSCU KRA") -> None:
     data: dict = json.loads(request_data)
 
     company_name = frappe.defaults.get_user_default("Company")
 
-    headers = build_headers(company_name, data["branch_id"])
-    server_url = get_server_url(company_name, data["branch_id"])
+    headers = build_headers(company_name,vendor, data["branch_id"])
+    server_url = get_server_url(company_name,vendor, data["branch_id"])
     route_path, last_request_date = get_route_path("StockMasterSaveReq")
 
     if headers and server_url and route_path:
@@ -466,13 +481,13 @@ def submit_inventory(request_data: str) -> None:
 
 
 @frappe.whitelist()
-def perform_item_classification_search(request_data: str) -> None:
+def perform_item_classification_search(request_data: str, vendor="OSCU KRA") -> None:
     data: dict = json.loads(request_data)
 
     company_name = data["company_name"]
 
-    headers = build_headers(company_name)
-    server_url = get_server_url(company_name)
+    headers = build_headers(company_name, vendor)
+    server_url = get_server_url(company_name, vendor)
     route_path, last_request_date = get_route_path("ItemClsSearchReq")
 
     if headers and server_url and route_path:
@@ -495,13 +510,13 @@ def perform_item_classification_search(request_data: str) -> None:
 
 
 @frappe.whitelist()
-def search_branch_request(request_data: str) -> None:
+def search_branch_request(request_data: str, vendor="OSCU KRA") -> None:
     data: dict = json.loads(request_data)
 
     company_name = data["company_name"]
 
-    headers = build_headers(company_name)
-    server_url = get_server_url(company_name)
+    headers = build_headers(company_name, vendor)
+    server_url = get_server_url(company_name, vendor)
     route_path, last_request_date = get_route_path("BhfSearchReq")
 
     if headers and server_url and route_path:
@@ -523,12 +538,12 @@ def search_branch_request(request_data: str) -> None:
 
 
 @frappe.whitelist()
-def send_imported_item_request(request_data: str) -> None:
+def send_imported_item_request(request_data: str, vendor="OSCU KRA") -> None:
     data: dict = json.loads(request_data)
 
     company_name = data["company_name"]
-    headers = build_headers(company_name)
-    server_url = get_server_url(company_name)
+    headers = build_headers(company_name, vendor)
+    server_url = get_server_url(company_name, vendor)
     route_path, last_request_date = get_route_path("ImportItemUpdateReq")
 
     if headers and server_url and route_path:
@@ -570,13 +585,13 @@ def send_imported_item_request(request_data: str) -> None:
 
 
 @frappe.whitelist()
-def perform_notice_search(request_data: str) -> None:
+def perform_notice_search(request_data: str, vendor="OSCU KRA") -> None:
     data: dict = json.loads(request_data)
 
     company_name = data["company_name"]
 
-    headers = build_headers(company_name)
-    server_url = get_server_url(company_name)
+    headers = build_headers(company_name, vendor)
+    server_url = get_server_url(company_name, vendor)
 
     route_path, last_request_date = get_route_path("NoticeSearchReq")
     request_date = add_to_date(datetime.now(), years=-1).strftime("%Y%m%d%H%M%S")
@@ -597,13 +612,13 @@ def perform_notice_search(request_data: str) -> None:
 
 
 @frappe.whitelist()
-def perform_stock_movement_search(request_data: str) -> None:
+def perform_stock_movement_search(request_data: str, vendor="OSCU KRA") -> None:
     data: dict = json.loads(request_data)
 
     company_name = data["company_name"]
 
-    headers = build_headers(company_name, data["branch_id"])
-    server_url = get_server_url(company_name, data["branch_id"])
+    headers = build_headers(company_name,vendor, data["branch_id"])
+    server_url = get_server_url(company_name,vendor, data["branch_id"])
 
     route_path, last_request_date = get_route_path("StockMoveReq")
     request_date = last_request_date.strftime("%Y%m%d%H%M%S")
@@ -611,7 +626,6 @@ def perform_stock_movement_search(request_data: str) -> None:
     if headers and server_url and route_path:
         url = f"{server_url}{route_path}"
         payload = {"lastReqDt": request_date}
-
         endpoints_builder.headers = headers
         endpoints_builder.url = url
         endpoints_builder.payload = payload
@@ -626,15 +640,27 @@ def perform_stock_movement_search(request_data: str) -> None:
             job_name=token_hex(100),
         )
 
+@frappe.whitelist()
+def perform_stock_movement_search_all_branches() -> None:
+    all_credentials = frappe.get_all(
+        SETTINGS_DOCTYPE_NAME,
+        ["name", "bhfid", "communication_key", "tin", "company"],
+    )
+
+    for credential in all_credentials:
+        request_data = json.dumps(
+            {"company_name": credential.company, "branch_id": credential.bhfid}
+        )
+        perform_stock_movement_search(request_data)
 
 @frappe.whitelist()
-def submit_item_composition(request_data: str) -> None:
+def submit_item_composition(request_data: str, vendor="OSCU KRA") -> None:
     data: dict = json.loads(request_data)
 
     company_name = data["company_name"]
 
-    headers = build_headers(company_name)
-    server_url = get_server_url(company_name)
+    headers = build_headers(company_name, vendor)
+    server_url = get_server_url(company_name, vendor)
     route_path, last_request_date = get_route_path("SaveItemComposition")
 
     if headers and server_url and route_path:
@@ -726,7 +752,6 @@ def create_supplier(supplier_details: dict) -> Document:
 @frappe.whitelist()
 def create_items_from_fetched_registered_purchases(request_data: str) -> None:
     data = json.loads(request_data)
-
     if data["items"]:
         items = data["items"]
         for item in items:
@@ -735,7 +760,7 @@ def create_items_from_fetched_registered_purchases(request_data: str) -> None:
 
 def create_item(item: dict | frappe._dict) -> Document:
     item_code = item.get("item_code", None)
-
+    
     new_item = frappe.new_doc("Item")
     new_item.is_stock_item = 0  # Default to 0
     new_item.item_code = item["item_name"]
@@ -770,14 +795,15 @@ def create_item(item: dict | frappe._dict) -> Document:
         new_item.custom_referenced_imported_item = item["imported_item"]
 
     new_item.insert(ignore_mandatory=True, ignore_if_duplicate=True)
-
+    if new_item.custom_item_classification is not None:
+        process_single_item(new_item.name)
     return new_item
 
 
 @frappe.whitelist()
 def create_purchase_invoice_from_request(request_data: str) -> None:
     data = json.loads(request_data)
-
+    bhfId=get_first_branch_id()
     # Check if supplier exists
     supplier = None
     if not frappe.db.exists("Supplier", data["supplier_name"], cache=False):
@@ -801,7 +827,7 @@ def create_purchase_invoice_from_request(request_data: str) -> None:
     purchase_invoice.custom_supplier_branch_id = data["supplier_branch_id"]
     purchase_invoice.bill_no = data["supplier_invoice_no"]
     purchase_invoice.bill_date = data["supplier_invoice_date"]
-
+    purchase_invoice.branch = bhfId
     if "currency" in data:
         # The "currency" key is only available when creating from Imported Item
         purchase_invoice.currency = data["currency"]
@@ -847,13 +873,13 @@ def create_purchase_invoice_from_request(request_data: str) -> None:
                 "custom_packaging_unit": item["packaging_unit_code"],
                 "custom_unit_of_quantity": item["quantity_unit_code"],
                 "custom_taxation_type": item["taxation_type_code"],
-            },
+                "task_code": item.get("task_code", ''),
+},
         )
-
+    validate_mapping_and_registration_of_items(data["items"])
     purchase_invoice.insert(ignore_mandatory=True)
 
     frappe.msgprint("Purchase Invoices have been created")
-
 
 @frappe.whitelist()
 def ping_server(request_data: str) -> None:
@@ -917,3 +943,16 @@ def create_stock_entry_from_stock_movement(request_data: str) -> None:
     stock_entry.save()
 
     frappe.msgprint(f"Stock Entry {stock_entry.name} created successfully")
+
+def validate_mapping_and_registration_of_items(items):
+    for item in items:
+        task_code = item.get("task_code") or item.get("item_name")
+        items = frappe.get_all("Item", 
+		filters={"custom_referenced_imported_item": task_code}, 
+		fields=["name","item_name","item_code"]
+	)
+        if items:
+            item_name = items[0].name
+            from kenya_compliance.kenya_compliance.overrides.server.purchase_invoice import validation_message
+            validation_message(item_name)
+        

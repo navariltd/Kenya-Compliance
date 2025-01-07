@@ -1,340 +1,348 @@
 {
-  "actions": [],
-  "allow_rename": 1,
-  "autoname": "hash",
-  "creation": "2024-02-19 01:07:18.311952",
-  "doctype": "DocType",
-  "engine": "InnoDB",
-  "field_order": [
-    "environment_section",
-    "sandbox",
-    "column_break_swix",
-    "env",
-    "is_active",
-    "autocreate_branch_dimension",
-    "settings_section",
-    "server_url",
-    "company",
-    "tin",
-    "column_break_mmvk",
-    "bhfid",
-    "dvcsrlno",
-    "sales_control_unit_id",
-    "communication_key_section",
-    "communication_key",
-    "request_frequency_tab",
-    "frequency_of_communication_with_etims_servers_section",
-    "sales_information_submission",
-    "sales_info_cron_format",
-    "column_break_ukgx",
-    "stock_information_submission",
-    "stock_info_cron_format",
-    "column_break_ifui",
-    "purchase_information_submission",
-    "purchase_info_cron_format",
-    "column_break_fsjl",
-    "notices_refresh_frequency",
-    "notices_refresh_freq_cron_format",
-    "field_defaults_tab",
-    "sales_details_defaults_section",
-    "sales_payment_type",
-    "column_break_qugc",
-    "sales_transaction_progress",
-    "purchase_details_defaults_section",
-    "purchases_payment_type",
-    "purchases_purchase_type",
-    "column_break_mxxv",
-    "purchases_receipt_type",
-    "purchases_purchase_status"
-  ],
-  "fields": [
-    {
-      "fieldname": "settings_section",
-      "fieldtype": "Section Break",
-      "label": "Settings Definition"
-    },
-    {
-      "default": "1",
-      "description": "Marks current environment as either Sandbox, or Production.",
-      "fieldname": "sandbox",
-      "fieldtype": "Check",
-      "label": "Sandbox Environment",
-      "no_copy": 1
-    },
-    {
-      "default": "https://etims-api-sbx.kra.go.ke/etims-api",
-      "description": "KRA E-Tims Server URL. Don't fill if you're not sure what to input.",
-      "fieldname": "server_url",
-      "fieldtype": "Data",
-      "label": "Server URL",
-      "options": "URL",
-      "reqd": 1
-    },
-    {
-      "fetch_from": "company.tax_id",
-      "fieldname": "tin",
-      "fieldtype": "Data",
-      "in_list_view": 1,
-      "label": "Tax Payer's PIN",
-      "reqd": 1
-    },
-    {
-      "fieldname": "dvcsrlno",
-      "fieldtype": "Data",
-      "in_list_view": 1,
-      "label": "Device Serial Number",
-      "no_copy": 1,
-      "reqd": 1
-    },
-    {
-      "description": "00 is Head-Office/Headquarters, 01 to 99 is Branch Office",
-      "fieldname": "bhfid",
-      "fieldtype": "Link",
-      "in_list_view": 1,
-      "in_standard_filter": 1,
-      "label": "Branch Id",
-      "no_copy": 1,
-      "options": "Branch",
-      "reqd": 1
-    },
-    {
-      "fieldname": "environment_section",
-      "fieldtype": "Section Break",
-      "label": "Environment"
-    },
-    {
-      "fieldname": "column_break_mmvk",
-      "fieldtype": "Column Break"
-    },
-    {
-      "default": "Sandbox",
-      "fieldname": "env",
-      "fieldtype": "Select",
-      "in_list_view": 1,
-      "label": "Environment",
-      "options": "\nSandbox\nProduction",
-      "read_only": 1
-    },
-    {
-      "fieldname": "column_break_swix",
-      "fieldtype": "Column Break"
-    },
-    {
-      "fieldname": "company",
-      "fieldtype": "Link",
-      "in_list_view": 1,
-      "label": "Company",
-      "options": "Company",
-      "reqd": 1
-    },
-    {
-      "default": "0",
-      "fieldname": "is_active",
-      "fieldtype": "Check",
-      "in_list_view": 1,
-      "label": "Is Active",
-      "options": "1"
-    },
-    {
-      "fieldname": "communication_key_section",
-      "fieldtype": "Section Break",
-      "label": "Communication Key"
-    },
-    {
-      "fieldname": "communication_key",
-      "fieldtype": "Data",
-      "label": "Communication Key",
-      "no_copy": 1,
-      "read_only": 1
-    },
-    {
-      "fieldname": "request_frequency_tab",
-      "fieldtype": "Tab Break",
-      "label": "Submission Frequency Settings"
-    },
-    {
-      "fieldname": "frequency_of_communication_with_etims_servers_section",
-      "fieldtype": "Section Break",
-      "label": "Frequency of Communication with eTims Servers"
-    },
-    {
-      "default": "All",
-      "fieldname": "sales_information_submission",
-      "fieldtype": "Select",
-      "label": "Sales Information Submission Frequency",
-      "options": "\nAll\nHourly\nDaily\nWeekly\nMonthly\nYearly\nAnnual\nCron"
-    },
-    {
-      "fieldname": "column_break_ukgx",
-      "fieldtype": "Column Break"
-    },
-    {
-      "default": "All",
-      "fieldname": "stock_information_submission",
-      "fieldtype": "Select",
-      "label": "Stock Information Submission Frequency",
-      "options": "\nAll\nHourly\nDaily\nWeekly\nMonthly\nYearly\nAnnual\nCron"
-    },
-    {
-      "fieldname": "column_break_ifui",
-      "fieldtype": "Column Break"
-    },
-    {
-      "default": "All",
-      "fieldname": "purchase_information_submission",
-      "fieldtype": "Select",
-      "label": "Purchase Information Submission Frequency",
-      "mandatory_depends_on": "eval:doc.purchase_information_submission === \"Cron Format\";",
-      "options": "\nAll\nHourly\nDaily\nWeekly\nMonthly\nYearly\nAnnual\nCron"
-    },
-    {
-      "depends_on": "eval:doc.sales_information_submission === \"Cron\";",
-      "fieldname": "sales_info_cron_format",
-      "fieldtype": "Data",
-      "label": "Sales Info. Cron Format",
-      "mandatory_depends_on": "eval:doc.sales_information_submission === \"Cron\";"
-    },
-    {
-      "depends_on": "eval:doc.stock_information_submission === \"Cron\";",
-      "fieldname": "stock_info_cron_format",
-      "fieldtype": "Data",
-      "label": "Stock Info. Cron Format",
-      "mandatory_depends_on": "eval:doc.stock_information_submission === \"Cron\";"
-    },
-    {
-      "depends_on": "eval:doc.purchase_information_submission === \"Cron\";",
-      "fieldname": "purchase_info_cron_format",
-      "fieldtype": "Data",
-      "label": "Purchase Info. Cron Format",
-      "mandatory_depends_on": "eval:doc.purchase_information_submission === \"Cron\";"
-    },
-    {
-      "default": "1",
-      "description": "Auto creates the \"Branch\" Accounting Dimension which will be mandatory for all P&L transactions. Recommended.",
-      "fieldname": "autocreate_branch_dimension",
-      "fieldtype": "Check",
-      "label": "Auto Create Branch Accounting Dimension"
-    },
-    {
-      "fieldname": "field_defaults_tab",
-      "fieldtype": "Tab Break",
-      "label": "Field Defaults"
-    },
-    {
-      "fieldname": "sales_details_defaults_section",
-      "fieldtype": "Section Break",
-      "label": "Sales Details Defaults"
-    },
-    {
-      "fieldname": "column_break_qugc",
-      "fieldtype": "Column Break"
-    },
-    {
-      "default": "CASH",
-      "fieldname": "sales_payment_type",
-      "fieldtype": "Link",
-      "label": "Payment Type",
-      "options": "Navari KRA eTims Payment Type"
-    },
-    {
-      "default": "Approved",
-      "fieldname": "sales_transaction_progress",
-      "fieldtype": "Link",
-      "label": "Transaction Progress",
-      "options": "Navari KRA eTims Transaction Progress"
-    },
-    {
-      "fieldname": "purchase_details_defaults_section",
-      "fieldtype": "Section Break",
-      "label": "Purchase Details Defaults"
-    },
-    {
-      "fieldname": "column_break_mxxv",
-      "fieldtype": "Column Break"
-    },
-    {
-      "default": "Normal",
-      "fieldname": "purchases_purchase_type",
-      "fieldtype": "Link",
-      "label": "Purchase Type",
-      "options": "Navari eTims Transaction Type"
-    },
-    {
-      "default": "Purchase",
-      "fieldname": "purchases_receipt_type",
-      "fieldtype": "Link",
-      "label": "Receipt Type",
-      "options": "Navari eTims Purchase Receipt Type"
-    },
-    {
-      "default": "CASH",
-      "fieldname": "purchases_payment_type",
-      "fieldtype": "Link",
-      "label": "Payment Type",
-      "options": "Navari KRA eTims Payment Type"
-    },
-    {
-      "default": "Approved",
-      "fieldname": "purchases_purchase_status",
-      "fieldtype": "Link",
-      "label": "Purchase Status",
-      "options": "Navari KRA eTims Transaction Progress"
-    },
-    {
-      "fieldname": "column_break_fsjl",
-      "fieldtype": "Column Break"
-    },
-    {
-      "default": "Hourly",
-      "fieldname": "notices_refresh_frequency",
-      "fieldtype": "Select",
-      "label": "Notices Refresh Frequency",
-      "options": "\nAll\nHourly\nDaily\nWeekly\nMonthly\nYearly\nAnnual\nCron"
-    },
-    {
-      "depends_on": "eval:doc.notices_refresh_frequency === \"Cron\";",
-      "fieldname": "notices_refresh_freq_cron_format",
-      "fieldtype": "Data",
-      "label": "Notices Refresh Freq. Cron Format",
-      "mandatory_depends_on": "eval:doc.notices_refresh_frequency === \"Cron\";"
-    },
-    {
-      "fieldname": "sales_control_unit_id",
-      "fieldtype": "Data",
-      "label": "Sales Control Unit Id",
-      "read_only": 1
-    }
-  ],
-  "index_web_pages_for_search": 1,
-  "links": [
-    {
-      "group": "Linked Requests",
-      "link_doctype": "Integration Request",
-      "link_fieldname": "reference_docname"
-    }
-  ],
-  "modified": "2024-08-29 09:16:16.112737",
-  "modified_by": "Administrator",
-  "module": "Kenya Compliance",
-  "name": "Navari KRA eTims Settings",
-  "naming_rule": "Random",
-  "owner": "Administrator",
-  "permissions": [
-    {
-      "create": 1,
-      "delete": 1,
-      "email": 1,
-      "export": 1,
-      "print": 1,
-      "read": 1,
-      "report": 1,
-      "role": "System Manager",
-      "share": 1,
-      "write": 1
-    }
-  ],
-  "sort_field": "modified",
-  "sort_order": "DESC",
-  "states": [],
-  "track_changes": 1
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "hash",
+ "creation": "2024-02-19 01:07:18.311952",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "environment_section",
+  "vendor",
+  "sandbox",
+  "column_break_swix",
+  "env",
+  "is_active",
+  "autocreate_branch_dimension",
+  "settings_section",
+  "server_url",
+  "company",
+  "tin",
+  "column_break_mmvk",
+  "bhfid",
+  "dvcsrlno",
+  "sales_control_unit_id",
+  "communication_key_section",
+  "communication_key",
+  "request_frequency_tab",
+  "frequency_of_communication_with_etims_servers_section",
+  "sales_information_submission",
+  "sales_info_cron_format",
+  "column_break_ukgx",
+  "stock_information_submission",
+  "stock_info_cron_format",
+  "column_break_ifui",
+  "purchase_information_submission",
+  "purchase_info_cron_format",
+  "column_break_fsjl",
+  "notices_refresh_frequency",
+  "notices_refresh_freq_cron_format",
+  "field_defaults_tab",
+  "sales_details_defaults_section",
+  "sales_payment_type",
+  "column_break_qugc",
+  "sales_transaction_progress",
+  "purchase_details_defaults_section",
+  "purchases_payment_type",
+  "purchases_purchase_type",
+  "column_break_mxxv",
+  "purchases_receipt_type",
+  "purchases_purchase_status"
+ ],
+ "fields": [
+  {
+   "fieldname": "settings_section",
+   "fieldtype": "Section Break",
+   "label": "Settings Definition"
+  },
+  {
+   "default": "1",
+   "description": "Marks current environment as either Sandbox, or Production.",
+   "fieldname": "sandbox",
+   "fieldtype": "Check",
+   "label": "Sandbox Environment",
+   "no_copy": 1
+  },
+  {
+   "default": "https://etims-api-sbx.kra.go.ke/etims-api",
+   "description": "KRA E-Tims Server URL. Don't fill if you're not sure what to input.",
+   "fieldname": "server_url",
+   "fieldtype": "Data",
+   "label": "Server URL",
+   "options": "URL",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "company.tax_id",
+   "fieldname": "tin",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Tax Payer's PIN",
+   "reqd": 1
+  },
+  {
+   "fieldname": "dvcsrlno",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Device Serial Number",
+   "no_copy": 1,
+   "reqd": 1
+  },
+  {
+   "description": "00 is Head-Office/Headquarters, 01 to 99 is Branch Office",
+   "fieldname": "bhfid",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Branch Id",
+   "no_copy": 1,
+   "options": "Branch",
+   "reqd": 1
+  },
+  {
+   "fieldname": "environment_section",
+   "fieldtype": "Section Break",
+   "label": "Environment"
+  },
+  {
+   "fieldname": "column_break_mmvk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Sandbox",
+   "fieldname": "env",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Environment",
+   "options": "\nSandbox\nProduction",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_swix",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Is Active",
+   "options": "1"
+  },
+  {
+   "fieldname": "communication_key_section",
+   "fieldtype": "Section Break",
+   "label": "Communication Key"
+  },
+  {
+   "fieldname": "communication_key",
+   "fieldtype": "Data",
+   "label": "Communication Key",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "request_frequency_tab",
+   "fieldtype": "Tab Break",
+   "label": "Submission Frequency Settings"
+  },
+  {
+   "fieldname": "frequency_of_communication_with_etims_servers_section",
+   "fieldtype": "Section Break",
+   "label": "Frequency of Communication with eTims Servers"
+  },
+  {
+   "default": "All",
+   "fieldname": "sales_information_submission",
+   "fieldtype": "Select",
+   "label": "Sales Information Submission Frequency",
+   "options": "\nAll\nHourly\nDaily\nWeekly\nMonthly\nYearly\nAnnual\nCron"
+  },
+  {
+   "fieldname": "column_break_ukgx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "All",
+   "fieldname": "stock_information_submission",
+   "fieldtype": "Select",
+   "label": "Stock Information Submission Frequency",
+   "options": "\nAll\nHourly\nDaily\nWeekly\nMonthly\nYearly\nAnnual\nCron"
+  },
+  {
+   "fieldname": "column_break_ifui",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "All",
+   "fieldname": "purchase_information_submission",
+   "fieldtype": "Select",
+   "label": "Purchase Information Submission Frequency",
+   "mandatory_depends_on": "eval:doc.purchase_information_submission === \"Cron Format\";",
+   "options": "\nAll\nHourly\nDaily\nWeekly\nMonthly\nYearly\nAnnual\nCron"
+  },
+  {
+   "depends_on": "eval:doc.sales_information_submission === \"Cron\";",
+   "fieldname": "sales_info_cron_format",
+   "fieldtype": "Data",
+   "label": "Sales Info. Cron Format",
+   "mandatory_depends_on": "eval:doc.sales_information_submission === \"Cron\";"
+  },
+  {
+   "depends_on": "eval:doc.stock_information_submission === \"Cron\";",
+   "fieldname": "stock_info_cron_format",
+   "fieldtype": "Data",
+   "label": "Stock Info. Cron Format",
+   "mandatory_depends_on": "eval:doc.stock_information_submission === \"Cron\";"
+  },
+  {
+   "depends_on": "eval:doc.purchase_information_submission === \"Cron\";",
+   "fieldname": "purchase_info_cron_format",
+   "fieldtype": "Data",
+   "label": "Purchase Info. Cron Format",
+   "mandatory_depends_on": "eval:doc.purchase_information_submission === \"Cron\";"
+  },
+  {
+   "default": "1",
+   "description": "Auto creates the \"Branch\" Accounting Dimension which will be mandatory for all P&L transactions. Recommended.",
+   "fieldname": "autocreate_branch_dimension",
+   "fieldtype": "Check",
+   "label": "Auto Create Branch Accounting Dimension"
+  },
+  {
+   "fieldname": "field_defaults_tab",
+   "fieldtype": "Tab Break",
+   "label": "Field Defaults"
+  },
+  {
+   "fieldname": "sales_details_defaults_section",
+   "fieldtype": "Section Break",
+   "label": "Sales Details Defaults"
+  },
+  {
+   "fieldname": "column_break_qugc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "CASH",
+   "fieldname": "sales_payment_type",
+   "fieldtype": "Link",
+   "label": "Payment Type",
+   "options": "Navari KRA eTims Payment Type"
+  },
+  {
+   "default": "Approved",
+   "fieldname": "sales_transaction_progress",
+   "fieldtype": "Link",
+   "label": "Transaction Progress",
+   "options": "Navari KRA eTims Transaction Progress"
+  },
+  {
+   "fieldname": "purchase_details_defaults_section",
+   "fieldtype": "Section Break",
+   "label": "Purchase Details Defaults"
+  },
+  {
+   "fieldname": "column_break_mxxv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Normal",
+   "fieldname": "purchases_purchase_type",
+   "fieldtype": "Link",
+   "label": "Purchase Type",
+   "options": "Navari eTims Transaction Type"
+  },
+  {
+   "default": "Purchase",
+   "fieldname": "purchases_receipt_type",
+   "fieldtype": "Link",
+   "label": "Receipt Type",
+   "options": "Navari eTims Purchase Receipt Type"
+  },
+  {
+   "default": "CASH",
+   "fieldname": "purchases_payment_type",
+   "fieldtype": "Link",
+   "label": "Payment Type",
+   "options": "Navari KRA eTims Payment Type"
+  },
+  {
+   "default": "Approved",
+   "fieldname": "purchases_purchase_status",
+   "fieldtype": "Link",
+   "label": "Purchase Status",
+   "options": "Navari KRA eTims Transaction Progress"
+  },
+  {
+   "fieldname": "column_break_fsjl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Hourly",
+   "fieldname": "notices_refresh_frequency",
+   "fieldtype": "Select",
+   "label": "Notices Refresh Frequency",
+   "options": "\nAll\nHourly\nDaily\nWeekly\nMonthly\nYearly\nAnnual\nCron"
+  },
+  {
+   "depends_on": "eval:doc.notices_refresh_frequency === \"Cron\";",
+   "fieldname": "notices_refresh_freq_cron_format",
+   "fieldtype": "Data",
+   "label": "Notices Refresh Freq. Cron Format",
+   "mandatory_depends_on": "eval:doc.notices_refresh_frequency === \"Cron\";"
+  },
+  {
+   "fieldname": "sales_control_unit_id",
+   "fieldtype": "Data",
+   "label": "Sales Control Unit Id",
+   "read_only": 1
+  },
+  {
+   "fieldname": "vendor",
+   "fieldtype": "Select",
+   "label": "API Provider",
+   "options": "\nOSCU KRA\nVSCU Slade 360\nPergamon",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "group": "Linked Requests",
+   "link_doctype": "Integration Request",
+   "link_fieldname": "reference_docname"
+  }
+ ],
+ "modified": "2024-11-29 08:37:26.434270",
+ "modified_by": "Administrator",
+ "module": "Kenya Compliance",
+ "name": "Navari KRA eTims Settings",
+ "naming_rule": "Random",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
 }

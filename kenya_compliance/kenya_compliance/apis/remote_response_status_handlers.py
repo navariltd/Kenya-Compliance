@@ -120,7 +120,6 @@ def submit_inventory_on_success(response: dict, document_name: str) -> None:
         {"custom_inventory_submitted_successfully": 1},
     )
 
-
 def sales_information_submission_on_success(
     response: dict,
     invoice_type: str,
@@ -189,6 +188,9 @@ def purchase_search_on_success(reponse: dict) -> None:
 
 
 def create_purchase_from_search_details(fetched_purchase: dict) -> str:
+    existing_unique_id = check_duplicate_registered_purchase(fetched_purchase)
+    if existing_unique_id:
+        return existing_unique_id
     doc = frappe.new_doc(REGISTERED_PURCHASES_DOCTYPE_NAME)
 
     doc.supplier_name = fetched_purchase["spplrNm"]
@@ -234,6 +236,28 @@ def create_purchase_from_search_details(fetched_purchase: dict) -> str:
         frappe.log_error(title="Duplicate entries")
 
     return doc.name
+
+def check_duplicate_registered_purchase(fetched_purchase: dict) -> str:
+    """
+    Check if a Registered Purchase already exists based on a unique ID.
+
+    Args:
+        fetched_purchase (dict): The purchase details fetched from the source.
+
+    Returns:
+        str: The unique ID if the Registered Purchase exists, else None.
+    """
+   
+    unique_id = f"{fetched_purchase['spplrTin']}-{fetched_purchase['spplrInvcNo']}"
+
+    if frappe.db.exists(REGISTERED_PURCHASES_DOCTYPE_NAME, unique_id):
+        frappe.log_error(
+            title="Duplicate Registered Purchase",
+            message=f"Purchase with ID {unique_id} already exists. Skipping creation."
+        )
+        return unique_id
+    
+    return None
 
 
 def create_and_link_purchase_item(item: dict, parent_record: str) -> None:
@@ -370,7 +394,13 @@ def imported_items_search_on_success(response: dict) -> None:
 
     for item in items:
         doc = frappe.new_doc(REGISTERED_IMPORTED_ITEM_DOCTYPE_NAME)
-
+        if frappe.db.exists(
+            REGISTERED_IMPORTED_ITEM_DOCTYPE_NAME,
+            {
+                "task_code": item["taskCd"],
+            },
+        ):
+            continue
         doc.item_name = item["itemNm"]
         doc.task_code = item["taskCd"]
         doc.declaration_date = datetime.strptime(item["dclDe"], "%d%m%Y")
@@ -398,14 +428,14 @@ def imported_items_search_on_success(response: dict) -> None:
         doc.invoice_foreign_currency_amount = item["invcFcurAmt"]
         doc.invoice_foreign_currency = item["invcFcurCd"]
         doc.invoice_foreign_currency_rate = item["invcFcurExcrt"]
+        doc.rate = item["invcFcurAmt"] / item["qty"]
 
         doc.save()
 
     frappe.msgprint(
         "Imported Items Fetched. Go to <b>Navari eTims Registered Imported Item</b> Doctype for more information"
     )
-
-
+   
 def search_branch_request_on_success(response: dict) -> None:
     for branch in response["data"]["bhfList"]:
         doc = None

@@ -2,7 +2,7 @@ import frappe
 from frappe.model.document import Document
 
 from .shared_overrides import generic_invoices_on_submit_override
-
+from .purchase_invoice import validate
 
 def on_submit(doc: Document, method: str) -> None:
     """Intercepts submit event for document"""

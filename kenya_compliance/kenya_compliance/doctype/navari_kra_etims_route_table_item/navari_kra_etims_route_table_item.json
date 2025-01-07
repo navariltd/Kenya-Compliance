@@ -1,68 +1,70 @@
 {
-  "actions": [],
-  "allow_rename": 1,
-  "autoname": "hash",
-  "creation": "2024-02-20 02:25:49.240588",
-  "doctype": "DocType",
-  "editable_grid": 1,
-  "engine": "InnoDB",
-  "field_order": [
-    "url_path_function",
-    "column_break_zyfv",
-    "url_path",
-    "column_break_derf",
-    "description",
-    "column_break_ztya",
-    "last_request_date"
-  ],
-  "fields": [
-    {
-      "fieldname": "url_path_function",
-      "fieldtype": "Data",
-      "in_list_view": 1,
-      "label": "URL Path Function"
-    },
-    {
-      "fieldname": "column_break_zyfv",
-      "fieldtype": "Column Break"
-    },
-    {
-      "fieldname": "url_path",
-      "fieldtype": "Data",
-      "in_list_view": 1,
-      "label": "URL Path"
-    },
-    {
-      "fieldname": "column_break_derf",
-      "fieldtype": "Column Break"
-    },
-    {
-      "fieldname": "description",
-      "fieldtype": "Data",
-      "label": "Description"
-    },
-    {
-      "fieldname": "column_break_ztya",
-      "fieldtype": "Column Break"
-    },
-    {
-      "fieldname": "last_request_date",
-      "fieldtype": "Datetime",
-      "in_list_view": 1,
-      "label": "Last Request Date"
-    }
-  ],
-  "index_web_pages_for_search": 1,
-  "istable": 1,
-  "links": [],
-  "modified": "2024-04-03 11:16:14.221999",
-  "modified_by": "Administrator",
-  "module": "Kenya Compliance",
-  "name": "Navari KRA eTims Route Table Item",
-  "naming_rule": "Random",
-  "owner": "Administrator",
-  "permissions": [],
-  "sort_field": "modified",
-  "sort_order": "DESC",
-  "states": []
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "hash",
+ "creation": "2024-02-20 02:25:49.240588",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "url_path_function",
+  "column_break_zyfv",
+  "url_path",
+  "column_break_derf",
+  "description",
+  "column_break_ztya",
+  "last_request_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "url_path_function",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "URL Path Function",
+   "options": "Navari Etims URL Path Function"
+  },
+  {
+   "fieldname": "column_break_zyfv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "url_path_function.url_path",
+   "fieldname": "url_path",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "URL Path"
+  },
+  {
+   "fieldname": "column_break_derf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Data",
+   "label": "Description"
+  },
+  {
+   "fieldname": "column_break_ztya",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "last_request_date",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Last Request Date"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-12-05 11:44:17.812052",
+ "modified_by": "Administrator",
+ "module": "Kenya Compliance",
+ "name": "Navari KRA eTims Route Table Item",
+ "naming_rule": "Random",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
 }

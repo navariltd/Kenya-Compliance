@@ -33,9 +33,9 @@ def generic_invoices_on_submit_override(
         The Type of the invoice. Either Sales, or POS
     """
     company_name = doc.company
-
-    headers = build_headers(company_name, doc.branch)
-    server_url = get_server_url(company_name, doc.branch)
+    vendor="OSCU KRA"
+    headers = build_headers(company_name,vendor, doc.branch)
+    server_url = get_server_url(company_name,vendor, doc.branch)
     route_path, last_request_date = get_route_path("TrnsSalesSaveWrReq")
 
     if headers and server_url and route_path:
@@ -70,10 +70,12 @@ def generic_invoices_on_submit_override(
 
 
 def validate(doc: Document, method: str) -> None:
+    vendor="OSCU KRA"
     doc.custom_scu_id = get_curr_env_etims_settings(
-        frappe.defaults.get_user_default("Company"), doc.branch
+        frappe.defaults.get_user_default("Company"),vendor, doc.branch
     ).scu_id
-
+    if not doc.branch:
+        frappe.throw("Please ensure the branch is set before saving the documents")
     # item_taxes = get_itemised_tax_breakup_data(doc)
 
     # taxes_breakdown = defaultdict(list)
